@@ -40,11 +40,11 @@
 <meta property="og:title" content="JavaScript——基础篇02">
 <meta property="og:url" content="http://kouqiang.space/2023/01/14/JavaScript%E2%80%94%E2%80%94%E5%9F%BA%E7%A1%80%E7%AF%8702/index.html">
 <meta property="og:site_name" content="寇强的个人空间">
-<meta property="og:description" content="JavaScript——基础篇02各种功能实现的思路及代码 一、昼夜主题切换功能在没有后台服务器，前端只有静态页面时，用js就可以实现昼夜主题切换。 思路一：更改css文件提前写好两个配色主题（css文件），利用点击按钮绑定js函数去更改头部&lt;link&gt;标签的&lt;href&gt;属性——更改引入的css文件的路径——来实现该想法。 代码实现： 1.body中添加点击按钮，获取元素并">
+<meta property="og:description" content="JavaScript——基础篇02各种功能实现的思路及代码 一、昼夜主题切换功能在没有后台服务器，前端只有静态页面时，用js就可以实现昼夜主题切换。不过缺点是默认主题不能随时间变化，且每刷新一次页面都会恢复为默认样式。 如果有后端，则应该根据客户端请求网页的不同时间来动态创建不同主题的前端页面！ 思路一：更改css文件提前写好两个配色主题（css文件），利用点击按钮绑定js函数去更改头部&lt;l">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2023-01-14T04:00:00.000Z">
-<meta property="article:modified_time" content="2023-01-14T11:36:43.505Z">
+<meta property="article:modified_time" content="2023-01-30T04:59:29.757Z">
 <meta property="article:author" content="寇强">
 <meta property="article:tag" content="学习总结">
 <meta property="article:tag" content="前端">
@@ -1793,7 +1793,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1673696295764),
+    lastupdate: new Date(1677590786777),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc"],
@@ -2714,7 +2714,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
     <h1 id="JavaScript——基础篇02"><a href="#JavaScript——基础篇02" class="headerlink" title="JavaScript——基础篇02"></a>JavaScript——基础篇02</h1><p>各种功能实现的思路及代码</p>
-<h2 id="一、昼夜主题切换功能"><a href="#一、昼夜主题切换功能" class="headerlink" title="一、昼夜主题切换功能"></a>一、昼夜主题切换功能</h2><p>在没有后台服务器，前端只有静态页面时，用js就可以实现昼夜主题切换。</p>
+<h2 id="一、昼夜主题切换功能"><a href="#一、昼夜主题切换功能" class="headerlink" title="一、昼夜主题切换功能"></a>一、昼夜主题切换功能</h2><p>在没有后台服务器，前端只有静态页面时，用js就可以实现昼夜主题切换。不过缺点是默认主题不能随时间变化，且每刷新一次页面都会恢复为默认样式。</p>
+<p>如果有后端，则应该根据客户端请求网页的不同时间来动态创建不同主题的前端页面！</p>
 <h3 id="思路一：更改css文件"><a href="#思路一：更改css文件" class="headerlink" title="思路一：更改css文件"></a>思路一：更改css文件</h3><p>提前写好两个配色主题（css文件），利用点击按钮绑定js函数去更改头部<code>&lt;link&gt;</code>标签的<code>&lt;href&gt;</code>属性——更改引入的css文件的路径——来实现该想法。</p>
 <h4 id="代码实现："><a href="#代码实现：" class="headerlink" title="代码实现："></a>代码实现：</h4><blockquote>
 <p>1.body中添加点击按钮，获取元素并绑定点击事件，<strong>并新建一个标记昼夜白天切换的变量<code>tips</code>！</strong></p>
@@ -2768,10 +2769,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-01-14T19:36:43+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-01-30T12:59:29+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2023年1月14日</p>
+    <p>更新于：2023年1月30日</p>
   </a>
 </div>
 
@@ -2850,6 +2851,19 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   
     <div class="prev-next">
+      
+        <a class='prev' href='/2023/01/20/SU%E5%8A%A8%E6%80%81%E7%BB%84%E4%BB%B6%E5%AD%A6%E4%B9%A0/'>
+          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>SU动态组件学习</p>
+          <p class='content'>SU动态组件一、各种函数认识（一）数学函数
+ABS(number)
+求整数的绝对值
+1alert(abs(-127))
+
+
+
+CEILING(number,significance)
+将参数nu...</p>
+        </a>
       
       
         <a class='next' href='/2022/12/28/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%B5%81%E7%A8%8B/'>
@@ -3689,7 +3703,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"寇强的个人空间","url":"http://kouqiang.space/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"寇强","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://kouqiang.space/","sameAs":["https://github.com/volantis-x"],"description":"自建博客页面"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://kouqiang.space/","name":"寇强的个人空间"}},{"@type":"ListItem","position":2,"item":{"@id":"http://kouqiang.space/categories/前端/","name":"前端"}},{"@type":"ListItem","position":3,"item":{"@id":"http://kouqiang.space/2023/01/14/JavaScript——基础篇02/","name":"JavaScript——基础篇02"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"寇强的个人空间","url":"http://kouqiang.space/","keywords":null,"description":"自建博客页面","author":{"@type":"Person","name":"寇强","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://kouqiang.space/","description":"自建博客页面"},"publisher":{"@type":"Organization","name":"寇强的个人空间","url":"http://kouqiang.space/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://kouqiang.space?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"JavaScript——基础篇02","description":"自建博客页面","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://kouqiang.space/2023/01/14/JavaScript%E2%80%94%E2%80%94%E5%9F%BA%E7%A1%80%E7%AF%8702/"},"author":{"@type":"Person","name":"寇强","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://kouqiang.space/"},"publisher":{"@type":"Organization","name":"寇强的个人空间","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://kouqiang.space/2023/01/14/JavaScript%E2%80%94%E2%80%94%E5%9F%BA%E7%A1%80%E7%AF%8702/","wordCount":0,"datePublished":"2023-01-14T04:00:00.000Z","dateModified":"2023-01-14T11:36:43.505Z","articleSection":"前端","keywords":"学习总结,前端,JavaScript","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"寇强的个人空间","url":"http://kouqiang.space/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"寇强","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://kouqiang.space/","sameAs":["https://github.com/volantis-x"],"description":"自建博客页面"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://kouqiang.space/","name":"寇强的个人空间"}},{"@type":"ListItem","position":2,"item":{"@id":"http://kouqiang.space/categories/前端/","name":"前端"}},{"@type":"ListItem","position":3,"item":{"@id":"http://kouqiang.space/2023/01/14/JavaScript——基础篇02/","name":"JavaScript——基础篇02"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"寇强的个人空间","url":"http://kouqiang.space/","keywords":null,"description":"自建博客页面","author":{"@type":"Person","name":"寇强","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://kouqiang.space/","description":"自建博客页面"},"publisher":{"@type":"Organization","name":"寇强的个人空间","url":"http://kouqiang.space/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://kouqiang.space?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"JavaScript——基础篇02","description":"自建博客页面","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://kouqiang.space/2023/01/14/JavaScript%E2%80%94%E2%80%94%E5%9F%BA%E7%A1%80%E7%AF%8702/"},"author":{"@type":"Person","name":"寇强","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://kouqiang.space/"},"publisher":{"@type":"Organization","name":"寇强的个人空间","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://kouqiang.space/2023/01/14/JavaScript%E2%80%94%E2%80%94%E5%9F%BA%E7%A1%80%E7%AF%8702/","wordCount":0,"datePublished":"2023-01-14T04:00:00.000Z","dateModified":"2023-01-30T04:59:29.757Z","articleSection":"前端","keywords":"学习总结,前端,JavaScript","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
