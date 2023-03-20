@@ -44,7 +44,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2023-02-28T13:10:00.000Z">
-<meta property="article:modified_time" content="2023-03-11T11:25:18.613Z">
+<meta property="article:modified_time" content="2023-03-20T03:27:04.894Z">
 <meta property="article:author" content="寇强">
 <meta property="article:tag" content="考研笔记">
 <meta property="article:tag" content="C语言">
@@ -1793,7 +1793,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1678776183944),
+    lastupdate: new Date(1679285738287),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc"],
@@ -3083,7 +3083,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <ul>
 <li><p>需引入头文件<code>#include &lt;stdlib.h&gt;</code>。</p>
 </li>
-<li><p>返回值为一个<code>void</code>类型的指针。</p>
+<li><p>返回值为一个<code>void</code>类型的指针，指向刚申请的空间的地址。</p>
 <p>C&#x2F;C++规定，<code>void*</code>类型可以强制转换为任何其它类型的指针。</p>
 <p>因此我们需要对返回值进行强制类型转换，参考如下代码。</p>
 </li>
@@ -3217,6 +3217,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </ul>
 <h3 id="（三）typedef的使用"><a href="#（三）typedef的使用" class="headerlink" title="（三）typedef的使用"></a>（三）<code>typedef</code>的使用</h3><p><code>typedef</code>是在C和C++编程语言中的一个关键字。作用是为现有的数据类型(<code>int</code>、<code>float</code>、<code>char</code>……)创建一个新的名字，目的是为了使代码方便阅读和理解。</p>
 <p>相当于提前定义好某个变量再起个别名，用的时候直接用这个别名去声明新的数据，改的时候改一处即可。</p>
+<p>语句：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//结构体定义</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">member</span> &#123;</span></span><br><span class="line">    <span class="type">int</span> a, b;</span><br><span class="line">    <span class="type">char</span> c;</span><br><span class="line">&#125;mbr, *mbrp;				<span class="comment">//给该结构体起的别名为mbr，给该结构体类型的指针起别名为mbrp；</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//别名使用</span></span><br><span class="line">mbr m1;						<span class="comment">//定义结构体变量；</span></span><br><span class="line">m1.a = <span class="number">10</span>;					<span class="comment">//实现其内容</span></span><br><span class="line">m1.b = <span class="number">20</span>;</span><br><span class="line">m1.c = <span class="string">&#x27;t&#x27;</span>;</span><br><span class="line"></span><br><span class="line">mbrp mp1;					<span class="comment">//定义该结构体类型的指针（此时该指针没有指向任何具体对象）；</span></span><br><span class="line">mp1 = &amp;m1;					<span class="comment">//该指针指向结构体变量；</span></span><br></pre></td></tr></table></figure>
+
+
+
 <ul>
 <li><p>使用方法：</p>
 <p>在头文件下面提前定义。</p>
@@ -3271,10 +3276,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-03-11T19:25:18+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-03-20T11:27:04+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2023年3月11日</p>
+    <p>更新于：2023年3月20日</p>
   </a>
 </div>
 
@@ -3354,24 +3359,24 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
-        <a class='prev' href='/2023/03/11/24%E8%80%83%E7%A0%94408%E7%AC%94%E8%AE%B0B%E2%80%94%E2%80%94%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/'>
-          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>24考研408笔记B——数据结构与算法</p>
-          <p class='content'>2024考研408统考试题——数据结构与算法2023.3.11开始
-一、绪论（一）什么是数据结构
-数据结构三要素：
-
-逻辑结构
-
-四种常见的逻辑结构：
-集合（408考纲早已去除，此处不做讨论）
-...</p>
+        <a class='prev' href='/2023/02/28/24%E8%80%83%E7%A0%94408%E7%AC%94%E8%AE%B0C%E2%80%94%E2%80%94%E9%AB%98%E6%95%B0%E4%BE%8B%E9%A2%98/'>
+          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>24考研408笔记C——高数例题</p>
+          <p class='content'>24考研高数笔记C——高数例题【2024考研数学】武忠祥领学班&#x2F;03.基础定制&#x2F;01.高数
+01.高数1-1 函数及其性质【学习包】02.高数1-2 极限的概念与性质【学习包...</p>
         </a>
       
       
-        <a class='next' href='/2023/02/28/24%E8%80%83%E7%A0%94408%E7%AC%94%E8%AE%B0C%E2%80%94%E2%80%94%E9%AB%98%E6%95%B0%E4%BE%8B%E9%A2%98/'>
-          <p class='title'>24考研408笔记C——高数例题<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>24考研高数笔记C——高数例题【2024考研数学】武忠祥领学班&#x2F;03.基础定制&#x2F;01.高数
-01.高数1-1 函数及其性质【学习包】02.高数1-2 极限的概念与性质【学习包...</p>
+        <a class='next' href='/2023/01/20/SU%E5%8A%A8%E6%80%81%E7%BB%84%E4%BB%B6%E5%AD%A6%E4%B9%A0/'>
+          <p class='title'>SU动态组件学习<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>SU动态组件一、各种函数认识（一）数学函数
+ABS(number)
+求整数的绝对值
+1alert(abs(-127))
+
+
+
+CEILING(number,significance)
+将参数nu...</p>
         </a>
       
     </div>
@@ -4204,7 +4209,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"寇强的个人空间","url":"http://kouqiang.space/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"寇强","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://kouqiang.space/","sameAs":["https://github.com/volantis-x"],"description":"自建博客页面"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://kouqiang.space/","name":"寇强的个人空间"}},{"@type":"ListItem","position":2,"item":{"@id":"http://kouqiang.space/categories/考研408笔记/","name":"考研408笔记"}},{"@type":"ListItem","position":3,"item":{"@id":"http://kouqiang.space/2023/02/28/24考研408笔记A——C语言/","name":"24考研408笔记A——C语言"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"寇强的个人空间","url":"http://kouqiang.space/","keywords":null,"description":"自建博客页面","author":{"@type":"Person","name":"寇强","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://kouqiang.space/","description":"自建博客页面"},"publisher":{"@type":"Organization","name":"寇强的个人空间","url":"http://kouqiang.space/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://kouqiang.space?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"24考研408笔记A——C语言","description":"自建博客页面","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://kouqiang.space/2023/02/28/24%E8%80%83%E7%A0%94408%E7%AC%94%E8%AE%B0A%E2%80%94%E2%80%94C%E8%AF%AD%E8%A8%80/"},"author":{"@type":"Person","name":"寇强","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://kouqiang.space/"},"publisher":{"@type":"Organization","name":"寇强的个人空间","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://kouqiang.space/2023/02/28/24%E8%80%83%E7%A0%94408%E7%AC%94%E8%AE%B0A%E2%80%94%E2%80%94C%E8%AF%AD%E8%A8%80/","wordCount":0,"datePublished":"2023-02-28T13:10:00.000Z","dateModified":"2023-03-11T11:25:18.613Z","articleSection":"考研408笔记","keywords":"考研笔记,C语言,编程","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"寇强的个人空间","url":"http://kouqiang.space/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"寇强","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://kouqiang.space/","sameAs":["https://github.com/volantis-x"],"description":"自建博客页面"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://kouqiang.space/","name":"寇强的个人空间"}},{"@type":"ListItem","position":2,"item":{"@id":"http://kouqiang.space/categories/考研408笔记/","name":"考研408笔记"}},{"@type":"ListItem","position":3,"item":{"@id":"http://kouqiang.space/2023/02/28/24考研408笔记A——C语言/","name":"24考研408笔记A——C语言"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"寇强的个人空间","url":"http://kouqiang.space/","keywords":null,"description":"自建博客页面","author":{"@type":"Person","name":"寇强","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://kouqiang.space/","description":"自建博客页面"},"publisher":{"@type":"Organization","name":"寇强的个人空间","url":"http://kouqiang.space/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://kouqiang.space?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"24考研408笔记A——C语言","description":"自建博客页面","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://kouqiang.space/2023/02/28/24%E8%80%83%E7%A0%94408%E7%AC%94%E8%AE%B0A%E2%80%94%E2%80%94C%E8%AF%AD%E8%A8%80/"},"author":{"@type":"Person","name":"寇强","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://kouqiang.space/"},"publisher":{"@type":"Organization","name":"寇强的个人空间","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://kouqiang.space/2023/02/28/24%E8%80%83%E7%A0%94408%E7%AC%94%E8%AE%B0A%E2%80%94%E2%80%94C%E8%AF%AD%E8%A8%80/","wordCount":0,"datePublished":"2023-02-28T13:10:00.000Z","dateModified":"2023-03-20T03:27:04.894Z","articleSection":"考研408笔记","keywords":"考研笔记,C语言,编程","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
