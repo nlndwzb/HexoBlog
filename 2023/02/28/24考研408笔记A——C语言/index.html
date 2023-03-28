@@ -44,7 +44,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2023-02-28T13:10:00.000Z">
-<meta property="article:modified_time" content="2023-03-22T02:46:48.058Z">
+<meta property="article:modified_time" content="2023-03-24T07:48:10.047Z">
 <meta property="article:author" content="寇强">
 <meta property="article:tag" content="考研笔记">
 <meta property="article:tag" content="C语言">
@@ -1793,7 +1793,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1679586821952),
+    lastupdate: new Date(1680010735368),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc"],
@@ -2875,7 +2875,20 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>优先级低于算术运算符。</p>
 <p>C语言中的<code>==</code>不能用于结构体的比较！都无法编译通过！</p>
 <h3 id="（四）运算符优先级"><a href="#（四）运算符优先级" class="headerlink" title="（四）运算符优先级"></a>（四）运算符优先级</h3><p><img src="https://www.z4a.net/images/2023/03/03/C.png" class="lazyload" data-srcset="https://www.z4a.net/images/2023/03/03/C.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="C.png"></p>
-<h2 id="三、选择、循环"><a href="#三、选择、循环" class="headerlink" title="三、选择、循环"></a>三、选择、循环</h2><p>if else、for、while、continue、break，与Java大差不大。</p>
+<h2 id="三、选择、循环"><a href="#三、选择、循环" class="headerlink" title="三、选择、循环"></a>三、选择、循环</h2><p>if else、for、while、do while、continue、break，与Java大差不大。</p>
+<ul>
+<li><p><code>for()</code>循环</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(起始条件; 判断语句; 循环指令)&#123;</span><br><span class="line">    代码块</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>判断语句为真则执行代码块，直至判断语句为假。</p>
+</li>
+<li><p><code>while()</code>和<code>do while</code></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span>(判断语句)&#123;</span><br><span class="line">    代码块</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//-----------------------------------</span></span><br><span class="line"><span class="keyword">do</span>&#123;</span><br><span class="line">    代码块</span><br><span class="line">&#125;<span class="keyword">while</span>(判断语句);</span><br></pre></td></tr></table></figure>
+
+<p>判断语句为真则执行代码块，直至判断语句为假。</p>
+<p><code>do while</code>循环体最少会执行一次，而<code>while</code>最少执行0次。</p>
+</li>
+</ul>
 <p>用到的时候随时补充。</p>
 <h2 id="四、一维数组与字符数组"><a href="#四、一维数组与字符数组" class="headerlink" title="四、一维数组与字符数组"></a>四、一维数组与字符数组</h2><h3 id="（一）一维数组"><a href="#（一）一维数组" class="headerlink" title="（一）一维数组"></a>（一）一维数组</h3><h4 id="1、声明-x2F-初始化"><a href="#1、声明-x2F-初始化" class="headerlink" title="1、声明&#x2F;初始化"></a>1、声明&#x2F;初始化</h4><ul>
 <li><p>在定义数组的时候对数组元素赋初值：</p>
@@ -3278,10 +3291,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-03-22T10:46:48+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-03-24T15:48:10+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2023年3月22日</p>
+    <p>更新于：2023年3月24日</p>
   </a>
 </div>
 
@@ -4211,7 +4224,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"寇强的个人空间","url":"http://kouqiang.space/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"寇强","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://kouqiang.space/","sameAs":["https://github.com/volantis-x"],"description":"自建博客页面"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://kouqiang.space/","name":"寇强的个人空间"}},{"@type":"ListItem","position":2,"item":{"@id":"http://kouqiang.space/categories/考研408笔记/","name":"考研408笔记"}},{"@type":"ListItem","position":3,"item":{"@id":"http://kouqiang.space/2023/02/28/24考研408笔记A——C语言/","name":"24考研408笔记A——C语言"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"寇强的个人空间","url":"http://kouqiang.space/","keywords":null,"description":"自建博客页面","author":{"@type":"Person","name":"寇强","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://kouqiang.space/","description":"自建博客页面"},"publisher":{"@type":"Organization","name":"寇强的个人空间","url":"http://kouqiang.space/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://kouqiang.space?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"24考研408笔记A——C语言","description":"自建博客页面","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://kouqiang.space/2023/02/28/24%E8%80%83%E7%A0%94408%E7%AC%94%E8%AE%B0A%E2%80%94%E2%80%94C%E8%AF%AD%E8%A8%80/"},"author":{"@type":"Person","name":"寇强","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://kouqiang.space/"},"publisher":{"@type":"Organization","name":"寇强的个人空间","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://kouqiang.space/2023/02/28/24%E8%80%83%E7%A0%94408%E7%AC%94%E8%AE%B0A%E2%80%94%E2%80%94C%E8%AF%AD%E8%A8%80/","wordCount":0,"datePublished":"2023-02-28T13:10:00.000Z","dateModified":"2023-03-22T02:46:48.058Z","articleSection":"考研408笔记","keywords":"考研笔记,C语言,编程","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"寇强的个人空间","url":"http://kouqiang.space/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"寇强","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://kouqiang.space/","sameAs":["https://github.com/volantis-x"],"description":"自建博客页面"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://kouqiang.space/","name":"寇强的个人空间"}},{"@type":"ListItem","position":2,"item":{"@id":"http://kouqiang.space/categories/考研408笔记/","name":"考研408笔记"}},{"@type":"ListItem","position":3,"item":{"@id":"http://kouqiang.space/2023/02/28/24考研408笔记A——C语言/","name":"24考研408笔记A——C语言"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"寇强的个人空间","url":"http://kouqiang.space/","keywords":null,"description":"自建博客页面","author":{"@type":"Person","name":"寇强","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://kouqiang.space/","description":"自建博客页面"},"publisher":{"@type":"Organization","name":"寇强的个人空间","url":"http://kouqiang.space/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://kouqiang.space?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"24考研408笔记A——C语言","description":"自建博客页面","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://kouqiang.space/2023/02/28/24%E8%80%83%E7%A0%94408%E7%AC%94%E8%AE%B0A%E2%80%94%E2%80%94C%E8%AF%AD%E8%A8%80/"},"author":{"@type":"Person","name":"寇强","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://kouqiang.space/"},"publisher":{"@type":"Organization","name":"寇强的个人空间","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://kouqiang.space/2023/02/28/24%E8%80%83%E7%A0%94408%E7%AC%94%E8%AE%B0A%E2%80%94%E2%80%94C%E8%AF%AD%E8%A8%80/","wordCount":0,"datePublished":"2023-02-28T13:10:00.000Z","dateModified":"2023-03-24T07:48:10.047Z","articleSection":"考研408笔记","keywords":"考研笔记,C语言,编程","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
