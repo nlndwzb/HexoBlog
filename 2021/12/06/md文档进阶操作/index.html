@@ -40,11 +40,11 @@
 <meta property="og:title" content="寇强的个人空间">
 <meta property="og:url" content="http://kouqiang.space/2021/12/06/md%E6%96%87%E6%A1%A3%E8%BF%9B%E9%98%B6%E6%93%8D%E4%BD%9C/index.html">
 <meta property="og:site_name" content="寇强的个人空间">
-<meta property="og:description" content="标题 jdnvjdvfn  vrkvid  idfnvfi  hvruevur    Win + Shift + s ：截强制换行 横向流程图：mermaid语法 123456graph LRA[方括号是方形] --&gt;B(圆括号是圆角)    B --&gt; C&amp;#123;花括号是菱形条件a&amp;#125;    C --&gt;|a&#x3D;1| A[方括号是方形]    C --&gt;|a&#x3D;2|">
+<meta property="og:description" content="md文档进阶用法一、mermaid语法1、mermaid语法介绍 什么是mermaid语法 Mermaid是一种基于Javascript的绘图工具，使用类似于Markdown的语法，使用户可以方便快捷地通过代码创建图表。 项目源码：https:&#x2F;&#x2F;github.com&#x2F;mermaid-js&#x2F;mermaid。   如何使用该语法 使用集成了Mermaid渲染功能的Markdown编辑器，如Typor">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2021-12-06T02:59:00.000Z">
-<meta property="article:modified_time" content="2023-04-13T08:51:57.250Z">
+<meta property="article:modified_time" content="2023-04-21T03:06:40.291Z">
 <meta property="article:author" content="寇强">
 <meta property="article:tag" content="markdown">
 <meta name="twitter:card" content="summary">
@@ -1791,7 +1791,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1681568257040),
+    lastupdate: new Date(1682046449667),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc"],
@@ -2662,34 +2662,133 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <h1 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h1><blockquote>
-<p>jdnvjdvfn</p>
-<blockquote>
-<p>vrkvid</p>
-<p> idfnvfi</p>
-<blockquote>
-<p>hvruevur</p>
-</blockquote>
-</blockquote>
-</blockquote>
-<p><kbd>Win</kbd> + <kbd>Shift</kbd> + <kbd>s</kbd> ：截<br>强制换行</p>
-<p>横向流程图：<code>mermaid</code>语法</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">graph LR</span><br><span class="line">A[方括号是方形] --&gt;B(圆括号是圆角)</span><br><span class="line">    B --&gt; C&#123;花括号是菱形条件a&#125;</span><br><span class="line">    C --&gt;|a=1| A[方括号是方形]</span><br><span class="line">    C --&gt;|a=2| E[结果2]</span><br></pre></td></tr></table></figure>
+    <h1 id="md文档进阶用法"><a href="#md文档进阶用法" class="headerlink" title="md文档进阶用法"></a>md文档进阶用法</h1><h2 id="一、mermaid语法"><a href="#一、mermaid语法" class="headerlink" title="一、mermaid语法"></a>一、<code>mermaid</code>语法</h2><h3 id="1、mermaid语法介绍"><a href="#1、mermaid语法介绍" class="headerlink" title="1、mermaid语法介绍"></a>1、<code>mermaid</code>语法介绍</h3><ul>
+<li>什么是<code>mermaid</code>语法<ul>
+<li>Mermaid是一种基于<code>Javascript</code>的绘图工具，使用类似于<code>Markdown</code>的语法，使用户可以方便快捷地通过代码<strong>创建图表</strong>。</li>
+<li>项目源码：<a target="_blank" rel="noopener" href="https://github.com/mermaid-js/mermaid">https://github.com/mermaid-js/mermaid</a>。</li>
+</ul>
+</li>
+<li>如何使用该语法<ul>
+<li>使用集成了Mermaid渲染功能的Markdown编辑器，如<code>Typora</code>。</li>
+<li>使用特定的<code>Mermaid</code>渲染器。</li>
+</ul>
+</li>
+<li><code>Mermaid</code>能绘制那些图<ol>
+<li>饼状图<code>pie</code></li>
+<li>流程图<code>graph</code></li>
+<li>序列图<code>sequenceDiagram</code></li>
+<li>甘特图<code>gantt</code></li>
+<li>类图<code>classDiagram</code></li>
+<li>状态图<code>stateDiagram</code></li>
+<li>用户旅程图<code>journey</code></li>
+</ol>
+</li>
+<li>注释语法为：<code>%%注释内容</code></li>
+</ul>
+<h3 id="2、详解"><a href="#2、详解" class="headerlink" title="2、详解"></a>2、详解</h3><p>主要介绍饼状图和流程图，其他图几乎不用，有些还处于测试阶段暂不了解。</p>
+<h4 id="（1）饼状图：pie"><a href="#（1）饼状图：pie" class="headerlink" title="（1）饼状图：pie"></a>（1）饼状图：<code>pie</code></h4><ul>
+<li>会自动重新配比各个数值比例。</li>
+<li>不能自定义颜色位置等。</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">pie</span><br><span class="line">	title 为什么学计算机</span><br><span class="line">	&quot;嫌头发太多&quot;:20</span><br><span class="line">	&quot;嫌寿命太长&quot;:50</span><br><span class="line">	&quot;嫌晚上睡太早&quot;:50</span><br><span class="line">	&quot;嫌皮肤太好&quot;:10</span><br></pre></td></tr></table></figure>
+
+<p>显示结果：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">pie</span><br><span class="line">	title 为什么学计算机</span><br><span class="line">	&quot;嫌头发太多&quot;:20</span><br><span class="line">	&quot;嫌寿命太长&quot;:50</span><br><span class="line">	&quot;嫌晚上睡太早&quot;:50</span><br><span class="line">	&quot;嫌皮肤太好&quot;:10</span><br></pre></td></tr></table></figure>
+
+<h4 id="（2）流程图：graph"><a href="#（2）流程图：graph" class="headerlink" title="（2）流程图：graph"></a>（2）流程图：<code>graph</code></h4><h5 id="①定义方向："><a href="#①定义方向：" class="headerlink" title="①定义方向："></a>①定义方向：</h5><ul>
+<li><p>位于开头，用来定义流程图连线方向（而不是布局方向）。</p>
+</li>
+<li><p>默认<code>graph</code>或<code>graph TB</code>或<code>graph TD</code>：从上到下。</p>
+</li>
+<li><p><code>graph BT</code>：从下到上。（<code>graph DT</code>无效！）</p>
+</li>
+<li><p><code>graph LR</code>：从左到右。</p>
+</li>
+<li><p><code>graph RL</code>：从右往左。</p>
+</li>
+</ul>
+<h5 id="②定义结点："><a href="#②定义结点：" class="headerlink" title="②定义结点："></a>②定义结点：</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">graph</span><br><span class="line">	默认方形</span><br><span class="line">	节点名1[方框形状]</span><br><span class="line">	节点名2(圆角矩形)</span><br><span class="line">	节点名3([腰圆键形])</span><br><span class="line">	节点名4[[子程序形]]</span><br><span class="line">	id5[(圆柱形)]</span><br><span class="line">	id6((圆形))</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">graph</span><br><span class="line">	id7&#123;菱形&#125;</span><br><span class="line">	id8&#123;&#123;六边形&#125;&#125;</span><br><span class="line">	id9[/平行四边形/]</span><br><span class="line">	id10[\反向平行四边形\]</span><br><span class="line">	id11[/梯形\]</span><br><span class="line">	id12[\反向梯形/]</span><br></pre></td></tr></table></figure>
+
+<p>显示结果：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">graph</span><br><span class="line">	%%共有12种样式</span><br><span class="line">	默认方形</span><br><span class="line">	节点名1[方框形状]</span><br><span class="line">	节点名2(圆角矩形)</span><br><span class="line">	节点名3([腰圆键形])</span><br><span class="line">	节点名4[[子程序形]]</span><br><span class="line">	id5[(圆柱形)]</span><br><span class="line">	id6((圆形))</span><br></pre></td></tr></table></figure>
 
 
 
-<p>竖向树状图：<code>mermaid</code>语法</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">graph TD</span><br><span class="line">A((A))--&gt;B((B))</span><br><span class="line">A((A))--&gt;C((C))</span><br><span class="line">	B((B))--&gt;D((D))</span><br><span class="line">		D((D))--&gt;G((G))</span><br><span class="line">	C((C))--&gt;E((E))</span><br><span class="line">		E((E))--&gt;H((H))</span><br><span class="line">		E((E))--&gt;I((I))</span><br><span class="line">	C((C))--&gt;F((F))</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">graph</span><br><span class="line">	%%共有12种样式</span><br><span class="line">	id7&#123;菱形&#125;</span><br><span class="line">	id8&#123;&#123;六边形&#125;&#125;</span><br><span class="line">	id9[/平行四边形/]</span><br><span class="line">	id10[\反向平行四边形\]</span><br><span class="line">	id11[/梯形\]</span><br><span class="line">	id12[\反向梯形/]</span><br></pre></td></tr></table></figure>
+
+<p>注：</p>
+<ul>
+<li><p>节点名不能有空格。</p>
+</li>
+<li><p>显示内容文本里的多个连续的空格只显示一个。</p>
+</li>
+</ul>
+<h5 id="③定义连线："><a href="#③定义连线：" class="headerlink" title="③定义连线："></a>③定义连线：</h5><ul>
+<li><p>线条样式：</p>
+<p>普通直线<code>---</code>，加粗直线<code>===</code>，虚线<code>-.-</code>。</p>
+<p>增加一个相应字符即可延长线段（虚线是加<code>.</code>）。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">graph LR</span><br><span class="line">	a----b===c-...-d</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">graph LR</span><br><span class="line">	a----b===c-...-d</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>箭头样式</p>
+<p>更改线条两端的字符即可添加箭头。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">graph LR</span><br><span class="line">	a--&gt;b==&gt;c-..-&gt;d</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">graph LR</span><br><span class="line">	a--&gt;b==&gt;c-..-&gt;d</span><br></pre></td></tr></table></figure>
+
+<p>默认仅支持右箭头，将关键字<code>graph</code>改为<code>floechart</code>即可使用其他样式箭头。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">flowchart LR</span><br><span class="line">	a &lt;--&gt; b o==o c x-.-x d</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">flowchart LR</span><br><span class="line">	a &lt;--&gt; b o==o c x-.-x d</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>添加文本</p>
+<p>直接加在箭头中间，或者用<code>|文本内容|</code>加在箭头后面。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">graph LR</span><br><span class="line">	a--文本1--&gt;b==&gt;|文本2|c-.文本3.-&gt;d</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">graph LR</span><br><span class="line">	a--文本1--&gt;b==&gt;|文本2|c-.文本3.-&gt;d</span><br></pre></td></tr></table></figure>
+
+<p><code>flowchart</code>格式图的文本显示在底层：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">flowchart LR</span><br><span class="line">	a &lt;--文本--&gt; b o==文本==o c x-.文本.-x d</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">flowchart LR</span><br><span class="line">	a &lt;--文本--&gt; b o==文本==o c x-.文本.-x d</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h5 id="④多对多连接："><a href="#④多对多连接：" class="headerlink" title="④多对多连接："></a>④多对多连接：</h5><p>用<code>&amp;</code>字符连接结点即可：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">graph</span><br><span class="line">	a  &amp; b --&gt; c &amp; d</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">graph</span><br><span class="line">	a  &amp; b --&gt; c &amp; d</span><br></pre></td></tr></table></figure>
+
+<p>实例：朱元璋家谱简图，圆圈代表皇帝。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">graph LR</span><br><span class="line">emperor((朱八八))-.子.-&gt;朱五四-.子.-&gt;朱四九-.子.-&gt;朱百六</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">朱雄英--长子--&gt;朱标--长子--&gt;emperor</span><br><span class="line">emperor2((朱允炆))--次子--&gt;朱标</span><br><span class="line">朱樉--次子--&gt;emperor</span><br><span class="line">朱棡--三子--&gt;emperor</span><br><span class="line">emperor3((朱棣))--四子--&gt;emperor</span><br><span class="line">emperor4((朱高炽))--长子--&gt;emperor3</span><br></pre></td></tr></table></figure>
 
 
 
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">sta=&gt;start: 开始框</span><br><span class="line">op=&gt;operation: 处理框</span><br><span class="line">cond=&gt;condition: 判断框(是或否?)</span><br><span class="line">sub1=&gt;subroutine: 子流程</span><br><span class="line">io=&gt;inputoutput: 输入输出框</span><br><span class="line">e=&gt;end: 结束框</span><br><span class="line">sta-&gt;op-&gt;cond</span><br><span class="line">cond(yes)-&gt;io-&gt;e</span><br><span class="line">cond(no)-&gt;sub1(right)-&gt;op</span><br></pre></td></tr></table></figure>
-
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">graph LR</span><br><span class="line">emperor((朱八八))-.子.-&gt;朱五四-.子.-&gt;朱四九-.子.-&gt;朱百六</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">朱雄英--长子--&gt;朱标--长子--&gt;emperor</span><br><span class="line">emperor2((朱允炆))--次子--&gt;朱标</span><br><span class="line">朱樉--次子--&gt;emperor</span><br><span class="line">朱棡--三子--&gt;emperor</span><br><span class="line">emperor3((朱棣))--四子--&gt;emperor</span><br><span class="line">emperor4((朱高炽))--长子--&gt;emperor3</span><br></pre></td></tr></table></figure>
 
 
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">Title: 标题：复杂使用</span><br><span class="line">对象A-&gt;对象B: 对象B你好吗?（请求）</span><br><span class="line">Note right of 对象B: 对象B的描述</span><br><span class="line">Note left of 对象A: 对象A的描述(提示)</span><br><span class="line">对象B--&gt;对象A: 我很好(响应)</span><br><span class="line">对象B-&gt;小三: 你好吗</span><br><span class="line">小三--&gt;&gt;对象A: 对象B找我了</span><br><span class="line">对象A-&gt;对象B: 你真的好吗？</span><br><span class="line">Note over 小三,对象B: 我们是朋友</span><br><span class="line">participant C</span><br><span class="line">Note right of C: 没人陪我玩</span><br></pre></td></tr></table></figure>
 
+<h4 id="3、不知道叫什么名字"><a href="#3、不知道叫什么名字" class="headerlink" title="3、不知道叫什么名字"></a>3、不知道叫什么名字</h4><ul>
+<li><p><code>flowchart</code>语法：</p>
+<p><code>flowchart</code>语法只有两块内容——定义元素和连接元素。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">sta=&gt;start: 开始框:&gt;https://bilibli.com</span><br><span class="line">op=&gt;operation: 处理框</span><br><span class="line">cond=&gt;condition: 条件语句/判断框(是或否?)</span><br><span class="line">sub1=&gt;subroutine: 子流程</span><br><span class="line">io=&gt;inputoutput: 输入输出框</span><br><span class="line">e=&gt;end: 结束框</span><br><span class="line">sta-&gt;op-&gt;cond</span><br><span class="line">cond(yes)-&gt;io-&gt;e</span><br><span class="line">cond(no)-&gt;sub1(right)-&gt;op</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="4、序列图"><a href="#4、序列图" class="headerlink" title="4、序列图"></a>4、序列图</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">Title: 标题：复杂使用</span><br><span class="line">对象A-&gt;对象B: 对象B你好吗?（请求）</span><br><span class="line">Note right of 对象B: 对象B的描述</span><br><span class="line">Note left of 对象A: 对象A的描述(提示)</span><br><span class="line">对象B--&gt;对象A: 我很好(响应)</span><br><span class="line">对象B-&gt;小三: 你好吗</span><br><span class="line">小三--&gt;&gt;对象A: 对象B找我了</span><br><span class="line">对象A-&gt;对象B: 你真的好吗？</span><br><span class="line">Note over 小三,对象B: 我们是朋友</span><br><span class="line">participant C</span><br><span class="line">Note right of C: 没人陪我玩</span><br></pre></td></tr></table></figure>
+
+<h2 id="二、其它补充"><a href="#二、其它补充" class="headerlink" title="二、其它补充"></a>二、其它补充</h2><ul>
+<li><p>按钮样式<code>&lt;kbd&gt;显示文字&lt;/kbd&gt;</code>和强制换行<code>&lt;br&gt;</code>：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">kbd</span>&gt;</span></span>Win<span class="language-xml"><span class="tag">&lt;/<span class="name">kbd</span>&gt;</span></span> + <span class="language-xml"><span class="tag">&lt;<span class="name">kbd</span>&gt;</span></span>Shift<span class="language-xml"><span class="tag">&lt;/<span class="name">kbd</span>&gt;</span></span> + <span class="language-xml"><span class="tag">&lt;<span class="name">kbd</span>&gt;</span></span>s<span class="language-xml"><span class="tag">&lt;/<span class="name">kbd</span>&gt;</span></span> ：截<span class="language-xml"><span class="tag">&lt;<span class="name">br</span>&gt;</span></span>强制换行</span><br></pre></td></tr></table></figure>
+
+<p>显示效果：</p>
+<p><kbd>Win</kbd> + <kbd>Shift</kbd> + <kbd>s</kbd> ：截<br>图和强制换行</p>
+</li>
+<li><p>输入公式：</p>
+<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">$</span><span class="built_in">$</span></span><br><span class="line"><span class="keyword">\begin</span>&#123;equation&#125;</span><br><span class="line">Fib(n)=</span><br><span class="line"><span class="keyword">\left</span> <span class="keyword">\&#123;</span> <span class="keyword">\begin</span>&#123;aligned&#125;</span><br><span class="line">Fib(n-1)+Fib(n-2), n&gt;1 <span class="keyword">\\</span></span><br><span class="line">1, n=1 <span class="keyword">\\</span></span><br><span class="line">0, n=0</span><br><span class="line"><span class="keyword">\end</span>&#123;aligned&#125; <span class="keyword">\right</span>.</span><br><span class="line"><span class="keyword">\end</span>&#123;equation&#125;</span><br><span class="line"><span class="built_in">$</span><span class="built_in">$</span></span><br></pre></td></tr></table></figure>
+
+<p>显示效果：<br>$$<br>\begin{equation}<br>Fib(n)&#x3D;<br>\left { \begin{aligned}<br>Fib(n-1)+Fib(n-2), n&gt;1 \<br>1, n&#x3D;1 \<br>0, n&#x3D;0<br>\end{aligned} \right.<br>\end{equation}<br>$$</p>
+</li>
+</ul>
 
   </div>
   
@@ -2714,10 +2813,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-04-13T16:51:57+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-04-21T11:06:40+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2023年4月13日</p>
+    <p>更新于：2023年4月21日</p>
   </a>
 </div>
 
@@ -2877,7 +2976,7 @@ space空格向左，backsp...</p>
 
 
     <div class='content'>
-        
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81mermaid%E8%AF%AD%E6%B3%95"><span class="toc-text">一、mermaid语法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81mermaid%E8%AF%AD%E6%B3%95%E4%BB%8B%E7%BB%8D"><span class="toc-text">1、mermaid语法介绍</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81%E8%AF%A6%E8%A7%A3"><span class="toc-text">2、详解</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%881%EF%BC%89%E9%A5%BC%E7%8A%B6%E5%9B%BE%EF%BC%9Apie"><span class="toc-text">（1）饼状图：pie</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%882%EF%BC%89%E6%B5%81%E7%A8%8B%E5%9B%BE%EF%BC%9Agraph"><span class="toc-text">（2）流程图：graph</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E2%91%A0%E5%AE%9A%E4%B9%89%E6%96%B9%E5%90%91%EF%BC%9A"><span class="toc-text">①定义方向：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E2%91%A1%E5%AE%9A%E4%B9%89%E7%BB%93%E7%82%B9%EF%BC%9A"><span class="toc-text">②定义结点：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E2%91%A2%E5%AE%9A%E4%B9%89%E8%BF%9E%E7%BA%BF%EF%BC%9A"><span class="toc-text">③定义连线：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E2%91%A3%E5%A4%9A%E5%AF%B9%E5%A4%9A%E8%BF%9E%E6%8E%A5%EF%BC%9A"><span class="toc-text">④多对多连接：</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3%E3%80%81%E4%B8%8D%E7%9F%A5%E9%81%93%E5%8F%AB%E4%BB%80%E4%B9%88%E5%90%8D%E5%AD%97"><span class="toc-text">3、不知道叫什么名字</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4%E3%80%81%E5%BA%8F%E5%88%97%E5%9B%BE"><span class="toc-text">4、序列图</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E5%85%B6%E5%AE%83%E8%A1%A5%E5%85%85"><span class="toc-text">二、其它补充</span></a></li></ol>
     </div>
   </section>
 
@@ -3652,7 +3751,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"寇强的个人空间","url":"http://kouqiang.space/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"寇强","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://kouqiang.space/","sameAs":["https://github.com/volantis-x"],"description":"自建博客页面"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://kouqiang.space/","name":"寇强的个人空间"}},{"@type":"ListItem","position":2,"item":{"@id":"http://kouqiang.space/categories/其他工具/","name":"其他工具"}},{"@type":"ListItem","position":3,"item":{"@id":"http://kouqiang.space/2021/12/06/md文档进阶操作/"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"寇强的个人空间","url":"http://kouqiang.space/","keywords":null,"description":"自建博客页面","author":{"@type":"Person","name":"寇强","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://kouqiang.space/","description":"自建博客页面"},"publisher":{"@type":"Organization","name":"寇强的个人空间","url":"http://kouqiang.space/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://kouqiang.space?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","description":"自建博客页面","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://kouqiang.space/2021/12/06/md%E6%96%87%E6%A1%A3%E8%BF%9B%E9%98%B6%E6%93%8D%E4%BD%9C/"},"author":{"@type":"Person","name":"寇强","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://kouqiang.space/"},"publisher":{"@type":"Organization","name":"寇强的个人空间","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://kouqiang.space/2021/12/06/md%E6%96%87%E6%A1%A3%E8%BF%9B%E9%98%B6%E6%93%8D%E4%BD%9C/","wordCount":0,"datePublished":"2021-12-06T02:59:00.000Z","dateModified":"2023-04-13T08:51:57.250Z","articleSection":"其他工具","keywords":"markdown","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"寇强的个人空间","url":"http://kouqiang.space/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"寇强","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://kouqiang.space/","sameAs":["https://github.com/volantis-x"],"description":"自建博客页面"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://kouqiang.space/","name":"寇强的个人空间"}},{"@type":"ListItem","position":2,"item":{"@id":"http://kouqiang.space/categories/其他工具/","name":"其他工具"}},{"@type":"ListItem","position":3,"item":{"@id":"http://kouqiang.space/2021/12/06/md文档进阶操作/"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"寇强的个人空间","url":"http://kouqiang.space/","keywords":null,"description":"自建博客页面","author":{"@type":"Person","name":"寇强","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://kouqiang.space/","description":"自建博客页面"},"publisher":{"@type":"Organization","name":"寇强的个人空间","url":"http://kouqiang.space/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://kouqiang.space?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","description":"自建博客页面","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://kouqiang.space/2021/12/06/md%E6%96%87%E6%A1%A3%E8%BF%9B%E9%98%B6%E6%93%8D%E4%BD%9C/"},"author":{"@type":"Person","name":"寇强","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://kouqiang.space/"},"publisher":{"@type":"Organization","name":"寇强的个人空间","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://kouqiang.space/2021/12/06/md%E6%96%87%E6%A1%A3%E8%BF%9B%E9%98%B6%E6%93%8D%E4%BD%9C/","wordCount":0,"datePublished":"2021-12-06T02:59:00.000Z","dateModified":"2023-04-21T03:06:40.291Z","articleSection":"其他工具","keywords":"markdown","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
