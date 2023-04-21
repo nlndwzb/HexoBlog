@@ -44,7 +44,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2023-03-11T12:00:00.000Z">
-<meta property="article:modified_time" content="2023-04-20T14:06:05.583Z">
+<meta property="article:modified_time" content="2023-04-21T14:36:25.453Z">
 <meta property="article:author" content="寇强">
 <meta property="article:tag" content="考研笔记">
 <meta property="article:tag" content="数据结构">
@@ -1793,7 +1793,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1682053830977),
+    lastupdate: new Date(1682088779352),
     sidebar: {
       for_page: ["blogger","category","tagcloud","webinfo"],
       for_post: ["toc"],
@@ -3387,7 +3387,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">Fib</span><span class="params">(<span class="type">int</span> n)</span>&#123;						<span class="comment">//斐波那契数列的实现</span></span><br><span class="line">    <span class="keyword">if</span>(n==<span class="number">0</span>)</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;					<span class="comment">//边界条件</span></span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span>(n==<span class="number">1</span>)</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span>;					<span class="comment">//边界条件</span></span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        <span class="keyword">return</span> Fib(n<span class="number">-1</span>) + Fib(n<span class="number">-2</span>);	<span class="comment">//递归表达式</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>该递归执行过程：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">graph TD</span><br><span class="line"></span><br><span class="line">，，</span><br><span class="line"></span><br><span class="line">A[方括号是方形] --&gt;B(圆角)</span><br><span class="line">    B --&gt; C&#123;条件a&#125;</span><br><span class="line">    C --&gt;|a=1| D[结果1]</span><br><span class="line">    C --&gt;|a=2| E[结果2]</span><br><span class="line">    F[横向流程图]</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">graph TD</span><br><span class="line">id01[&quot;Fib(5)&quot;]</span><br><span class="line">id02[&quot;Fib(4)&quot;]</span><br><span class="line">id03[&quot;Fib(3)&quot;]</span><br><span class="line">id04[&quot;Fib(3)&quot;]</span><br><span class="line">id05[&quot;Fib(2)&quot;]</span><br><span class="line">id06[&quot;Fib(2)&quot;]</span><br><span class="line">id07[&quot;Fib(1)&quot;]</span><br><span class="line">id08[&quot;Fib(2)&quot;]</span><br><span class="line">id09[&quot;Fib(1)&quot;]</span><br><span class="line">id10[&quot;Fib(1)&quot;]</span><br><span class="line">id11[&quot;Fib(0)&quot;]</span><br><span class="line">id12[&quot;Fib(1)&quot;]</span><br><span class="line">id13[&quot;Fib(0)&quot;]</span><br><span class="line">id14[&quot;Fib(1)&quot;]</span><br><span class="line">id15[&quot;Fib(0)&quot;]</span><br><span class="line">id01 --- id02 &amp; id03</span><br><span class="line">id02 --- id04 &amp; id05</span><br><span class="line">id04 --- id08 &amp; id09</span><br><span class="line">id08 --- id14 &amp; id15</span><br><span class="line">id05 --- id10 &amp; id11</span><br><span class="line">id03 --- id06 &amp; id07</span><br><span class="line">id06 --- id12 &amp; id13</span><br></pre></td></tr></table></figure>
 
 <p>必须注意递归模型不能是循环定义的，其必须满足下面的两个条件：</p>
 <ul>
@@ -3522,7 +3522,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <li><p>定义：若对一个n阶矩阵A中的任意一个元素a<sub>i,j</sub>，都有a<sub>i,j</sub> &#x3D; a<sub>j,i</sub>（1&lt;&#x3D;i, j&lt;&#x3D;n），则称其为<strong>对称矩阵</strong>。</p>
 </li>
 <li><p>其中的元素可以划分为三部分，即上三角区、主对角线和下三角区，如图：</p>
-<img src="https://www.z4a.net/images/2023/04/15/MOV16J1D9O6N65QD.jpg" class="lazyload" data-srcset="https://www.z4a.net/images/2023/04/15/MOV16J1D9O6N65QD.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" style="width:40%" /></li>
+<img src="https://www.z4a.net/images/2023/04/15/MOV16J1D9O6N65QD.jpg" class="lazyload" data-srcset="https://www.z4a.net/images/2023/04/15/MOV16J1D9O6N65QD.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" style="width:40%" align="center" /></li>
 </ul>
 <ul>
 <li>对于n阶对称矩阵而言，上三角区和下三角区存放的对应数据是一样的，如果我们还采取多维数组存放所有数据元素的话那会浪费将近一半的存储空间，所以，我们只将主对角线元素和上三角区（或下三角区）的元素储存在数组<code>B[n(n+1)/2]</code>中，即元素a<sub>i,j</sub>存放在b<sub>k</sub>中。</li>
@@ -3551,10 +3551,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-04-20T22:06:05+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-04-21T22:36:25+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2023年4月20日</p>
+    <p>更新于：2023年4月21日</p>
   </a>
 </div>
 
@@ -4320,6 +4320,60 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 <!-- pjax 标签必须存在于所有页面 否则 pjax error -->
 <pjax>
 
+        <script>
+  // https://github.com/theme-next/hexo-theme-next/blob/master/layout/_third-party/math/mathjax.swig
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = "https://unpkg.com/volantis-static@0.0.1654736714924/libs/mathjax/es5/tex-mml-chtml.js";
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    // 文章章节标题不能为 “MathJax” ，否则会报错。
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typesetPromise();
+  }
+</script>
+
+
+
 </pjax>
 
 <script>
@@ -4451,7 +4505,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"寇强的个人空间","url":"http://kouqiang.space/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"寇强","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://kouqiang.space/","sameAs":["https://github.com/volantis-x"],"description":"自建博客页面"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://kouqiang.space/","name":"寇强的个人空间"}},{"@type":"ListItem","position":2,"item":{"@id":"http://kouqiang.space/categories/考研408笔记/","name":"考研408笔记"}},{"@type":"ListItem","position":3,"item":{"@id":"http://kouqiang.space/2023/03/11/24考研408笔记B——数据结构与算法/","name":"24考研408笔记B——数据结构与算法"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"寇强的个人空间","url":"http://kouqiang.space/","keywords":null,"description":"自建博客页面","author":{"@type":"Person","name":"寇强","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://kouqiang.space/","description":"自建博客页面"},"publisher":{"@type":"Organization","name":"寇强的个人空间","url":"http://kouqiang.space/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://kouqiang.space?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"24考研408笔记B——数据结构与算法","description":"自建博客页面","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://kouqiang.space/2023/03/11/24%E8%80%83%E7%A0%94408%E7%AC%94%E8%AE%B0B%E2%80%94%E2%80%94%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/"},"author":{"@type":"Person","name":"寇强","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://kouqiang.space/"},"publisher":{"@type":"Organization","name":"寇强的个人空间","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://kouqiang.space/2023/03/11/24%E8%80%83%E7%A0%94408%E7%AC%94%E8%AE%B0B%E2%80%94%E2%80%94%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/","wordCount":0,"datePublished":"2023-03-11T12:00:00.000Z","dateModified":"2023-04-20T14:06:05.583Z","articleSection":"考研408笔记","keywords":"考研笔记,数据结构,算法","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"寇强的个人空间","url":"http://kouqiang.space/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"寇强","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://kouqiang.space/","sameAs":["https://github.com/volantis-x"],"description":"自建博客页面"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://kouqiang.space/","name":"寇强的个人空间"}},{"@type":"ListItem","position":2,"item":{"@id":"http://kouqiang.space/categories/考研408笔记/","name":"考研408笔记"}},{"@type":"ListItem","position":3,"item":{"@id":"http://kouqiang.space/2023/03/11/24考研408笔记B——数据结构与算法/","name":"24考研408笔记B——数据结构与算法"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"寇强的个人空间","url":"http://kouqiang.space/","keywords":null,"description":"自建博客页面","author":{"@type":"Person","name":"寇强","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://kouqiang.space/","description":"自建博客页面"},"publisher":{"@type":"Organization","name":"寇强的个人空间","url":"http://kouqiang.space/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://kouqiang.space?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"24考研408笔记B——数据结构与算法","description":"自建博客页面","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://kouqiang.space/2023/03/11/24%E8%80%83%E7%A0%94408%E7%AC%94%E8%AE%B0B%E2%80%94%E2%80%94%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/"},"author":{"@type":"Person","name":"寇强","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://kouqiang.space/"},"publisher":{"@type":"Organization","name":"寇强的个人空间","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://kouqiang.space/2023/03/11/24%E8%80%83%E7%A0%94408%E7%AC%94%E8%AE%B0B%E2%80%94%E2%80%94%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/","wordCount":0,"datePublished":"2023-03-11T12:00:00.000Z","dateModified":"2023-04-21T14:36:25.453Z","articleSection":"考研408笔记","keywords":"考研笔记,数据结构,算法","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
