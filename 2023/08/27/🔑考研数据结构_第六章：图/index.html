@@ -40,11 +40,11 @@
 <meta property="og:title" content="🔑考研数据结构_第六章：图">
 <meta property="og:url" content="http://kouqiang.space/2023/08/27/%F0%9F%94%91%E8%80%83%E7%A0%94%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84_%E7%AC%AC%E5%85%AD%E7%AB%A0%EF%BC%9A%E5%9B%BE/index.html">
 <meta property="og:site_name" content="寇强的个人空间">
-<meta property="og:description" content="🔑考研数据结构_第六章：图2023.3.11开始 第六章、图（一）图的基本概念1、定义： 线性表是一对一，树是一对多，图就是多对多。 图由顶点和边组成，顶点即数据节点，边即顶点间的联系，每条边都一定连接着两个顶点，但每个顶点不一定有几条边相连。 图G由顶点集V和边集E组成，记为G &#x3D; (V, E)；V(G)表示图G中所有顶点的集合，为有限非空集；E(G)表示图G中所有边的集合，可以是空集。 **">
+<meta property="og:description" content="🔑考研数据结构_第六章：图第六章、图（一）图的基本概念1、定义： 线性表是一对一，树是一对多，图就是多对多。 图由顶点和边组成，顶点即数据节点，边即顶点间的联系，每条边都一定连接着两个顶点，但每个顶点不一定有几条边相连。 图G由顶点集V和边集E组成，记为G &#x3D; (V, E)；V(G)表示图G中所有顶点的集合，为有限非空集；E(G)表示图G中所有边的集合，可以是空集。 **|V|表示图G中顶点的总">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2023-08-27T00:00:00.000Z">
-<meta property="article:modified_time" content="2023-09-02T09:17:35.700Z">
+<meta property="article:modified_time" content="2023-09-04T09:57:02.622Z">
 <meta property="article:author" content="寇强">
 <meta property="article:tag" content="考研笔记">
 <meta property="article:tag" content="数据结构">
@@ -1792,7 +1792,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1693646512549),
+    lastupdate: new Date(1693821704466),
     sidebar: {
       for_page: ["blogger","category","tagcloud","webinfo"],
       for_post: ["toc"],
@@ -2712,8 +2712,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <h1 id="🔑考研数据结构-第六章：图"><a href="#🔑考研数据结构-第六章：图" class="headerlink" title="🔑考研数据结构_第六章：图"></a>🔑考研数据结构_第六章：图</h1><p>2023.3.11开始</p>
-<h2 id="第六章、图"><a href="#第六章、图" class="headerlink" title="第六章、图"></a>第六章、图</h2><h3 id="（一）图的基本概念"><a href="#（一）图的基本概念" class="headerlink" title="（一）图的基本概念"></a>（一）图的基本概念</h3><h4 id="1、定义："><a href="#1、定义：" class="headerlink" title="1、定义："></a>1、定义：</h4><ul>
+    <h1 id="🔑考研数据结构-第六章：图"><a href="#🔑考研数据结构-第六章：图" class="headerlink" title="🔑考研数据结构_第六章：图"></a>🔑考研数据结构_第六章：图</h1><h2 id="第六章、图"><a href="#第六章、图" class="headerlink" title="第六章、图"></a>第六章、图</h2><h3 id="（一）图的基本概念"><a href="#（一）图的基本概念" class="headerlink" title="（一）图的基本概念"></a>（一）图的基本概念</h3><h4 id="1、定义："><a href="#1、定义：" class="headerlink" title="1、定义："></a>1、定义：</h4><ul>
 <li>线性表是一对一，树是一对多，图就是多对多。</li>
 <li>图由顶点和边组成，顶点即数据节点，边即顶点间的联系，每条边都一定连接着两个顶点，但每个顶点不一定有几条边相连。</li>
 <li><u>图G</u>由<u>顶点集V</u>和<u>边集E</u>组成，记为<code>G = (V, E)</code>；V(G)表示图G中所有顶点的集合，<strong>为有限非空集</strong>；E(G)表示图G中所有边的集合，<strong>可以是空集</strong>。</li>
@@ -2735,7 +2734,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </li>
 <li><p>有向图</p>
 <ul>
-<li>边为有向边的图称为有向图，有向边也称为<strong>弧</strong>。</li>
+<li>边为有向边的图称为有向图，有向边也称为<strong>弧</strong>：从左指向右，从弧尾指向弧头。</li>
 <li>弧是顶点的有序对，记为<code>&lt;v,w&gt;</code>，其中<code>v</code>、<code>w</code>为顶点，<code>v</code>称为<strong>弧尾</strong>，<code>w</code>称为<strong>弧头</strong>，<code>&lt;v,w&gt;</code>≠<code>&lt;w,v&gt;</code>。</li>
 <li><code>&lt;v,w&gt;</code>称为从顶点<code>v</code>到顶点<code>w</code>的弧，表示<code>v</code>邻接到<code>w</code>，或<code>w</code>邻接自<code>v</code>。</li>
 </ul>
@@ -2951,7 +2950,168 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <td>须遍历对应行或列，较为方便</td>
 </tr>
 </tbody></table>
-<h4 id="3、十字链表、邻接多重表"><a href="#3、十字链表、邻接多重表" class="headerlink" title="3、十字链表、邻接多重表"></a>3、十字链表、邻接多重表</h4><h2 id="第七章、查找"><a href="#第七章、查找" class="headerlink" title="第七章、查找"></a>第七章、查找</h2><h2 id="第八章、排序"><a href="#第八章、排序" class="headerlink" title="第八章、排序"></a>第八章、排序</h2>
+<h4 id="3、十字链表、邻接多重表"><a href="#3、十字链表、邻接多重表" class="headerlink" title="3、十字链表、邻接多重表"></a>3、十字链表、邻接多重表</h4><p>十字链表用于存储有向图，邻接多重表由于存储无向图。</p>
+<h5 id="（1）十字链表法"><a href="#（1）十字链表法" class="headerlink" title="（1）十字链表法"></a>（1）十字链表法</h5><img src="https://www.z4a.net/images/2023/09/03/image.png" class="lazyload" data-srcset="https://www.z4a.net/images/2023/09/03/image.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image.png" align="center" style="width:80%; border:1px solid lightgray" />
+
+<ul>
+<li>空间复杂度：O(|E|+|V| )。</li>
+<li>如何找到指定顶点的所有出边？——顺着绿色线路找。</li>
+<li>如何找到指定顶点的所有入边？——顺着橙色线路找。</li>
+</ul>
+<p>注：十字链表法只适合存储<strong>有向图</strong>！</p>
+<h5 id="（2）邻接多重表法"><a href="#（2）邻接多重表法" class="headerlink" title="（2）邻接多重表法"></a>（2）邻接多重表法</h5><img src="https://www.z4a.net/images/2023/09/03/imagee4a3d179ff6faf8c.png" class="lazyload" data-srcset="https://www.z4a.net/images/2023/09/03/imagee4a3d179ff6faf8c.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="imagee4a3d179ff6faf8c.png" align="center" style="width:80%; border:1px solid lightgray" />
+
+<ul>
+<li>空间复杂度：O(|V|+|E|)。</li>
+<li>删除边、结点等操作很方便。</li>
+</ul>
+<p>注：邻接多重表只适用于存储无向图！</p>
+<h3 id="（三）图的基本操作"><a href="#（三）图的基本操作" class="headerlink" title="（三）图的基本操作"></a>（三）图的基本操作</h3><ul>
+<li><p><code>Adjacent(G,x,y)</code>：判断图G是否存在边(x,y)或&lt;x,y&gt;：</p>
+<ul>
+<li><p>对于无向图：</p>
+<img src="https://www.z4a.net/images/2023/09/04/imageb3a6f424f363fb40.png" class="lazyload" data-srcset="https://www.z4a.net/images/2023/09/04/imageb3a6f424f363fb40.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="imageb3a6f424f363fb40.png" align="center" style="width:80%; border:1px solid lightgray" />
+
+<p>邻接矩阵法：</p>
+<blockquote>
+<p>只需判断两个目标结点在邻接矩阵中的对应位置的矩阵元素值是否为<code>1</code>即可，为<code>1</code>则存在，为<code>0</code>不存在。</p>
+<p>时间复杂度为O(1)。</p>
+</blockquote>
+<p>邻接表法：</p>
+<blockquote>
+<p>遍历其中一个结点的所有边结点。</p>
+<p>时间复杂度：O(1)~O(|V|)。</p>
+</blockquote>
+</li>
+<li><p>对于有向图：</p>
+<img src="https://www.z4a.net/images/2023/09/04/image5c50ef9da3334b03.png" class="lazyload" data-srcset="https://www.z4a.net/images/2023/09/04/image5c50ef9da3334b03.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image5c50ef9da3334b03.png" align="center" style="width:80%; border:1px solid lightgray" />
+
+<p>原理同上。</p>
+</li>
+</ul>
+</li>
+<li><p><code>Neighbors(G, x)</code>：列出图G中与结点x相邻的边：</p>
+<ul>
+<li><p>无向图：</p>
+<img src="https://www.z4a.net/images/2023/09/04/image4a976a6b9bcd9382.png" class="lazyload" data-srcset="https://www.z4a.net/images/2023/09/04/image4a976a6b9bcd9382.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image4a976a6b9bcd9382.png" align="center" style="width:80%; border:1px solid lightgray" />
+
+<p>邻接矩阵法：</p>
+<blockquote>
+<p>遍历目标节点在矩阵中的所在行&#x2F;列，把值为<code>1</code>的元素全找出来即可。</p>
+<p>时间复杂度为O(|V|)。</p>
+</blockquote>
+<p>邻接表：</p>
+<blockquote>
+<p>遍历目标结点对应的链表即可</p>
+<p>时间复杂度：O(1)~O(|V|)。</p>
+</blockquote>
+</li>
+<li><p>有向图</p>
+<img src="https://www.z4a.net/images/2023/09/04/image1130f8f87a87aa3d.png" class="lazyload" data-srcset="https://www.z4a.net/images/2023/09/04/image1130f8f87a87aa3d.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image1130f8f87a87aa3d.png" align="center" style="width:80%; border:1px solid lightgray" />
+
+<p>邻接矩阵法：</p>
+<blockquote>
+<p>找出边遍历对应的行，找入边遍历对应的列。</p>
+<p>时间复杂度为O(|V|)。</p>
+</blockquote>
+<p>邻接表：</p>
+<blockquote>
+<p>找出边同上，而要找入边的话就必须遍历所有的边才行！</p>
+<p>时间复杂度：出边为O(1)~O(|V|)，而入边为O(|E|)。</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p><code>InsertVertex(G, x)</code>：在图G中插入顶点x：</p>
+<p>无向图和有向图都是如此：</p>
+<img src="https://www.z4a.net/images/2023/09/04/imagee8cff384501b8724.png" class="lazyload" data-srcset="https://www.z4a.net/images/2023/09/04/imagee8cff384501b8724.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="imagee8cff384501b8724.png" align="center" style="width:80%; border:1px solid lightgray" />
+
+<p>直接在矩阵或邻接表末尾插入即可。</p>
+</li>
+<li><p><code>DeleteVertex(G, x)</code>：从图G中删除顶点x：</p>
+<ul>
+<li><p>无向图：</p>
+<img src="https://www.z4a.net/images/2023/09/04/image24ffabf0bfe71b1e.png" class="lazyload" data-srcset="https://www.z4a.net/images/2023/09/04/image24ffabf0bfe71b1e.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image24ffabf0bfe71b1e.png" align="center" style="width:80%; border:1px solid lightgray" />
+
+<p>邻接矩阵法：</p>
+<blockquote>
+<p>在矩阵中将目标结点所在的行和列的所有元素值都改为<code>0</code>，再将用于存储结点的一维数组中的结点删去；</p>
+<p>给结点结构体中添加一个<code>bool</code>类型的判空标识，这样删除结点时只需改动此标识即可。</p>
+<p>只需修改矩阵中一行和一列的元素，时间复杂度为O(|V|)。</p>
+</blockquote>
+<p>邻接表：</p>
+<blockquote>
+<p>除了要删除结点和结点指向链表中所有数据，还要遍历整个链表找到所有相关的边进行删除。</p>
+<p>时间复杂度O(|1|)~O(|E|)。</p>
+<img src="https://www.z4a.net/images/2023/09/04/imagea1285260127fa6e0.png" class="lazyload" data-srcset="https://www.z4a.net/images/2023/09/04/imagea1285260127fa6e0.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="imagea1285260127fa6e0.png" align="center" style="width:30%; border:1px solid lightgray" />
+</blockquote>
+</li>
+<li><p>有向图：</p>
+<img src="https://www.z4a.net/images/2023/09/04/image67501282e43f2c93.png" class="lazyload" data-srcset="https://www.z4a.net/images/2023/09/04/image67501282e43f2c93.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image67501282e43f2c93.png" align="center" style="width:80%; border:1px solid lightgray" />
+
+<p>邻接矩阵：同上。</p>
+<p>邻接链表：</p>
+<blockquote>
+<p>删除出边只需删除结点指向的链表即可，时间复杂度为O(1)~O(|V|)；</p>
+<p>但删除入边就需要遍历找入边了，时间复杂度为O(|E|)。</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p><code>AddEdge(G, x, y)</code>：若边<code>(x,y)``&lt;x,y&gt;</code>不存在，则向图G中添加该边。</p>
+<img src="https://www.z4a.net/images/2023/09/04/image2b6c56dcf6ba6b78.png" class="lazyload" data-srcset="https://www.z4a.net/images/2023/09/04/image2b6c56dcf6ba6b78.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image2b6c56dcf6ba6b78.png" align="center" style="width:80%; border:1px solid lightgray" />
+
+<ul>
+<li><p>无向图和有向图相同：</p>
+<p>邻接矩阵：只需更改矩阵里的对应元素值为<code>1</code>即可，时间复杂度为O(1)。</p>
+<p>邻接链表：在对应结点的对应链表中，采用尾插法或头插法都可，时间复杂度为O(1)~O(|V|)。</p>
+</li>
+</ul>
+</li>
+<li><p><code>FirstNeighbor(G,x)</code>：求图<strong>G</strong>中顶点<code>x</code>的第一个邻接点，若有则返回顶点号，若<code>x</code>无邻接顶点或图中不存在<code>x</code>，则返回<code>-1</code>：</p>
+<ul>
+<li><p>无向图</p>
+<img src="https://www.z4a.net/images/2023/09/04/image7baf63a73363808d.png" class="lazyload" data-srcset="https://www.z4a.net/images/2023/09/04/image7baf63a73363808d.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image7baf63a73363808d.png" align="center" style="width:80%; border:1px solid lightgray" />
+
+<p>邻接矩阵：</p>
+<blockquote>
+<p>只需扫描对应的行或列，遇到的第一个值为<code>1</code>的数据返回即可。</p>
+<p>时间复杂度为O(1)~O(|V|)。</p>
+</blockquote>
+<p>邻接链表：</p>
+<blockquote>
+<p>只需扫描结点对应的链表，返回该链表中第一个元素即可。</p>
+<p>时间复杂度为O(1)。</p>
+</blockquote>
+</li>
+<li><p>有向图：</p>
+<img src="https://www.z4a.net/images/2023/09/04/imageac5a0e46f730b0d2.png" class="lazyload" data-srcset="https://www.z4a.net/images/2023/09/04/imageac5a0e46f730b0d2.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="imageac5a0e46f730b0d2.png" align="center" style="width:80%; border:1px solid lightgray" />
+
+<p>邻接矩阵：</p>
+<blockquote>
+<p>原理同上，找出边横向遍历，找入边纵向遍历。</p>
+<p>时间复杂度为O(1)~O(|V|)。</p>
+</blockquote>
+<p>邻接链表：</p>
+<blockquote>
+<p>同样，找出边一步到位，找入边就得遍历了。</p>
+<p>时间复杂度为O(1)~O(|E|)。</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p><code>NextNeighbor(G, x, y)</code>：<code>x</code>为<code>y</code>的邻接点，找出<code>x</code>的除<code>y</code>之外的下一个邻接点，若有则返回顶点号，若无（<code>y</code>是<code>x</code>的最后一个邻接点）则返回<code>-1</code>：</p>
+<p>算法在<code>FirstNeighbor(G,x)</code>的基础上，找到第<code>y</code>个，再往下扫描一个即可。</p>
+<img src="https://www.z4a.net/images/2023/09/04/image5a8be73d8c9e3721.png" class="lazyload" data-srcset="https://www.z4a.net/images/2023/09/04/image5a8be73d8c9e3721.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image5a8be73d8c9e3721.png" align="center" style="width:80%; border:1px solid lightgray" />
+</li>
+<li><p><code>Get_edge_value(G, x, y)</code>和<code>Set_edge_value(G, x, y, v)</code>：获取和设置某条边的权值：</p>
+<img src="https://www.z4a.net/images/2023/09/04/image1441f6f3c23a7adc.png" class="lazyload" data-srcset="https://www.z4a.net/images/2023/09/04/image1441f6f3c23a7adc.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image1441f6f3c23a7adc.png" align="center" style="width:80%; border:1px solid lightgray" />
+
+<p>与<code>Adjacent(G,x,y)</code>雷同，在其基础上增加一条获取或修改权值的指令即可。</p>
+<p>时间复杂度：O(1)~O(|V|)。</p>
+</li>
+</ul>
+<h3 id="（四）图的遍历"><a href="#（四）图的遍历" class="headerlink" title="（四）图的遍历"></a>（四）图的遍历</h3><h2 id="第七章、查找"><a href="#第七章、查找" class="headerlink" title="第七章、查找"></a>第七章、查找</h2><h2 id="第八章、排序"><a href="#第八章、排序" class="headerlink" title="第八章、排序"></a>第八章、排序</h2>
   </div>
   
   
@@ -2975,10 +3135,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-09-02T17:17:35+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-09-04T17:57:02+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2023年9月2日</p>
+    <p>更新于：2023年9月4日</p>
   </a>
 </div>
 
@@ -3058,6 +3218,18 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
+        <a class='prev' href='/2023/09/02/LATEX%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95%E6%80%BB%E7%BB%93/'>
+          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>LATEX常用语法总结</p>
+          <p class='content'>LATEX常用语法一、入门常用行内公式：用两个美元符号即可：$公式内容$。
+多行公式：用两个+两个美元符号，公式内容与该符号不能在同一行：
+123$$......$$
+
+
+
+
+上标：^，下标：_...</p>
+        </a>
+      
       
         <a class='next' href='/2023/08/23/SVG%E5%85%A5%E9%97%A8%E5%9F%BA%E7%A1%80/'>
           <p class='title'>SVG入门基础_01<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
@@ -3121,7 +3293,7 @@ SVG 指可伸缩矢量图...</p>
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%85%AD%E7%AB%A0%E3%80%81%E5%9B%BE"><span class="toc-text">第六章、图</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%88%E4%B8%80%EF%BC%89%E5%9B%BE%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="toc-text">（一）图的基本概念</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1%E3%80%81%E5%AE%9A%E4%B9%89%EF%BC%9A"><span class="toc-text">1、定义：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2%E3%80%81%E6%97%A0%E5%90%91%E5%9B%BE%E5%92%8C%E6%9C%89%E5%90%91%E5%9B%BE"><span class="toc-text">2、无向图和有向图</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3%E3%80%81%E7%AE%80%E5%8D%95%E5%9B%BE%E4%B8%8E%E5%A4%9A%E9%87%8D%E5%9B%BE"><span class="toc-text">3、简单图与多重图</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4%E3%80%81%E9%A1%B6%E7%82%B9%E7%9A%84%E5%BA%A6%E3%80%81%E5%85%A5%E5%BA%A6%E3%80%81%E5%87%BA%E5%BA%A6"><span class="toc-text">4、顶点的度、入度、出度</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5%E3%80%81%E9%A1%B6%E7%82%B9-%E9%A1%B6%E7%82%B9%E5%85%B3%E7%B3%BB%E6%8F%8F%E8%BF%B0"><span class="toc-text">5、顶点 - 顶点关系描述</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6%E3%80%81%E8%BF%9E%E9%80%9A%E5%9B%BE%E4%B8%8E%E5%BC%BA%E8%BF%9E%E9%80%9A%E5%9B%BE"><span class="toc-text">6、连通图与强连通图</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#7%E3%80%81%E5%AD%90%E5%9B%BE"><span class="toc-text">7、子图</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#8%E3%80%81%E8%BF%9E%E9%80%9A%E5%88%86%E9%87%8F%E5%92%8C%E5%BC%BA%E8%BF%9E%E9%80%9A%E5%88%86%E9%87%8F"><span class="toc-text">8、连通分量和强连通分量</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#9%E3%80%81%E7%94%9F%E6%88%90%E6%A0%91%E4%B8%8E%E7%94%9F%E6%88%90%E6%A3%AE%E6%9E%97"><span class="toc-text">9、生成树与生成森林</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#10%E3%80%81%E8%BE%B9%E7%9A%84%E6%9D%83%E3%80%81%E5%B8%A6%E6%9D%83%E5%9B%BE-x2F-%E7%BD%91"><span class="toc-text">10、边的权、带权图&#x2F;网</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#11%E3%80%81%E5%87%A0%E7%A7%8D%E7%89%B9%E6%AE%8A%E7%9A%84%E5%9B%BE"><span class="toc-text">11、几种特殊的图</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%EF%BC%881%EF%BC%89%E5%AE%8C%E5%85%A8%E5%9B%BE"><span class="toc-text">（1）完全图</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%EF%BC%882%EF%BC%89%E7%A8%80%E7%96%8F%E5%9B%BE%E5%92%8C%E7%A8%A0%E5%AF%86%E5%9B%BE"><span class="toc-text">（2）稀疏图和稠密图</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%EF%BC%883%EF%BC%89%E6%A0%91%E5%92%8C%E6%A3%AE%E6%9E%97"><span class="toc-text">（3）树和森林</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%88%E4%BA%8C%EF%BC%89%E5%9B%BE%E7%9A%84%E5%AD%98%E5%82%A8"><span class="toc-text">（二）图的存储</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1%E3%80%81%E9%82%BB%E6%8E%A5%E7%9F%A9%E9%98%B5%E6%B3%95"><span class="toc-text">1、邻接矩阵法</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%EF%BC%881%EF%BC%89%E6%99%AE%E9%80%9A%E5%9B%BE"><span class="toc-text">（1）普通图</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%EF%BC%882%EF%BC%89%E5%B8%A6%E6%9D%83%E5%9B%BE"><span class="toc-text">（2）带权图</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%EF%BC%883%EF%BC%89%E6%80%A7%E8%83%BD%E5%88%86%E6%9E%90"><span class="toc-text">（3）性能分析</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%EF%BC%884%EF%BC%89%E9%82%BB%E6%8E%A5%E7%9F%A9%E9%98%B5%E7%9A%84%E7%89%B9%E6%AE%8A%E6%80%A7%E8%B4%A8"><span class="toc-text">（4）邻接矩阵的特殊性质</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2%E3%80%81%E9%82%BB%E6%8E%A5%E8%A1%A8%E6%B3%95"><span class="toc-text">2、邻接表法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3%E3%80%81%E5%8D%81%E5%AD%97%E9%93%BE%E8%A1%A8%E3%80%81%E9%82%BB%E6%8E%A5%E5%A4%9A%E9%87%8D%E8%A1%A8"><span class="toc-text">3、十字链表、邻接多重表</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%83%E7%AB%A0%E3%80%81%E6%9F%A5%E6%89%BE"><span class="toc-text">第七章、查找</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%85%AB%E7%AB%A0%E3%80%81%E6%8E%92%E5%BA%8F"><span class="toc-text">第八章、排序</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%85%AD%E7%AB%A0%E3%80%81%E5%9B%BE"><span class="toc-text">第六章、图</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%88%E4%B8%80%EF%BC%89%E5%9B%BE%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="toc-text">（一）图的基本概念</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1%E3%80%81%E5%AE%9A%E4%B9%89%EF%BC%9A"><span class="toc-text">1、定义：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2%E3%80%81%E6%97%A0%E5%90%91%E5%9B%BE%E5%92%8C%E6%9C%89%E5%90%91%E5%9B%BE"><span class="toc-text">2、无向图和有向图</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3%E3%80%81%E7%AE%80%E5%8D%95%E5%9B%BE%E4%B8%8E%E5%A4%9A%E9%87%8D%E5%9B%BE"><span class="toc-text">3、简单图与多重图</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4%E3%80%81%E9%A1%B6%E7%82%B9%E7%9A%84%E5%BA%A6%E3%80%81%E5%85%A5%E5%BA%A6%E3%80%81%E5%87%BA%E5%BA%A6"><span class="toc-text">4、顶点的度、入度、出度</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5%E3%80%81%E9%A1%B6%E7%82%B9-%E9%A1%B6%E7%82%B9%E5%85%B3%E7%B3%BB%E6%8F%8F%E8%BF%B0"><span class="toc-text">5、顶点 - 顶点关系描述</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6%E3%80%81%E8%BF%9E%E9%80%9A%E5%9B%BE%E4%B8%8E%E5%BC%BA%E8%BF%9E%E9%80%9A%E5%9B%BE"><span class="toc-text">6、连通图与强连通图</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#7%E3%80%81%E5%AD%90%E5%9B%BE"><span class="toc-text">7、子图</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#8%E3%80%81%E8%BF%9E%E9%80%9A%E5%88%86%E9%87%8F%E5%92%8C%E5%BC%BA%E8%BF%9E%E9%80%9A%E5%88%86%E9%87%8F"><span class="toc-text">8、连通分量和强连通分量</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#9%E3%80%81%E7%94%9F%E6%88%90%E6%A0%91%E4%B8%8E%E7%94%9F%E6%88%90%E6%A3%AE%E6%9E%97"><span class="toc-text">9、生成树与生成森林</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#10%E3%80%81%E8%BE%B9%E7%9A%84%E6%9D%83%E3%80%81%E5%B8%A6%E6%9D%83%E5%9B%BE-x2F-%E7%BD%91"><span class="toc-text">10、边的权、带权图&#x2F;网</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#11%E3%80%81%E5%87%A0%E7%A7%8D%E7%89%B9%E6%AE%8A%E7%9A%84%E5%9B%BE"><span class="toc-text">11、几种特殊的图</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%EF%BC%881%EF%BC%89%E5%AE%8C%E5%85%A8%E5%9B%BE"><span class="toc-text">（1）完全图</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%EF%BC%882%EF%BC%89%E7%A8%80%E7%96%8F%E5%9B%BE%E5%92%8C%E7%A8%A0%E5%AF%86%E5%9B%BE"><span class="toc-text">（2）稀疏图和稠密图</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%EF%BC%883%EF%BC%89%E6%A0%91%E5%92%8C%E6%A3%AE%E6%9E%97"><span class="toc-text">（3）树和森林</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%88%E4%BA%8C%EF%BC%89%E5%9B%BE%E7%9A%84%E5%AD%98%E5%82%A8"><span class="toc-text">（二）图的存储</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1%E3%80%81%E9%82%BB%E6%8E%A5%E7%9F%A9%E9%98%B5%E6%B3%95"><span class="toc-text">1、邻接矩阵法</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%EF%BC%881%EF%BC%89%E6%99%AE%E9%80%9A%E5%9B%BE"><span class="toc-text">（1）普通图</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%EF%BC%882%EF%BC%89%E5%B8%A6%E6%9D%83%E5%9B%BE"><span class="toc-text">（2）带权图</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%EF%BC%883%EF%BC%89%E6%80%A7%E8%83%BD%E5%88%86%E6%9E%90"><span class="toc-text">（3）性能分析</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%EF%BC%884%EF%BC%89%E9%82%BB%E6%8E%A5%E7%9F%A9%E9%98%B5%E7%9A%84%E7%89%B9%E6%AE%8A%E6%80%A7%E8%B4%A8"><span class="toc-text">（4）邻接矩阵的特殊性质</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2%E3%80%81%E9%82%BB%E6%8E%A5%E8%A1%A8%E6%B3%95"><span class="toc-text">2、邻接表法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3%E3%80%81%E5%8D%81%E5%AD%97%E9%93%BE%E8%A1%A8%E3%80%81%E9%82%BB%E6%8E%A5%E5%A4%9A%E9%87%8D%E8%A1%A8"><span class="toc-text">3、十字链表、邻接多重表</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%EF%BC%881%EF%BC%89%E5%8D%81%E5%AD%97%E9%93%BE%E8%A1%A8%E6%B3%95"><span class="toc-text">（1）十字链表法</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%EF%BC%882%EF%BC%89%E9%82%BB%E6%8E%A5%E5%A4%9A%E9%87%8D%E8%A1%A8%E6%B3%95"><span class="toc-text">（2）邻接多重表法</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%88%E4%B8%89%EF%BC%89%E5%9B%BE%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C"><span class="toc-text">（三）图的基本操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%88%E5%9B%9B%EF%BC%89%E5%9B%BE%E7%9A%84%E9%81%8D%E5%8E%86"><span class="toc-text">（四）图的遍历</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%83%E7%AB%A0%E3%80%81%E6%9F%A5%E6%89%BE"><span class="toc-text">第七章、查找</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%85%AB%E7%AB%A0%E3%80%81%E6%8E%92%E5%BA%8F"><span class="toc-text">第八章、排序</span></a></li></ol>
     </div>
   </section>
 
@@ -3923,7 +4095,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"寇强的个人空间","url":"http://kouqiang.space/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"寇强","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://kouqiang.space/","sameAs":["https://github.com/volantis-x"],"description":"自建博客页面"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://kouqiang.space/","name":"寇强的个人空间"}},{"@type":"ListItem","position":2,"item":{"@id":"http://kouqiang.space/categories/考研408笔记/","name":"考研408笔记"}},{"@type":"ListItem","position":3,"item":{"@id":"http://kouqiang.space/2023/08/27/🔑考研数据结构_第六章：图/","name":"🔑考研数据结构_第六章：图"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"寇强的个人空间","url":"http://kouqiang.space/","keywords":null,"description":"自建博客页面","author":{"@type":"Person","name":"寇强","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://kouqiang.space/","description":"自建博客页面"},"publisher":{"@type":"Organization","name":"寇强的个人空间","url":"http://kouqiang.space/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://kouqiang.space?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"🔑考研数据结构_第六章：图","description":"自建博客页面","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://kouqiang.space/2023/08/27/%F0%9F%94%91%E8%80%83%E7%A0%94%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84_%E7%AC%AC%E5%85%AD%E7%AB%A0%EF%BC%9A%E5%9B%BE/"},"author":{"@type":"Person","name":"寇强","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://kouqiang.space/"},"publisher":{"@type":"Organization","name":"寇强的个人空间","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://kouqiang.space/2023/08/27/%F0%9F%94%91%E8%80%83%E7%A0%94%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84_%E7%AC%AC%E5%85%AD%E7%AB%A0%EF%BC%9A%E5%9B%BE/","wordCount":0,"datePublished":"2023-08-27T00:00:00.000Z","dateModified":"2023-09-02T09:17:35.700Z","articleSection":"考研408笔记","keywords":"考研笔记,数据结构","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"寇强的个人空间","url":"http://kouqiang.space/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"寇强","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://kouqiang.space/","sameAs":["https://github.com/volantis-x"],"description":"自建博客页面"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://kouqiang.space/","name":"寇强的个人空间"}},{"@type":"ListItem","position":2,"item":{"@id":"http://kouqiang.space/categories/考研408笔记/","name":"考研408笔记"}},{"@type":"ListItem","position":3,"item":{"@id":"http://kouqiang.space/2023/08/27/🔑考研数据结构_第六章：图/","name":"🔑考研数据结构_第六章：图"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"寇强的个人空间","url":"http://kouqiang.space/","keywords":null,"description":"自建博客页面","author":{"@type":"Person","name":"寇强","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://kouqiang.space/","description":"自建博客页面"},"publisher":{"@type":"Organization","name":"寇强的个人空间","url":"http://kouqiang.space/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://kouqiang.space?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"🔑考研数据结构_第六章：图","description":"自建博客页面","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://kouqiang.space/2023/08/27/%F0%9F%94%91%E8%80%83%E7%A0%94%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84_%E7%AC%AC%E5%85%AD%E7%AB%A0%EF%BC%9A%E5%9B%BE/"},"author":{"@type":"Person","name":"寇强","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://kouqiang.space/"},"publisher":{"@type":"Organization","name":"寇强的个人空间","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://kouqiang.space/2023/08/27/%F0%9F%94%91%E8%80%83%E7%A0%94%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84_%E7%AC%AC%E5%85%AD%E7%AB%A0%EF%BC%9A%E5%9B%BE/","wordCount":0,"datePublished":"2023-08-27T00:00:00.000Z","dateModified":"2023-09-04T09:57:02.622Z","articleSection":"考研408笔记","keywords":"考研笔记,数据结构","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
