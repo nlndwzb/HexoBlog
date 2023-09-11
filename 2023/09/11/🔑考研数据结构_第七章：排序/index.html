@@ -5,8 +5,8 @@
   <meta name="Volantis" content="5.7.7">
   <meta charset="utf-8">
   <!-- SEO相关 -->
-  <meta name="robots" content="noindex,follow">
-  <link rel="canonical" href="http://kouqiang.space/archives/2023/09/"/>
+  
+  <link rel="canonical" href="http://kouqiang.space/2023/09/11/🔑考研数据结构_第七章：排序/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -32,18 +32,23 @@
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>归档：2023/9 - 寇强的个人空间</title>
-  <meta name="keywords" content="null">
+  <title>🔑考研数据结构_第七章：查找 - 寇强的个人空间</title>
+  <meta name="keywords" content="考研笔记,数据结构,算法,null">
   <meta desc name="description" content="自建博客页面 - 寇强 - 寇强的个人空间">
   
-<meta property="og:type" content="website">
-<meta property="og:title" content="寇强的个人空间">
-<meta property="og:url" content="http://kouqiang.space/archives/2023/09/index.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="🔑考研数据结构_第七章：查找">
+<meta property="og:url" content="http://kouqiang.space/2023/09/11/%F0%9F%94%91%E8%80%83%E7%A0%94%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84_%E7%AC%AC%E4%B8%83%E7%AB%A0%EF%BC%9A%E6%8E%92%E5%BA%8F/index.html">
 <meta property="og:site_name" content="寇强的个人空间">
-<meta property="og:description" content="自建博客页面">
+<meta property="og:description" content="🔑考研数据结构_第七章：查找一、基本概念 查找：在数据集合中寻找满足某种条件的数据元素的过程称为查找； 查找表（查找结构）：查找的数据集合称为查找表，它由同一类型的数据元素(或记录)组成； 关键字：数据元素中唯一标识该元素的某个数据项的值，使用基于关键字的查找，查找结果应该是唯一的。 对查找表的常见操作： 仅查找符合条件的数据元素——静态查找表——仅关注查找速度即可； 插入、删除某个数据元素——">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+<meta property="article:published_time" content="2023-09-11T06:45:00.000Z">
+<meta property="article:modified_time" content="2023-09-11T09:41:18.368Z">
 <meta property="article:author" content="寇强">
+<meta property="article:tag" content="考研笔记">
+<meta property="article:tag" content="数据结构">
+<meta property="article:tag" content="算法">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
   <style>
@@ -2217,7 +2222,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <!-- Custom Files bodyBegin begin-->
     
     <!-- Custom Files bodyBegin end-->
-    <header itemscope itemtype="http://schema.org/WPHeader" id="l_header" class="l_header auto shadow floatable blur " style='opacity: 0' >
+    <header itemscope itemtype="http://schema.org/WPHeader" id="l_header" class="l_header auto shadow floatable blur show" style='opacity: 0' >
   <div class='container'>
   <div id='wrapper'>
     <div class='nav-sub'>
@@ -2544,7 +2549,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
       <!-- see: /layout/_partial/scripts/_ctrl/coverCtrl.ejs -->
-      <div id="half" class='cover-wrapper  search' style="display: ;">
+      <div id="none" class='cover-wrapper post search' style="display: none;">
         
   <div class='cover-bg lazyload placeholder' data-bg="https://www.z4a.net/images/2023/01/13/630.png"></div>
 
@@ -2629,23 +2634,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         <div class="body-wrapper">
           
 <div id="l_main" class=''>
-	
-		
-  <section class="post-list">
-    
-      
-        
-          
-        
-          
-        
-      
-    
-    
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
   <link itemprop="mainEntityOfPage" href="http://kouqiang.space/2023/09/11/🔑考研数据结构_第七章：排序/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="寇强的个人空间">
@@ -2655,143 +2644,291 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <meta itemprop="description" content="自建博客页面">
   </span>
   
-  
+
+
   
     <span hidden>
       <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
     </span>
   
-  
+  <div class="article-meta" id="top">
     
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2023/09/11/%F0%9F%94%91%E8%80%83%E7%A0%94%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84_%E7%AC%AC%E4%B8%83%E7%AB%A0%EF%BC%9A%E6%8E%92%E5%BA%8F/"  itemprop="url">
+    
+    
+      <h1 class="title" itemprop="name headline">
         🔑考研数据结构_第七章：查找
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
+      </h1>
+      <div class='new-meta-box'>
+        
+          
+            
+<div class='new-meta-item author' itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <a itemprop="url" class='author' href="https://kouqiang.space" rel="nofollow">
+    <img itemprop="image" src="https://romanticism.space/favicon1.ico" class="lazyload" data-srcset="https://romanticism.space/favicon1.ico" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+    <p itemprop="name">寇强</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class='new-meta-item category'>
+    <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
+    <a class="category-link" href="/categories/%E8%80%83%E7%A0%94408%E7%AC%94%E8%AE%B0/">考研408笔记</a>
     
-      
-        🔑考研数据结构_第七章：查找一、基本概念
-查找：在数据集合中寻找满足某种条件的数据元素的过程称为查找；
-查找表（查找结构）：查找的数据集合称为查找表，它由同一类型的数据元素(或记录)组成；
-关键字：数据元素中唯一标识该元素的某个数据项的值，使用基于关键字的查找，查找结果应该是唯一的。
-对查找表的常见操作：
-仅查找符合条件的数据元素——静态查找表——仅关注查找速度即可；
-插入、删除某个数据元...
-      
+      <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+        <a href="/categories/%E8%80%83%E7%A0%94408%E7%AC%94%E8%AE%B0/" itemprop="url"><span itemprop="name">考研408笔记</span></a>
+      </span>
     
   </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2023-09-11T14:45:00+08:00">2023-09-11</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E8%80%83%E7%A0%94408%E7%AC%94%E8%AE%B0/">考研408笔记</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E8%80%83%E7%A0%94408%E7%AC%94%E8%AE%B0/" itemprop="url"><span itemprop="name">考研408笔记</span></a>
-            </span>
+
+
           
         
+          
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2023-09-11T14:45:00+08:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：2023年9月11日</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+
+
+
+          
+        
+        <!-- Custom Files topMeta begin-->
+        
+        <!-- Custom Files topMeta end-->
       </div>
+    
+  </div>
+
+
+  <div id="layoutHelper-page-plugins"></div>
+  <div id="post-body" itemprop="articleBody">
+    <h1 id="🔑考研数据结构-第七章：查找"><a href="#🔑考研数据结构-第七章：查找" class="headerlink" title="🔑考研数据结构_第七章：查找"></a>🔑考研数据结构_第七章：查找</h1><h2 id="一、基本概念"><a href="#一、基本概念" class="headerlink" title="一、基本概念"></a>一、基本概念</h2><ul>
+<li><strong>查找</strong>：在数据集合中寻找满足某种条件的数据元素的过程称为查找；</li>
+<li><strong>查找表（查找结构）</strong>：查找的数据集合称为查找表，它由同一类型的数据元素(或记录)组成；</li>
+<li><strong>关键字</strong>：数据元素中唯一标识该元素的某个数据项的值，使用基于关键字的查找，查找结果应该是<br>唯一的。</li>
+<li>对查找表的常见操作：<ul>
+<li>仅查找符合条件的数据元素——<strong>静态查找表</strong>——仅关注查找速度即可；</li>
+<li>插入、删除某个数据元素——<strong>动态查找表</strong>——除了查找速度，还要注意插&#x2F;删操作是否方便实现。</li>
+</ul>
+</li>
+<li>查找算法的评价指标：<ul>
+<li><strong>查找长度</strong>：在查找运算中，需要对比关键字的次数称为查找长度；</li>
+<li><strong>平均查找长度</strong>(<strong>ASL</strong>,Average Search Length)：所有查找过程中进行关键字的比较次数<strong>之和</strong>的平均值。ASL的数量级反映了查找算法的时间复杂度。</li>
+<li>评价一个查找算法的效率时，通常考虑查找成功&#x2F;查找失败<strong>两种情况</strong>的ASL。</li>
+<li>通常认为查找任何一个元素的概率都相同。</li>
+</ul>
+</li>
+</ul>
+<img src="https://www.z4a.net/images/2023/09/11/image667ba1992d69ba82.png" class="lazyload" data-srcset="https://www.z4a.net/images/2023/09/11/image667ba1992d69ba82.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image667ba1992d69ba82.png" align="center" style="width:80%; border:1px solid lightgray" />
+
+<h2 id="二、顺序查找"><a href="#二、顺序查找" class="headerlink" title="二、顺序查找"></a>二、顺序查找</h2><h3 id="（一）算法思想"><a href="#（一）算法思想" class="headerlink" title="（一）算法思想"></a>（一）算法思想</h3><p>顺序查找，又叫线性查找，通常用于线性表。<br>算法思想：从头到 jio 挨个找 (或者反过来也OK)。就是遍历对比。</p>
+<h3 id="（二）代码实现"><a href="#（二）代码实现" class="headerlink" title="（二）代码实现"></a>（二）代码实现</h3><h4 id="方法1"><a href="#方法1" class="headerlink" title="方法1"></a>方法1</h4><img src="https://www.z4a.net/images/2023/09/11/image48a3c5ae264b16de.png" class="lazyload" data-srcset="https://www.z4a.net/images/2023/09/11/image48a3c5ae264b16de.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image48a3c5ae264b16de.png" align="center" style="width:80%; border:1px solid lightgray" />
+
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//要查找的顺序表</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span>&#123;</span></span><br><span class="line">	ElemType *elem;		<span class="comment">//动态数组基址</span></span><br><span class="line">    <span class="type">int</span> TableLen;		<span class="comment">//表的长度</span></span><br><span class="line">&#125;SSTable;</span><br><span class="line"></span><br><span class="line"><span class="comment">//顺序查找——查找表ST中关键字为key的元素，返回其数组下标</span></span><br><span class="line"><span class="type">int</span> <span class="title function_">Search_Seq</span><span class="params">(SSTable ST, ElemType key)</span>&#123;</span><br><span class="line">    <span class="comment">//标记查到的元素下标</span></span><br><span class="line">    <span class="type">int</span> i;</span><br><span class="line">    <span class="comment">//循环遍历查找</span></span><br><span class="line">    <span class="keyword">for</span>(i=<span class="number">0</span>; i&lt;ST.TableLen &amp;&amp; ST.elem[i]!=key; i++);</span><br><span class="line">    <span class="comment">//循环结束，查找成功则返回查到的元素的数组下标i，没查到则返回-1</span></span><br><span class="line">    <span class="keyword">return</span> i==ST.TableLen? <span class="number">-1</span> : i;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="方法2"><a href="#方法2" class="headerlink" title="方法2"></a>方法2</h4><img src="https://www.z4a.net/images/2023/09/11/image6fb94d992f0ae70e.png" class="lazyload" data-srcset="https://www.z4a.net/images/2023/09/11/image6fb94d992f0ae70e.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image6fb94d992f0ae70e.png" align="center" style="width:80%; border:1px solid lightgray" />
+
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//查找表的0号元素默认不存储数据，查找时使其等于key，然后从尾到头遍历，查找失败则返回0</span></span><br><span class="line"><span class="type">int</span> <span class="title function_">Search_Seq</span><span class="params">(SSTable ST, ElemType key)</span>&#123;</span><br><span class="line">    ST.elem[<span class="number">0</span>]=key;</span><br><span class="line">    <span class="type">int</span> i;</span><br><span class="line">    <span class="keyword">for</span>(i=ST.Table; ST.elem[i]!=key; i--);</span><br><span class="line">    <span class="keyword">return</span> i;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="（三）性能分析"><a href="#（三）性能分析" class="headerlink" title="（三）性能分析"></a>（三）性能分析</h3><p>ASL<sub>成功</sub> &#x3D; (1+2+3+…+n)&#x2F;n &#x3D; (n+1)&#x2F;2;</p>
+<p>ASL<sub>失败</sub> &#x3D; n+1;</p>
+<p>时间复杂度为：O(n)。</p>
+<h3 id="（四）优化（对有序表）"><a href="#（四）优化（对有序表）" class="headerlink" title="（四）优化（对有序表）"></a>（四）优化（对有序表）</h3><img src="https://www.z4a.net/images/2023/09/11/imagec2ce318c395fb839.png" class="lazyload" data-srcset="https://www.z4a.net/images/2023/09/11/imagec2ce318c395fb839.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="imagec2ce318c395fb839.png" align="center" style="width:80%; border:1px solid lightgray" />
+
+<img src="https://www.z4a.net/images/2023/09/11/image02d6f4cf38710231.png" class="lazyload" data-srcset="https://www.z4a.net/images/2023/09/11/image02d6f4cf38710231.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image02d6f4cf38710231.png" align="center" style="width:80%; border:1px solid lightgray" />
+
+
+
+
+
+<h2 id="三、二分查找（折半查找）"><a href="#三、二分查找（折半查找）" class="headerlink" title="三、二分查找（折半查找）"></a>三、二分查找（折半查找）</h2><ul>
+<li>仅适用于有序的顺序表！！！</li>
+</ul>
+<h3 id="（一）算法思想-1"><a href="#（一）算法思想-1" class="headerlink" title="（一）算法思想"></a>（一）算法思想</h3><p>二分法，没什么好说的。</p>
+<img src="https://www.z4a.net/images/2023/09/11/image3e320a3cdc4ff942.png" class="lazyload" data-srcset="https://www.z4a.net/images/2023/09/11/image3e320a3cdc4ff942.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image3e320a3cdc4ff942.png" align="center" style="width:100%; border:1px solid lightgray" />
+
+
+
+<h3 id="（二）代码实现-1"><a href="#（二）代码实现-1" class="headerlink" title="（二）代码实现"></a>（二）代码实现</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//待查找的有序表</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span>&#123;</span></span><br><span class="line">    ElemType *elem;</span><br><span class="line">    <span class="type">int</span> TableLen;</span><br><span class="line">&#125;SSTable;</span><br><span class="line"></span><br><span class="line"><span class="comment">//折半查找——从表L中查找等于key的数组元素，返回数组下标</span></span><br><span class="line"><span class="type">int</span> <span class="title function_">Binary_Search</span><span class="params">(SSTable L, ElemType key)</span>&#123;</span><br><span class="line">    <span class="comment">//定义左中右三个位置的标识</span></span><br><span class="line">    <span class="type">int</span> low=<span class="number">0</span>, high=L.TableLen<span class="number">-1</span>, mid;</span><br><span class="line">    <span class="comment">//循环查找</span></span><br><span class="line">    <span class="keyword">while</span>(low&lt;=hile)&#123;</span><br><span class="line">        mid=(low+high)/<span class="number">2</span>;</span><br><span class="line">        <span class="keyword">if</span>(L.elem[mid]==key)</span><br><span class="line">            <span class="keyword">return</span> mid;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(L.elem[mid]&gt;key)</span><br><span class="line">            high=mid<span class="number">-1</span>;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            low=mid+<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//当low&gt;high时循环结束，未查找到，返回-1</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="（三）性能评估"><a href="#（三）性能评估" class="headerlink" title="（三）性能评估"></a>（三）性能评估</h3><img src="https://www.z4a.net/images/2023/09/11/image954b43254066fa73.png" class="lazyload" data-srcset="https://www.z4a.net/images/2023/09/11/image954b43254066fa73.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image954b43254066fa73.png" align="center" style="width:80%; border:1px solid lightgray" />
+
+<img src="https://www.z4a.net/images/2023/09/11/imageaece6807a86072da.png" class="lazyload" data-srcset="https://www.z4a.net/images/2023/09/11/imageaece6807a86072da.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="imageaece6807a86072da.png" align="center" style="width:80%; border:1px solid lightgray" />
+
+<img src="https://www.z4a.net/images/2023/09/11/imageef1cf47f72d33e06.png" class="lazyload" data-srcset="https://www.z4a.net/images/2023/09/11/imageef1cf47f72d33e06.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="imageef1cf47f72d33e06.png" align="center" style="width:80%; border:1px solid lightgray" />
+
+<img src="https://www.z4a.net/images/2023/09/11/image78177bb61345a2b5.png" class="lazyload" data-srcset="https://www.z4a.net/images/2023/09/11/image78177bb61345a2b5.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image78177bb61345a2b5.png" align="center" style="width:60%; border:1px solid lightgray" />
+
+<img src="https://www.z4a.net/images/2023/09/11/image8984cb3ed657b687.png" class="lazyload" data-srcset="https://www.z4a.net/images/2023/09/11/image8984cb3ed657b687.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image8984cb3ed657b687.png" align="center" style="width:80%; border:1px solid lightgray" />
+
+<img src="https://www.z4a.net/images/2023/09/11/imageb7b66d44ff24da3d.png" class="lazyload" data-srcset="https://www.z4a.net/images/2023/09/11/imageb7b66d44ff24da3d.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="imageb7b66d44ff24da3d.png" align="center" style="width:80%; border:1px solid lightgray" />
+
+
+
+<h2 id="四、索引查找（分块查找）"><a href="#四、索引查找（分块查找）" class="headerlink" title="四、索引查找（分块查找）"></a>四、索引查找（分块查找）</h2><h2 id="五、二叉排序树的定义寄运算"><a href="#五、二叉排序树的定义寄运算" class="headerlink" title="五、二叉排序树的定义寄运算"></a>五、二叉排序树的定义寄运算</h2><h2 id="六、散列查找"><a href="#六、散列查找" class="headerlink" title="六、散列查找"></a>六、散列查找</h2>
+  </div>
+  
+  
+    
+    <div class='footer'>
+       <!-- 参考资料、相关资料等 -->
       
-        <div>
-          <a class='readmore' href='/2023/09/11/%F0%9F%94%91%E8%80%83%E7%A0%94%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84_%E7%AC%AC%E4%B8%83%E7%AB%A0%EF%BC%9A%E6%8E%92%E5%BA%8F/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
+       <!-- 相关文章 -->
+      
+      <!-- 版权声明组件 -->
+      
+      <!-- 打赏组件 -->
       
     </div>
   
+  
+    
 
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-09-11T17:41:18+08:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：2023年9月11日</p>
+  </a>
 </div>
 
-          </div>
         
       
         
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://kouqiang.space/2023/09/02/LATEX常用语法总结/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="寇强的个人空间">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="寇强的个人空间">
-    <meta itemprop="description" content="自建博客页面">
-  </span>
+          
   
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2023/09/02/LATEX%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95%E6%80%BB%E7%BB%93/"  itemprop="url">
-        LATEX常用语法总结
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E8%80%83%E7%A0%94%E7%AC%94%E8%AE%B0/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>考研笔记</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>数据结构</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E7%AE%97%E6%B3%95/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>算法</p></a></div>
+  <span hidden itemprop="keywords">考研笔记 数据结构 算法</span>
+
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
     
       
-        LATEX常用语法一、入门常用行内公式：用两个美元符号即可：$公式内容$。
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://kouqiang.space/2023/09/11/%F0%9F%94%91%E8%80%83%E7%A0%94%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84_%E7%AC%AC%E4%B8%83%E7%AB%A0%EF%BC%9A%E6%8E%92%E5%BA%8F/&title=🔑考研数据结构_第七章：查找 - 寇强的个人空间&summary="
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qq.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qq.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://kouqiang.space/2023/09/11/%F0%9F%94%91%E8%80%83%E7%A0%94%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84_%E7%AC%AC%E4%B8%83%E7%AB%A0%EF%BC%9A%E6%8E%92%E5%BA%8F/&title=🔑考研数据结构_第七章：查找 - 寇强的个人空间&summary="
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qzone.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qzone.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://kouqiang.space/2023/09/11/%F0%9F%94%91%E8%80%83%E7%A0%94%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84_%E7%AC%AC%E4%B8%83%E7%AB%A0%EF%BC%9A%E6%8E%92%E5%BA%8F/&title=🔑考研数据结构_第七章：查找 - 寇强的个人空间&summary="
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/weibo.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/weibo.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+    <!-- Custom Files bottomMeta begin -->
+    
+    <!-- Custom Files bottomMeta end -->
+  </div>
+
+
+  
+  
+
+  
+    <div class="prev-next">
+      
+      
+        <a class='next' href='/2023/09/02/LATEX%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95%E6%80%BB%E7%BB%93/'>
+          <p class='title'>LATEX常用语法总结<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>LATEX常用语法一、入门常用行内公式：用两个美元符号即可：$公式内容$。
 多行公式：用两个+两个美元符号，公式内容与该符号不能在同一行：
 123$$......$$
 
 
 
 
-上标：^，下标：_。
-
-二、数学符号三、多行公式与简单对齐
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2023-09-02T17:45:00+08:00">2023-09-02</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E5%85%B6%E4%BB%96%E5%B7%A5%E5%85%B7/">其他工具</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E5%85%B6%E4%BB%96%E5%B7%A5%E5%85%B7/" itemprop="url"><span itemprop="name">其他工具</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2023/09/02/LATEX%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95%E6%80%BB%E7%BB%93/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
+上标：^，下标：_...</p>
+        </a>
       
     </div>
   
-
-</div>
-
-          </div>
-        
-      
-    
-  </section>
+  <!-- Custom Files postEnd begin-->
   
-    
+  <!-- Custom Files postEnd end-->
+</article>
+
+
   
 
 
-	
+  <article class="post white-box shadow floatable blur" id="comments">
+    <span hidden>
+      <meta itemprop="discussionUrl" content="/2023/09/11/%F0%9F%94%91%E8%80%83%E7%A0%94%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84_%E7%AC%AC%E4%B8%83%E7%AB%A0%EF%BC%9A%E6%8E%92%E5%BA%8F/index.html#comments">
+    </span>
+    <p ct><i class='fa-solid fa-comments'></i> 评论</p>
+    
+
+    <div id="layoutHelper-comments"></div>
+
+  </article>
+
+
+
+
+
+
 </div>
 <aside id='l_side' itemscope itemtype="http://schema.org/WPSideBar">
   
@@ -2800,221 +2937,52 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       
-<section class="widget blogger desktop mobile pjax">
-  <div class='content'>
-    
-      
-        <a class='avatar flat-box rectangle' href='/about/'>
-          <img no-lazy src='https://www.z4a.net/images/2023/04/21/01__256px.png'/>
-        </a>
-      
-    
-    
-      <div class='text'>
-        
-        
-        
-          <p><span id="jinrishici-sentence">寇强的个人空间</span></p>
-          <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
-        
-      </div>
-    
-    
-      <div class="social-wrapper">
-        
-          
-            <a href="/atom.xml"
-              class="social fa-solid fa-rss flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="mailto:tyc7576-626-1@qq.com"
-              class="social fa-solid fa-envelope flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="https://github.com/kq2316336903"
-              class="social fab fa-github flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="/"
-              class="social fa-solid fa-headphones-alt flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-      </div>
-    
-  </div>
-</section>
-
-    
-  
-
-  
-    
-    
-      
-  
-  <section class="widget category desktop pjax">
-    
-  <header>
-    
-      <a href='/blog/categories/'><i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <ul class="entry navigation">
-        
-          <li><a class="flat-box"
-            title="/categories/Linux/" href="/categories/Linux/"
-            active-action="action-categoriesLinux"
-            ><div class='name'>Linux</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/Typora/" href="/categories/Typora/"
-            active-action="action-categoriesTypora"
-            ><div class='name'>Typora</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/kali/" href="/categories/kali/"
-            active-action="action-categorieskali"
-            ><div class='name'>kali</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E5%85%B6%E4%BB%96%E5%B7%A5%E5%85%B7/" href="/categories/%E5%85%B6%E4%BB%96%E5%B7%A5%E5%85%B7/"
-            active-action="action-categoriesE585B6E4BB96E5B7A5E585B7"
-            ><div class='name'>其他工具</div><div class='badge'>(6)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E5%89%8D%E7%AB%AF/" href="/categories/%E5%89%8D%E7%AB%AF/"
-            active-action="action-categoriesE5898DE7ABAF"
-            ><div class='name'>前端</div><div class='badge'>(6)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" href="/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"
-            active-action="action-categoriesE58D9AE5AEA2E690ADE5BBBA"
-            ><div class='name'>博客搭建</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E5%BB%BA%E7%AD%91%E5%AD%A6/" href="/categories/%E5%BB%BA%E7%AD%91%E5%AD%A6/"
-            active-action="action-categoriesE5BBBAE7AD91E5ADA6"
-            ><div class='name'>建筑学</div><div class='badge'>(2)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E6%91%84%E5%BD%B1/" href="/categories/%E6%91%84%E5%BD%B1/"
-            active-action="action-categoriesE69184E5BDB1"
-            ><div class='name'>摄影</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E8%80%83%E7%A0%94408%E7%AC%94%E8%AE%B0/" href="/categories/%E8%80%83%E7%A0%94408%E7%AC%94%E8%AE%B0/"
-            active-action="action-categoriesE88083E7A094408E7AC94E8AEB0"
-            ><div class='name'>考研408笔记</div><div class='badge'>(8)</div></a></li>
-        
-      </ul>
-    </div>
-  </section>
-
-
-    
-  
-
-  
-    
-    
-      
-  
-  <section class="widget tagcloud desktop mobile pjax">
-    
-  <header>
-    
-      <a href='/blog/tags/'><i class="fa-solid fa-tags fa-fw" aria-hidden="true"></i><span class='name'>热门标签</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <a href="/tags/CSS/" style="font-size: 16px; color: #8b8b8b">CSS</a> <a href="/tags/C%E8%AF%AD%E8%A8%80/" style="font-size: 14px; color: #999">C语言</a> <a href="/tags/DDBot/" style="font-size: 14px; color: #999">DDBot</a> <a href="/tags/Html/" style="font-size: 14px; color: #999">Html</a> <a href="/tags/JavaScript/" style="font-size: 16px; color: #8b8b8b">JavaScript</a> <a href="/tags/LATEX/" style="font-size: 14px; color: #999">LATEX</a> <a href="/tags/Linux/" style="font-size: 14px; color: #999">Linux</a> <a href="/tags/SU/" style="font-size: 14px; color: #999">SU</a> <a href="/tags/SVG/" style="font-size: 14px; color: #999">SVG</a> <a href="/tags/Typora/" style="font-size: 16px; color: #8b8b8b">Typora</a> <a href="/tags/Vim%E7%BC%96%E8%BE%91%E5%99%A8/" style="font-size: 14px; color: #999">Vim编辑器</a> <a href="/tags/bilibili/" style="font-size: 14px; color: #999">bilibili</a> <a href="/tags/git/" style="font-size: 14px; color: #999">git</a> <a href="/tags/kali/" style="font-size: 14px; color: #999">kali</a> <a href="/tags/markdown/" style="font-size: 16px; color: #8b8b8b">markdown</a> <a href="/tags/python/" style="font-size: 14px; color: #999">python</a> <a href="/tags/%E5%89%8D%E7%AB%AF/" style="font-size: 20px; color: #707070">前端</a> <a href="/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" style="font-size: 14px; color: #999">博客搭建</a> <a href="/tags/%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/" style="font-size: 24px; color: #555">学习总结</a> <a href="/tags/%E5%B7%A5%E5%85%B7/" style="font-size: 18px; color: #7e7e7e">工具</a> <a href="/tags/%E5%BB%BA%E7%AD%91%E5%AD%A6/" style="font-size: 16px; color: #8b8b8b">建筑学</a> <a href="/tags/%E5%BF%AB%E6%8D%B7%E9%94%AE/" style="font-size: 16px; color: #8b8b8b">快捷键</a> <a href="/tags/%E6%91%84%E5%BD%B1/" style="font-size: 14px; color: #999">摄影</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" style="font-size: 22px; color: #636363">数据结构</a> <a href="/tags/%E7%AC%94%E8%AE%B0/" style="font-size: 16px; color: #8b8b8b">笔记</a> <a href="/tags/%E7%AE%97%E6%B3%95/" style="font-size: 14px; color: #999">算法</a> <a href="/tags/%E7%BC%96%E7%A8%8B/" style="font-size: 14px; color: #999">编程</a> <a href="/tags/%E8%80%83%E7%A0%94%E7%AC%94%E8%AE%B0/" style="font-size: 24px; color: #555">考研笔记</a> <a href="/tags/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/" style="font-size: 14px; color: #999">软件安装</a>
-    </div>
-  </section>
-
-
-    
-  
-
-  
-    
-    
-      
-<section class="widget desktop pjax">
-  
-  <header>
-    
-      <i class="fa-solid fa-award fa-fw" aria-hidden="true"></i><span class='name'>站点信息</span>
-    
-  </header>
-
-
-  <div class='content'>
-    <div class="webinfo">
-      
-        <div class="webinfo-item">
-          <div>文章数目：</div>
-          <div>27 篇</div>
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>已运行时间：</div>
-          <div id="webinfo-runtime-count"></div>
-        </div>
-      
-
-
-      
-
-      
-
-      
-
-      
-        <div class="webinfo-item">
-          <div>最后活动时间：</div>
-          <div id="last-update-show">2023-09-11 日</div>
-        </div>
-      
-    </div>
-  </div>
-</section>
-
     
   
 
 
 <div class="widget-sticky pjax">
 
+  
+  
+
+
+  <section class="widget toc-wrapper desktop mobile " id="toc-div" >
+    
+  <header>
+    
+      <i class="fa-solid fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
+
+
+    <div class='content'>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="toc-text">一、基本概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E9%A1%BA%E5%BA%8F%E6%9F%A5%E6%89%BE"><span class="toc-text">二、顺序查找</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%88%E4%B8%80%EF%BC%89%E7%AE%97%E6%B3%95%E6%80%9D%E6%83%B3"><span class="toc-text">（一）算法思想</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%88%E4%BA%8C%EF%BC%89%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0"><span class="toc-text">（二）代码实现</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%96%B9%E6%B3%951"><span class="toc-text">方法1</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%96%B9%E6%B3%952"><span class="toc-text">方法2</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%88%E4%B8%89%EF%BC%89%E6%80%A7%E8%83%BD%E5%88%86%E6%9E%90"><span class="toc-text">（三）性能分析</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%88%E5%9B%9B%EF%BC%89%E4%BC%98%E5%8C%96%EF%BC%88%E5%AF%B9%E6%9C%89%E5%BA%8F%E8%A1%A8%EF%BC%89"><span class="toc-text">（四）优化（对有序表）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE%EF%BC%88%E6%8A%98%E5%8D%8A%E6%9F%A5%E6%89%BE%EF%BC%89"><span class="toc-text">三、二分查找（折半查找）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%88%E4%B8%80%EF%BC%89%E7%AE%97%E6%B3%95%E6%80%9D%E6%83%B3-1"><span class="toc-text">（一）算法思想</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%88%E4%BA%8C%EF%BC%89%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0-1"><span class="toc-text">（二）代码实现</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%88%E4%B8%89%EF%BC%89%E6%80%A7%E8%83%BD%E8%AF%84%E4%BC%B0"><span class="toc-text">（三）性能评估</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E7%B4%A2%E5%BC%95%E6%9F%A5%E6%89%BE%EF%BC%88%E5%88%86%E5%9D%97%E6%9F%A5%E6%89%BE%EF%BC%89"><span class="toc-text">四、索引查找（分块查找）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%94%E3%80%81%E4%BA%8C%E5%8F%89%E6%8E%92%E5%BA%8F%E6%A0%91%E7%9A%84%E5%AE%9A%E4%B9%89%E5%AF%84%E8%BF%90%E7%AE%97"><span class="toc-text">五、二叉排序树的定义寄运算</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AD%E3%80%81%E6%95%A3%E5%88%97%E6%9F%A5%E6%89%BE"><span class="toc-text">六、散列查找</span></a></li></ol>
+    </div>
+  </section>
+
+  
+
 </div>
 
 
 <!-- 没有 pjax 占位会报错 万恶的 pjax -->
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
 
   <div class="pjax">
     <!-- pjax占位 -->
@@ -3038,13 +3006,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </aside>
 
 
+
           <!--此文件用来存放一些不方便取值的变量-->
 <!--思路大概是将值藏到重加载的区域内-->
 
 <pjax>
 <script>
   window.pdata={}
-  pdata.ispage=false;
+  pdata.ispage=true;
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   pdata.commentConfig={};
@@ -3053,14 +3022,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     // header
     var l_header=document.getElementById("l_header");
     
-    l_header.classList.remove("show");
+    l_header.classList.add("show");
     
     
       // cover
       var cover_wrapper=document.querySelector('#l_cover .cover-wrapper');
       var scroll_down=document.getElementById('scroll-down');
-      cover_wrapper.id="half";
-      cover_wrapper.style.display="";
+      cover_wrapper.id="none";
+      cover_wrapper.style.display="none";
       scroll_down.style.display="none";
     
   
@@ -3605,6 +3574,60 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 <!-- pjax 标签必须存在于所有页面 否则 pjax error -->
 <pjax>
 
+        <script>
+  // https://github.com/theme-next/hexo-theme-next/blob/master/layout/_third-party/math/mathjax.swig
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = "https://unpkg.com/volantis-static@0.0.1654736714924/libs/mathjax/es5/tex-mml-chtml.js";
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    // 文章章节标题不能为 “MathJax” ，否则会报错。
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typesetPromise();
+  }
+</script>
+
+
+
 </pjax>
 
 <script>
@@ -3736,7 +3759,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"寇强的个人空间","url":"http://kouqiang.space/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"寇强","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://kouqiang.space/","sameAs":["https://github.com/volantis-x"],"description":"自建博客页面"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://kouqiang.space/","name":"寇强的个人空间"}},{"@type":"ListItem","position":2,"item":{"@id":"http://kouqiang.space/archives/","name":"Archive"}},{"@type":"ListItem","position":3,"item":{"@id":"http://kouqiang.space/archives/2023/","name":"2023年"}},{"@type":"ListItem","position":4,"item":{"@id":"http://kouqiang.space/archives/2023/9/","name":"9月"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"寇强的个人空间","url":"http://kouqiang.space/","keywords":null,"description":"自建博客页面","author":{"@type":"Person","name":"寇强","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://kouqiang.space/","description":"自建博客页面"},"publisher":{"@type":"Organization","name":"寇强的个人空间","url":"http://kouqiang.space/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://kouqiang.space?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","description":"自建博客页面","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage"},"author":{"@type":"Person","name":"寇强","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://kouqiang.space/"},"publisher":{"@type":"Organization","name":"寇强的个人空间","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"wordCount":0,"image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"寇强的个人空间","url":"http://kouqiang.space/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"寇强","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://kouqiang.space/","sameAs":["https://github.com/volantis-x"],"description":"自建博客页面"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://kouqiang.space/","name":"寇强的个人空间"}},{"@type":"ListItem","position":2,"item":{"@id":"http://kouqiang.space/categories/考研408笔记/","name":"考研408笔记"}},{"@type":"ListItem","position":3,"item":{"@id":"http://kouqiang.space/2023/09/11/🔑考研数据结构_第七章：排序/","name":"🔑考研数据结构_第七章：查找"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"寇强的个人空间","url":"http://kouqiang.space/","keywords":null,"description":"自建博客页面","author":{"@type":"Person","name":"寇强","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://kouqiang.space/","description":"自建博客页面"},"publisher":{"@type":"Organization","name":"寇强的个人空间","url":"http://kouqiang.space/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://kouqiang.space?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"🔑考研数据结构_第七章：查找","description":"自建博客页面","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://kouqiang.space/2023/09/11/%F0%9F%94%91%E8%80%83%E7%A0%94%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84_%E7%AC%AC%E4%B8%83%E7%AB%A0%EF%BC%9A%E6%8E%92%E5%BA%8F/"},"author":{"@type":"Person","name":"寇强","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://kouqiang.space/"},"publisher":{"@type":"Organization","name":"寇强的个人空间","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://kouqiang.space/2023/09/11/%F0%9F%94%91%E8%80%83%E7%A0%94%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84_%E7%AC%AC%E4%B8%83%E7%AB%A0%EF%BC%9A%E6%8E%92%E5%BA%8F/","wordCount":0,"datePublished":"2023-09-11T06:45:00.000Z","dateModified":"2023-09-11T09:41:18.368Z","articleSection":"考研408笔记","keywords":"考研笔记,数据结构,算法","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
