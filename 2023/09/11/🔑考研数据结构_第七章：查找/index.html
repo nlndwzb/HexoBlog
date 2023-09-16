@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <!-- SEO相关 -->
   
-  <link rel="canonical" href="http://kouqiang.space/2023/09/11/🔑考研数据结构_第七章：排序/"/>
+  <link rel="canonical" href="http://kouqiang.space/2023/09/11/🔑考研数据结构_第七章：查找/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -38,13 +38,13 @@
   
 <meta property="og:type" content="article">
 <meta property="og:title" content="🔑考研数据结构_第七章：查找">
-<meta property="og:url" content="http://kouqiang.space/2023/09/11/%F0%9F%94%91%E8%80%83%E7%A0%94%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84_%E7%AC%AC%E4%B8%83%E7%AB%A0%EF%BC%9A%E6%8E%92%E5%BA%8F/index.html">
+<meta property="og:url" content="http://kouqiang.space/2023/09/11/%F0%9F%94%91%E8%80%83%E7%A0%94%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84_%E7%AC%AC%E4%B8%83%E7%AB%A0%EF%BC%9A%E6%9F%A5%E6%89%BE/index.html">
 <meta property="og:site_name" content="寇强的个人空间">
 <meta property="og:description" content="🔑考研数据结构_第七章：查找一、基本概念 查找：在数据集合中寻找满足某种条件的数据元素的过程称为查找； 查找表（查找结构）：查找的数据集合称为查找表，它由同一类型的数据元素(或记录)组成； 关键字：数据元素中唯一标识该元素的某个数据项的值，使用基于关键字的查找，查找结果应该是唯一的。 对查找表的常见操作： 仅查找符合条件的数据元素——静态查找表——仅关注查找速度即可； 插入、删除某个数据元素——">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2023-09-11T06:45:00.000Z">
-<meta property="article:modified_time" content="2023-09-15T09:34:11.445Z">
+<meta property="article:modified_time" content="2023-09-16T09:29:49.915Z">
 <meta property="article:author" content="寇强">
 <meta property="article:tag" content="考研笔记">
 <meta property="article:tag" content="数据结构">
@@ -1793,7 +1793,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1694770555234),
+    lastupdate: new Date(1694857030476),
     sidebar: {
       for_page: ["blogger","category","tagcloud","webinfo"],
       for_post: ["toc"],
@@ -2635,7 +2635,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
 <div id="l_main" class=''>
   <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
-  <link itemprop="mainEntityOfPage" href="http://kouqiang.space/2023/09/11/🔑考研数据结构_第七章：排序/">
+  <link itemprop="mainEntityOfPage" href="http://kouqiang.space/2023/09/11/🔑考研数据结构_第七章：查找/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="寇强的个人空间">
   </span>
@@ -2944,7 +2944,119 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <h4 id="2、平衡二叉树的删除"><a href="#2、平衡二叉树的删除" class="headerlink" title="2、平衡二叉树的删除"></a>2、平衡二叉树的删除</h4><img src="https://www.z4a.net/images/2023/09/15/image47d950aa05c3d988.png" class="lazyload" data-srcset="https://www.z4a.net/images/2023/09/15/image47d950aa05c3d988.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image47d950aa05c3d988.png" align="center" style="width:80%; border:1px solid lightgray" />
 
-<h2 id="六、散列查找"><a href="#六、散列查找" class="headerlink" title="六、散列查找"></a>六、散列查找</h2>
+<h2 id="六、散列查找"><a href="#六、散列查找" class="headerlink" title="六、散列查找"></a>六、散列查找</h2><h3 id="（一）散列表（哈希表）"><a href="#（一）散列表（哈希表）" class="headerlink" title="（一）散列表（哈希表）"></a>（一）散列表（哈希表）</h3><ul>
+<li><strong>散列表</strong> (Hash Table)，又称<strong>哈希表</strong>，是一种数据结构，特点是：数据元素的关键字与其存储地址直接相关。</li>
+<li>我们通过<strong>散列函数&#x2F;哈希函数</strong>建立关键字与存储地址的联系。</li>
+</ul>
+<img src="https://www.z4a.net/images/2023/09/16/image.png" class="lazyload" data-srcset="https://www.z4a.net/images/2023/09/16/image.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image.png" align="center" style="width:80%; border:1px solid lightgray" />
+
+<ul>
+<li><p>若不同的关键字通过散列函数映射到同一个值，则称它们为<strong>同义词</strong>；</p>
+</li>
+<li><p>通过散列函数确定的位置已经存放了其他元素，则称这种情况为<strong>冲突</strong>。</p>
+</li>
+<li><p>处理冲突的方法之一——拉链法：</p>
+<p>用拉链法（又称链接法、链地址法）处理“冲突”：把所有“同义词”存储在一个链表中：</p>
+<img src="https://www.z4a.net/images/2023/09/16/image37e803b31bb4189d.png" class="lazyload" data-srcset="https://www.z4a.net/images/2023/09/16/image37e803b31bb4189d.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image37e803b31bb4189d.png" align="center" style="width:80%; border:1px solid lightgray" />
+
+<ul>
+<li>PS：将链表变成有序链表，效率会进一步提高！</li>
+</ul>
+</li>
+</ul>
+<h3 id="（二）查找逻辑"><a href="#（二）查找逻辑" class="headerlink" title="（二）查找逻辑"></a>（二）查找逻辑</h3><ul>
+<li>先用哈希函数计算关键字的对应存储地址，查找到后再去哈希表里查找，例如图中；</li>
+</ul>
+<img src="https://www.z4a.net/images/2023/09/16/image571ca62a6d407d72.png" class="lazyload" data-srcset="https://www.z4a.net/images/2023/09/16/image571ca62a6d407d72.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image571ca62a6d407d72.png" align="center" style="width:80%; border:1px solid lightgray" />
+
+
+
+<ul>
+<li><p>性能评估</p>
+<ul>
+<li><p>查找成功</p>
+<img src="https://www.z4a.net/images/2023/09/16/imaged190824084321c9d.png" class="lazyload" data-srcset="https://www.z4a.net/images/2023/09/16/imaged190824084321c9d.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="imaged190824084321c9d.png" align="center" style="width:80%; border:1px solid lightgray" />
+
+<p>总之，冲突越多，查找效率越低，而哈希函数越优秀，产生的冲突越少。</p>
+<p>理论上，散列查找的最优时间复杂度可达到O(1)。</p>
+</li>
+<li><p>查找失败</p>
+<img src="https://www.z4a.net/images/2023/09/16/image698dac5a20dc6165.png" class="lazyload" data-srcset="https://www.z4a.net/images/2023/09/16/image698dac5a20dc6165.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image698dac5a20dc6165.png" align="center" style="width:80%; border:1px solid lightgray" /></li>
+</ul>
+</li>
+<li><p>装填因子：</p>
+<p>$\alpha$ &#x3D; 表中记录数 &#x2F; 散列表长度</p>
+</li>
+</ul>
+<h3 id="（三）常见哈希函数-x2F-散列函数"><a href="#（三）常见哈希函数-x2F-散列函数" class="headerlink" title="（三）常见哈希函数&#x2F;散列函数"></a>（三）常见哈希函数&#x2F;散列函数</h3><h4 id="1、除留余数法"><a href="#1、除留余数法" class="headerlink" title="1、除留余数法"></a>1、<strong>除留余数法</strong></h4><p>$H(key)&#x3D;key%p$：</p>
+<p>散列表长<code>m</code>，取一个不大于<code>m</code>但最接近或等于<code>m</code>的<strong>质数</strong><code>p</code>。</p>
+<p><strong>一定得是质数</strong>，才能尽可能的让更多的元素分布均匀！</p>
+<img src="https://www.z4a.net/images/2023/09/16/imageef485b54198cd40c.png" class="lazyload" data-srcset="https://www.z4a.net/images/2023/09/16/imageef485b54198cd40c.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="imageef485b54198cd40c.png" align="center" style="width:80%; border:1px solid lightgray" />
+
+<p>当然，考试标准答案是质数，但在实际业务场景中还得根据实际情况选择！</p>
+<h4 id="2、直接定址法"><a href="#2、直接定址法" class="headerlink" title="2、直接定址法"></a>2、<strong>直接定址法</strong></h4><p>$H(key)&#x3D;key$ 或 $H(key)&#x3D;a \times key+b$：</p>
+<p>其中，<code>a</code>和<code>b</code>是常数。这种方法计算最简单，且不会产生冲突。</p>
+<p>它适合关键字的分布基本连续的情况，若关键字分布不连续，空位较多，则会造成存储空间的浪费。</p>
+<img src="https://www.z4a.net/images/2023/09/16/image1d254ab0b973583f.png" class="lazyload" data-srcset="https://www.z4a.net/images/2023/09/16/image1d254ab0b973583f.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image1d254ab0b973583f.png" align="center" style="width:80%; border:1px solid lightgray" />
+
+<h4 id="3、数字分析法"><a href="#3、数字分析法" class="headerlink" title="3、数字分析法"></a>3、数字分析法</h4><img src="https://www.z4a.net/images/2023/09/16/image7090936eb388f8e9.png" class="lazyload" data-srcset="https://www.z4a.net/images/2023/09/16/image7090936eb388f8e9.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image7090936eb388f8e9.png" align="center" style="width:80%; border:1px solid lightgray" />
+
+<h4 id="4、平方取中法"><a href="#4、平方取中法" class="headerlink" title="4、平方取中法"></a>4、平方取中法</h4><p>取关键字的平方值的中间几位作为散列地址。</p>
+<p>具体取多少位要视实际情况而定。</p>
+<p>这种方法得到的散列地址与关键字的每位都有关系，因此使得散列地址分布比较均匀，适用于关键字的每位取值都不够均匀或均小于散列地址所需的位数。</p>
+<img src="https://www.z4a.net/images/2023/09/16/imageb0f947a6ca1b13db.png" class="lazyload" data-srcset="https://www.z4a.net/images/2023/09/16/imageb0f947a6ca1b13db.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="imageb0f947a6ca1b13db.png" align="center" style="width:80%; border:1px solid lightgray" />
+
+<p>总之，散列查找是典型的“用空间换时间”的算法，只要散列函数设计的合理，则散列表越长，冲突的概率越低。</p>
+<img src="https://www.z4a.net/images/2023/09/16/image0ff039776705d43c.png" class="lazyload" data-srcset="https://www.z4a.net/images/2023/09/16/image0ff039776705d43c.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image0ff039776705d43c.png" align="center" style="width:80%; border:1px solid lightgray" />
+
+<h3 id="（四）常见冲突处理方法"><a href="#（四）常见冲突处理方法" class="headerlink" title="（四）常见冲突处理方法"></a>（四）常见冲突处理方法</h3><h4 id="1、拉链法"><a href="#1、拉链法" class="headerlink" title="1、拉链法"></a>1、拉链法</h4><p>处理冲突的方法之一——拉链法：</p>
+<p>用拉链法（又称链接法、链地址法）处理“冲突”：把所有“同义词”存储在一个链表中：</p>
+<img src="https://www.z4a.net/images/2023/09/16/image37e803b31bb4189d.png" class="lazyload" data-srcset="https://www.z4a.net/images/2023/09/16/image37e803b31bb4189d.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image37e803b31bb4189d.png" align="center" style="width:80%; border:1px solid lightgray" />
+
+<ul>
+<li>PS：将链表变成有序链表，效率会进一步提高！</li>
+</ul>
+<h4 id="2、开放定址法"><a href="#2、开放定址法" class="headerlink" title="2、开放定址法"></a>2、开放定址法</h4><p>所谓开放定址法，是指可存放新表项的空闲地址既向它的同义词表项开放，又向它的非同义词表项开放。</p>
+<p>其数学递推公式为：<br>$$<br>H_i&#x3D;(H(key)+d_i)%m<br>$$<br>其中$i&#x3D;0,1,2,…,k(k \le m-1)$，$m$表示散列表表长，$d_i$为增量序列，$i$可理解为“第$i$次发生冲突”。</p>
+<img src="https://www.z4a.net/images/2023/09/16/imaged9727633c2ddd589.png" class="lazyload" data-srcset="https://www.z4a.net/images/2023/09/16/imaged9727633c2ddd589.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="imaged9727633c2ddd589.png" align="center" style="width:80%; border:1px solid lightgray" />
+
+<p>关于$d_i$的确定有三种方法：</p>
+<ul>
+<li><p>线性探测法——$d_i&#x3D;0,1,2,…,m-1$：</p>
+<p>即发生冲突时，每次往后探测相邻的下一个位置是否为空。</p>
+<p>空则存储在下位置，不空则重复检测下一个，直到存下为止。</p>
+<ul>
+<li><p>缺点：线性探测法很容易造成同义词、非同义词的“聚集 (堆积)”现象，严重影响查找效率。</p>
+<p>产生原因——冲突后再探测一定是放在某个连续的位置。</p>
+</li>
+</ul>
+</li>
+<li><p>平方探测法——$d_i&#x3D;0^2,1^2,(-1)^2,2^2,(-2)^2,…,k^2,(-k)^2$：</p>
+<p>又称二次探测法，其中$k\le \frac{m}{2}$。</p>
+<p><strong>非重点小坑</strong>：采用此方法处理时，前提条件是哈希表的表长必须为$4j+3$，这样才能使得所有单元格都能被探测到！否则只会重复检测其中的某些位置！</p>
+<img src="https://www.z4a.net/images/2023/09/16/image54dbd1e8605d51bb.png" class="lazyload" data-srcset="https://www.z4a.net/images/2023/09/16/image54dbd1e8605d51bb.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image54dbd1e8605d51bb.png" align="center" style="width:80%; border:1px solid lightgray" />
+
+<ul>
+<li>查找：也是此方法查找即可。</li>
+</ul>
+</li>
+<li><p>伪随机序列法：</p>
+<p>就是让$d_i$等于一个你自己确定的具体序列。</p>
+</li>
+<li><p>总结</p>
+<ul>
+<li>查找：进行查找时同样也是这样操作，直到遇到空位表示查找失败。</li>
+<li>❗删除：若是直接删掉元素会导致空位出现从而影响查找，所以应该用自定义的删除标识标记此处为已删除！</li>
+</ul>
+</li>
+</ul>
+<h4 id="3、再哈希法-x2F-再散列法"><a href="#3、再哈希法-x2F-再散列法" class="headerlink" title="3、再哈希法&#x2F;再散列法"></a>3、再哈希法&#x2F;再散列法</h4><img src="https://www.z4a.net/images/2023/09/16/image3ba2e72fe1602af9.png" class="lazyload" data-srcset="https://www.z4a.net/images/2023/09/16/image3ba2e72fe1602af9.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image3ba2e72fe1602af9.png" align="center" style="width:80%; border:1px solid lightgray" />
+
+
+
+<h4 id="4、建立一个公共溢出区"><a href="#4、建立一个公共溢出区" class="headerlink" title="4、建立一个公共溢出区"></a>4、建立一个公共溢出区</h4><p>另设立向量<code>OverTable[0..v]</code>为溢出表。</p>
+<p>所有冲突的记录，不管它们由哈希函数得到的哈希地址是什么，一旦发生冲突，都填入溢出表。</p>
+
   </div>
   
   
@@ -2968,10 +3080,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-09-15T17:34:11+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-09-16T17:29:49+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2023年9月15日</p>
+    <p>更新于：2023年9月16日</p>
   </a>
 </div>
 
@@ -2994,7 +3106,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://kouqiang.space/2023/09/11/%F0%9F%94%91%E8%80%83%E7%A0%94%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84_%E7%AC%AC%E4%B8%83%E7%AB%A0%EF%BC%9A%E6%8E%92%E5%BA%8F/&title=🔑考研数据结构_第七章：查找 - 寇强的个人空间&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://kouqiang.space/2023/09/11/%F0%9F%94%91%E8%80%83%E7%A0%94%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84_%E7%AC%AC%E4%B8%83%E7%AB%A0%EF%BC%9A%E6%9F%A5%E6%89%BE/&title=🔑考研数据结构_第七章：查找 - 寇强的个人空间&summary="
           
           >
           
@@ -3006,7 +3118,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://kouqiang.space/2023/09/11/%F0%9F%94%91%E8%80%83%E7%A0%94%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84_%E7%AC%AC%E4%B8%83%E7%AB%A0%EF%BC%9A%E6%8E%92%E5%BA%8F/&title=🔑考研数据结构_第七章：查找 - 寇强的个人空间&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://kouqiang.space/2023/09/11/%F0%9F%94%91%E8%80%83%E7%A0%94%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84_%E7%AC%AC%E4%B8%83%E7%AB%A0%EF%BC%9A%E6%9F%A5%E6%89%BE/&title=🔑考研数据结构_第七章：查找 - 寇强的个人空间&summary="
           
           >
           
@@ -3018,7 +3130,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://kouqiang.space/2023/09/11/%F0%9F%94%91%E8%80%83%E7%A0%94%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84_%E7%AC%AC%E4%B8%83%E7%AB%A0%EF%BC%9A%E6%8E%92%E5%BA%8F/&title=🔑考研数据结构_第七章：查找 - 寇强的个人空间&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://kouqiang.space/2023/09/11/%F0%9F%94%91%E8%80%83%E7%A0%94%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84_%E7%AC%AC%E4%B8%83%E7%AB%A0%EF%BC%9A%E6%9F%A5%E6%89%BE/&title=🔑考研数据结构_第七章：查找 - 寇强的个人空间&summary="
           
           >
           
@@ -3051,6 +3163,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
+        <a class='prev' href='/2023/09/16/%F0%9F%94%91%E8%80%83%E7%A0%94%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84_%E7%AC%AC%E5%85%AB%E7%AB%A0%EF%BC%9A%E6%8E%92%E5%BA%8F/'>
+          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>🔑考研数据结构_第八章：排序</p>
+          <p class='content'>🔑考研数据结构_第八章：排序一、排序的概念二、插入排序直接插入排序、折半插入排序、希尔排序
+三、冒泡排序和快排序四、直接选择排序和堆排序五、归并排序六、排序算法性能分析、稳定性分析</p>
+        </a>
+      
       
         <a class='next' href='/2023/09/02/LATEX%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95%E6%80%BB%E7%BB%93/'>
           <p class='title'>LATEX常用语法总结<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
@@ -3077,7 +3195,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <article class="post white-box shadow floatable blur" id="comments">
     <span hidden>
-      <meta itemprop="discussionUrl" content="/2023/09/11/%F0%9F%94%91%E8%80%83%E7%A0%94%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84_%E7%AC%AC%E4%B8%83%E7%AB%A0%EF%BC%9A%E6%8E%92%E5%BA%8F/index.html#comments">
+      <meta itemprop="discussionUrl" content="/2023/09/11/%F0%9F%94%91%E8%80%83%E7%A0%94%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84_%E7%AC%AC%E4%B8%83%E7%AB%A0%EF%BC%9A%E6%9F%A5%E6%89%BE/index.html#comments">
     </span>
     <p ct><i class='fa-solid fa-comments'></i> 评论</p>
     
@@ -3119,7 +3237,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="toc-text">一、基本概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E9%A1%BA%E5%BA%8F%E6%9F%A5%E6%89%BE"><span class="toc-text">二、顺序查找</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%88%E4%B8%80%EF%BC%89%E7%AE%97%E6%B3%95%E6%80%9D%E6%83%B3"><span class="toc-text">（一）算法思想</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%88%E4%BA%8C%EF%BC%89%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0"><span class="toc-text">（二）代码实现</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%96%B9%E6%B3%951"><span class="toc-text">方法1</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%96%B9%E6%B3%952"><span class="toc-text">方法2</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%88%E4%B8%89%EF%BC%89%E6%80%A7%E8%83%BD%E5%88%86%E6%9E%90"><span class="toc-text">（三）性能分析</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%88%E5%9B%9B%EF%BC%89%E4%BC%98%E5%8C%96%EF%BC%88%E5%AF%B9%E6%9C%89%E5%BA%8F%E8%A1%A8%EF%BC%89"><span class="toc-text">（四）优化（对有序表）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE%EF%BC%88%E6%8A%98%E5%8D%8A%E6%9F%A5%E6%89%BE%EF%BC%89"><span class="toc-text">三、二分查找（折半查找）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%88%E4%B8%80%EF%BC%89%E7%AE%97%E6%B3%95%E6%80%9D%E6%83%B3-1"><span class="toc-text">（一）算法思想</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%88%E4%BA%8C%EF%BC%89%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0-1"><span class="toc-text">（二）代码实现</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%88%E4%B8%89%EF%BC%89%E6%80%A7%E8%83%BD%E8%AF%84%E4%BC%B0"><span class="toc-text">（三）性能评估</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E7%B4%A2%E5%BC%95%E6%9F%A5%E6%89%BE%EF%BC%88%E5%88%86%E5%9D%97%E6%9F%A5%E6%89%BE%EF%BC%89"><span class="toc-text">四、索引查找（分块查找）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%88%E4%B8%80%EF%BC%89%E7%AE%97%E6%B3%95%E6%80%9D%E6%83%B3-2"><span class="toc-text">（一）算法思想</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%88%E4%BA%8C%EF%BC%89%E6%80%A7%E8%83%BD%E8%AF%84%E4%BC%B0"><span class="toc-text">（二）性能评估</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1%E3%80%81%E6%9F%A5%E6%89%BE%E6%95%88%E7%8E%87%E5%88%86%E6%9E%90%E2%80%94%E2%80%94ASL"><span class="toc-text">1、查找效率分析——ASL</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%94%E3%80%81%E4%BA%8C%E5%8F%89%E6%8E%92%E5%BA%8F%E6%A0%91%E7%9A%84%E5%AE%9A%E4%B9%89%E5%8F%8A%E8%BF%90%E7%AE%97"><span class="toc-text">五、二叉排序树的定义及运算</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%88%E4%B8%80%EF%BC%89%E6%A6%82%E5%BF%B5"><span class="toc-text">（一）概念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%88%E4%BA%8C%EF%BC%89%E6%9F%A5%E6%89%BE"><span class="toc-text">（二）查找</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%88%E4%B8%89%EF%BC%89%E6%8F%92%E5%85%A5"><span class="toc-text">（三）插入</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%88%E5%9B%9B%EF%BC%89%E4%BA%8C%E5%8F%89%E6%8E%92%E5%BA%8F%E6%A0%91%E7%9A%84%E6%9E%84%E9%80%A0"><span class="toc-text">（四）二叉排序树的构造</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%88%E5%9B%9B%EF%BC%89%E5%88%A0%E9%99%A4"><span class="toc-text">（四）删除</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%88%E4%BA%94%EF%BC%89%E6%80%A7%E8%83%BD%E8%AF%84%E4%BC%B0"><span class="toc-text">（五）性能评估</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%88%E5%85%AD%EF%BC%89%E5%B9%B3%E8%A1%A1%E4%BA%8C%E5%8F%89%E6%A0%91"><span class="toc-text">（六）平衡二叉树</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1%E3%80%81%E5%B9%B3%E8%A1%A1%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E6%9E%84%E9%80%A0"><span class="toc-text">1、平衡二叉树的构造</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%EF%BC%881%EF%BC%89LL%E6%83%85%E5%86%B5"><span class="toc-text">（1）LL情况</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%EF%BC%882%EF%BC%89RR%E6%83%85%E5%86%B5"><span class="toc-text">（2）RR情况</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%EF%BC%883%EF%BC%89LR"><span class="toc-text">（3）LR</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%EF%BC%884%EF%BC%89RL"><span class="toc-text">（4）RL</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%EF%BC%885%EF%BC%89%E6%9F%A5%E6%89%BE%E6%95%88%E7%8E%87%E5%88%86%E6%9E%90"><span class="toc-text">（5）查找效率分析</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2%E3%80%81%E5%B9%B3%E8%A1%A1%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%88%A0%E9%99%A4"><span class="toc-text">2、平衡二叉树的删除</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AD%E3%80%81%E6%95%A3%E5%88%97%E6%9F%A5%E6%89%BE"><span class="toc-text">六、散列查找</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="toc-text">一、基本概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E9%A1%BA%E5%BA%8F%E6%9F%A5%E6%89%BE"><span class="toc-text">二、顺序查找</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%88%E4%B8%80%EF%BC%89%E7%AE%97%E6%B3%95%E6%80%9D%E6%83%B3"><span class="toc-text">（一）算法思想</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%88%E4%BA%8C%EF%BC%89%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0"><span class="toc-text">（二）代码实现</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%96%B9%E6%B3%951"><span class="toc-text">方法1</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%96%B9%E6%B3%952"><span class="toc-text">方法2</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%88%E4%B8%89%EF%BC%89%E6%80%A7%E8%83%BD%E5%88%86%E6%9E%90"><span class="toc-text">（三）性能分析</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%88%E5%9B%9B%EF%BC%89%E4%BC%98%E5%8C%96%EF%BC%88%E5%AF%B9%E6%9C%89%E5%BA%8F%E8%A1%A8%EF%BC%89"><span class="toc-text">（四）优化（对有序表）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE%EF%BC%88%E6%8A%98%E5%8D%8A%E6%9F%A5%E6%89%BE%EF%BC%89"><span class="toc-text">三、二分查找（折半查找）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%88%E4%B8%80%EF%BC%89%E7%AE%97%E6%B3%95%E6%80%9D%E6%83%B3-1"><span class="toc-text">（一）算法思想</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%88%E4%BA%8C%EF%BC%89%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0-1"><span class="toc-text">（二）代码实现</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%88%E4%B8%89%EF%BC%89%E6%80%A7%E8%83%BD%E8%AF%84%E4%BC%B0"><span class="toc-text">（三）性能评估</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E7%B4%A2%E5%BC%95%E6%9F%A5%E6%89%BE%EF%BC%88%E5%88%86%E5%9D%97%E6%9F%A5%E6%89%BE%EF%BC%89"><span class="toc-text">四、索引查找（分块查找）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%88%E4%B8%80%EF%BC%89%E7%AE%97%E6%B3%95%E6%80%9D%E6%83%B3-2"><span class="toc-text">（一）算法思想</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%88%E4%BA%8C%EF%BC%89%E6%80%A7%E8%83%BD%E8%AF%84%E4%BC%B0"><span class="toc-text">（二）性能评估</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1%E3%80%81%E6%9F%A5%E6%89%BE%E6%95%88%E7%8E%87%E5%88%86%E6%9E%90%E2%80%94%E2%80%94ASL"><span class="toc-text">1、查找效率分析——ASL</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%94%E3%80%81%E4%BA%8C%E5%8F%89%E6%8E%92%E5%BA%8F%E6%A0%91%E7%9A%84%E5%AE%9A%E4%B9%89%E5%8F%8A%E8%BF%90%E7%AE%97"><span class="toc-text">五、二叉排序树的定义及运算</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%88%E4%B8%80%EF%BC%89%E6%A6%82%E5%BF%B5"><span class="toc-text">（一）概念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%88%E4%BA%8C%EF%BC%89%E6%9F%A5%E6%89%BE"><span class="toc-text">（二）查找</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%88%E4%B8%89%EF%BC%89%E6%8F%92%E5%85%A5"><span class="toc-text">（三）插入</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%88%E5%9B%9B%EF%BC%89%E4%BA%8C%E5%8F%89%E6%8E%92%E5%BA%8F%E6%A0%91%E7%9A%84%E6%9E%84%E9%80%A0"><span class="toc-text">（四）二叉排序树的构造</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%88%E5%9B%9B%EF%BC%89%E5%88%A0%E9%99%A4"><span class="toc-text">（四）删除</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%88%E4%BA%94%EF%BC%89%E6%80%A7%E8%83%BD%E8%AF%84%E4%BC%B0"><span class="toc-text">（五）性能评估</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%88%E5%85%AD%EF%BC%89%E5%B9%B3%E8%A1%A1%E4%BA%8C%E5%8F%89%E6%A0%91"><span class="toc-text">（六）平衡二叉树</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1%E3%80%81%E5%B9%B3%E8%A1%A1%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E6%9E%84%E9%80%A0"><span class="toc-text">1、平衡二叉树的构造</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%EF%BC%881%EF%BC%89LL%E6%83%85%E5%86%B5"><span class="toc-text">（1）LL情况</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%EF%BC%882%EF%BC%89RR%E6%83%85%E5%86%B5"><span class="toc-text">（2）RR情况</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%EF%BC%883%EF%BC%89LR"><span class="toc-text">（3）LR</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%EF%BC%884%EF%BC%89RL"><span class="toc-text">（4）RL</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%EF%BC%885%EF%BC%89%E6%9F%A5%E6%89%BE%E6%95%88%E7%8E%87%E5%88%86%E6%9E%90"><span class="toc-text">（5）查找效率分析</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2%E3%80%81%E5%B9%B3%E8%A1%A1%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%88%A0%E9%99%A4"><span class="toc-text">2、平衡二叉树的删除</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AD%E3%80%81%E6%95%A3%E5%88%97%E6%9F%A5%E6%89%BE"><span class="toc-text">六、散列查找</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%88%E4%B8%80%EF%BC%89%E6%95%A3%E5%88%97%E8%A1%A8%EF%BC%88%E5%93%88%E5%B8%8C%E8%A1%A8%EF%BC%89"><span class="toc-text">（一）散列表（哈希表）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%88%E4%BA%8C%EF%BC%89%E6%9F%A5%E6%89%BE%E9%80%BB%E8%BE%91"><span class="toc-text">（二）查找逻辑</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%88%E4%B8%89%EF%BC%89%E5%B8%B8%E8%A7%81%E5%93%88%E5%B8%8C%E5%87%BD%E6%95%B0-x2F-%E6%95%A3%E5%88%97%E5%87%BD%E6%95%B0"><span class="toc-text">（三）常见哈希函数&#x2F;散列函数</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1%E3%80%81%E9%99%A4%E7%95%99%E4%BD%99%E6%95%B0%E6%B3%95"><span class="toc-text">1、除留余数法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2%E3%80%81%E7%9B%B4%E6%8E%A5%E5%AE%9A%E5%9D%80%E6%B3%95"><span class="toc-text">2、直接定址法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3%E3%80%81%E6%95%B0%E5%AD%97%E5%88%86%E6%9E%90%E6%B3%95"><span class="toc-text">3、数字分析法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4%E3%80%81%E5%B9%B3%E6%96%B9%E5%8F%96%E4%B8%AD%E6%B3%95"><span class="toc-text">4、平方取中法</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%88%E5%9B%9B%EF%BC%89%E5%B8%B8%E8%A7%81%E5%86%B2%E7%AA%81%E5%A4%84%E7%90%86%E6%96%B9%E6%B3%95"><span class="toc-text">（四）常见冲突处理方法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1%E3%80%81%E6%8B%89%E9%93%BE%E6%B3%95"><span class="toc-text">1、拉链法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2%E3%80%81%E5%BC%80%E6%94%BE%E5%AE%9A%E5%9D%80%E6%B3%95"><span class="toc-text">2、开放定址法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3%E3%80%81%E5%86%8D%E5%93%88%E5%B8%8C%E6%B3%95-x2F-%E5%86%8D%E6%95%A3%E5%88%97%E6%B3%95"><span class="toc-text">3、再哈希法&#x2F;再散列法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4%E3%80%81%E5%BB%BA%E7%AB%8B%E4%B8%80%E4%B8%AA%E5%85%AC%E5%85%B1%E6%BA%A2%E5%87%BA%E5%8C%BA"><span class="toc-text">4、建立一个公共溢出区</span></a></li></ol></li></ol></li></ol>
     </div>
   </section>
 
@@ -3921,7 +4039,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"寇强的个人空间","url":"http://kouqiang.space/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"寇强","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://kouqiang.space/","sameAs":["https://github.com/volantis-x"],"description":"自建博客页面"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://kouqiang.space/","name":"寇强的个人空间"}},{"@type":"ListItem","position":2,"item":{"@id":"http://kouqiang.space/categories/考研408笔记/","name":"考研408笔记"}},{"@type":"ListItem","position":3,"item":{"@id":"http://kouqiang.space/2023/09/11/🔑考研数据结构_第七章：排序/","name":"🔑考研数据结构_第七章：查找"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"寇强的个人空间","url":"http://kouqiang.space/","keywords":null,"description":"自建博客页面","author":{"@type":"Person","name":"寇强","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://kouqiang.space/","description":"自建博客页面"},"publisher":{"@type":"Organization","name":"寇强的个人空间","url":"http://kouqiang.space/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://kouqiang.space?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"🔑考研数据结构_第七章：查找","description":"自建博客页面","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://kouqiang.space/2023/09/11/%F0%9F%94%91%E8%80%83%E7%A0%94%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84_%E7%AC%AC%E4%B8%83%E7%AB%A0%EF%BC%9A%E6%8E%92%E5%BA%8F/"},"author":{"@type":"Person","name":"寇强","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://kouqiang.space/"},"publisher":{"@type":"Organization","name":"寇强的个人空间","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://kouqiang.space/2023/09/11/%F0%9F%94%91%E8%80%83%E7%A0%94%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84_%E7%AC%AC%E4%B8%83%E7%AB%A0%EF%BC%9A%E6%8E%92%E5%BA%8F/","wordCount":0,"datePublished":"2023-09-11T06:45:00.000Z","dateModified":"2023-09-15T09:34:11.445Z","articleSection":"考研408笔记","keywords":"考研笔记,数据结构,算法","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"寇强的个人空间","url":"http://kouqiang.space/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"寇强","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://kouqiang.space/","sameAs":["https://github.com/volantis-x"],"description":"自建博客页面"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://kouqiang.space/","name":"寇强的个人空间"}},{"@type":"ListItem","position":2,"item":{"@id":"http://kouqiang.space/categories/考研408笔记/","name":"考研408笔记"}},{"@type":"ListItem","position":3,"item":{"@id":"http://kouqiang.space/2023/09/11/🔑考研数据结构_第七章：查找/","name":"🔑考研数据结构_第七章：查找"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"寇强的个人空间","url":"http://kouqiang.space/","keywords":null,"description":"自建博客页面","author":{"@type":"Person","name":"寇强","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://kouqiang.space/","description":"自建博客页面"},"publisher":{"@type":"Organization","name":"寇强的个人空间","url":"http://kouqiang.space/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://kouqiang.space?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"🔑考研数据结构_第七章：查找","description":"自建博客页面","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://kouqiang.space/2023/09/11/%F0%9F%94%91%E8%80%83%E7%A0%94%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84_%E7%AC%AC%E4%B8%83%E7%AB%A0%EF%BC%9A%E6%9F%A5%E6%89%BE/"},"author":{"@type":"Person","name":"寇强","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://kouqiang.space/"},"publisher":{"@type":"Organization","name":"寇强的个人空间","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://kouqiang.space/2023/09/11/%F0%9F%94%91%E8%80%83%E7%A0%94%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84_%E7%AC%AC%E4%B8%83%E7%AB%A0%EF%BC%9A%E6%9F%A5%E6%89%BE/","wordCount":0,"datePublished":"2023-09-11T06:45:00.000Z","dateModified":"2023-09-16T09:29:49.915Z","articleSection":"考研408笔记","keywords":"考研笔记,数据结构,算法","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
