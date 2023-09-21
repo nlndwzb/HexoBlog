@@ -40,11 +40,11 @@
 <meta property="og:title" content="LATEX常用语法总结">
 <meta property="og:url" content="http://kouqiang.space/2023/09/02/LATEX%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95%E6%80%BB%E7%BB%93/index.html">
 <meta property="og:site_name" content="寇强的个人空间">
-<meta property="og:description" content="LATEX常用语法一、入门常用行内公式：用两个美元符号即可：$公式内容$。 多行公式：用两个+两个美元符号，公式内容与该符号不能在同一行： 123$$......$$     上标：^，下标：_。  二、数学符号三、多行公式与简单对齐">
+<meta property="og:description" content="LATEX常用语法一、入门常用 行内公式：用两个美元符号即可：$公式内容$。  多行公式：用两个+两个美元符号，不能与公式内容在同一行： 123$$%......$$   上标：^，下标：_。  单行注释：用%。  强制换行：  两个反斜杠：\\； \par； \newline。    二、常用符号（1）数学符号   符号名称 LATEX代码 显示效果 符号名称 LATEX代码 显示效果    加">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2023-09-02T09:45:00.000Z">
-<meta property="article:modified_time" content="2023-09-02T09:54:49.243Z">
+<meta property="article:modified_time" content="2023-09-21T15:20:47.082Z">
 <meta property="article:author" content="寇强">
 <meta property="article:tag" content="学习总结">
 <meta property="article:tag" content="LATEX">
@@ -1795,7 +1795,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1695203944596),
+    lastupdate: new Date(1695309771302),
     sidebar: {
       for_page: ["blogger","category","tagcloud","webinfo"],
       for_post: ["toc"],
@@ -2715,16 +2715,370 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <h1 id="LATEX常用语法"><a href="#LATEX常用语法" class="headerlink" title="LATEX常用语法"></a>LATEX常用语法</h1><h2 id="一、入门常用"><a href="#一、入门常用" class="headerlink" title="一、入门常用"></a>一、入门常用</h2><p>行内公式：用两个美元符号即可：<code>$公式内容$</code>。</p>
-<p>多行公式：用两个+两个美元符号，公式内容与该符号不能在同一行：</p>
-<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">$</span><span class="built_in">$</span></span><br><span class="line">......</span><br><span class="line"><span class="built_in">$</span><span class="built_in">$</span></span><br></pre></td></tr></table></figure>
+    <h1 id="LATEX常用语法"><a href="#LATEX常用语法" class="headerlink" title="LATEX常用语法"></a>LATEX常用语法</h1><h2 id="一、入门常用"><a href="#一、入门常用" class="headerlink" title="一、入门常用"></a>一、入门常用</h2><ul>
+<li><p>行内公式：用两个美元符号即可：<code>$公式内容$</code>。</p>
+</li>
+<li><p>多行公式：用两个+两个美元符号，不能与公式内容在同一行：</p>
+<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">$</span><span class="built_in">$</span></span><br><span class="line"><span class="comment">%......</span></span><br><span class="line"><span class="built_in">$</span><span class="built_in">$</span></span><br></pre></td></tr></table></figure>
 
+</li>
+<li><p>上标：<code>^</code>，下标：<code>_</code>。</p>
+</li>
+<li><p>单行注释：用<code>%</code>。</p>
+</li>
+<li><p>强制换行：</p>
+<ul>
+<li>两个反斜杠：<code>\\</code>；</li>
+<li><code>\par</code>；</li>
+<li><code>\newline</code>。</li>
+</ul>
+</li>
+</ul>
+<h2 id="二、常用符号"><a href="#二、常用符号" class="headerlink" title="二、常用符号"></a>二、常用符号</h2><h3 id="（1）数学符号"><a href="#（1）数学符号" class="headerlink" title="（1）数学符号"></a>（1）数学符号</h3><table>
+<thead>
+<tr>
+<th>符号名称</th>
+<th>LATEX代码</th>
+<th>显示效果</th>
+<th>符号名称</th>
+<th>LATEX代码</th>
+<th>显示效果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>加号减号</td>
+<td><code>+</code>和<code>-</code></td>
+<td>$+$和$-$</td>
+<td>星号</td>
+<td><code>\ast</code>或<code>*</code></td>
+<td>$\ast$或$*$</td>
+</tr>
+<tr>
+<td>乘号</td>
+<td><code>\times</code></td>
+<td>$\times$</td>
+<td>大括号</td>
+<td><code>\&#123; \&#125;</code></td>
+<td>${}$</td>
+</tr>
+<tr>
+<td>除号</td>
+<td><code>\div</code></td>
+<td>$\div$</td>
+<td>分数</td>
+<td><code>\frac&#123;a&#125;&#123;b&#125;</code></td>
+<td>$\frac{a}{b}$</td>
+</tr>
+<tr>
+<td>加或减</td>
+<td><code>\pm</code></td>
+<td>$\pm$</td>
+<td>大于等于</td>
+<td><code>\ge</code></td>
+<td>$\ge$</td>
+</tr>
+<tr>
+<td>减或加</td>
+<td><code>\mp</code></td>
+<td>$\mp$</td>
+<td>小于等于</td>
+<td><code>\le</code></td>
+<td>$\le$</td>
+</tr>
+<tr>
+<td>并集</td>
+<td><code>\cup</code></td>
+<td>$\cup$</td>
+<td>远大于</td>
+<td><code>\gg</code></td>
+<td>$\gg$</td>
+</tr>
+<tr>
+<td>交集</td>
+<td><code>\cap</code></td>
+<td>$\cap$</td>
+<td>远小于</td>
+<td><code>\ll</code></td>
+<td>$\ll$</td>
+</tr>
+<tr>
+<td>恒等于</td>
+<td><code>\equiv</code></td>
+<td>$\equiv$</td>
+<td>等价符号</td>
+<td><code>\sim</code></td>
+<td>$\sim$</td>
+</tr>
+<tr>
+<td>约等于</td>
+<td><code>\approx</code></td>
+<td>$\approx$</td>
+<td>全等于</td>
+<td><code>\cong</code></td>
+<td>$\cong$</td>
+</tr>
+<tr>
+<td>因为</td>
+<td><code>\because</code></td>
+<td>$\because$</td>
+<td>所以</td>
+<td><code>\therefore</code></td>
+<td>$\therefore$</td>
+</tr>
+<tr>
+<td>无穷大</td>
+<td><code>\infty</code></td>
+<td>$\infty$</td>
+<td>开根号</td>
+<td>根号：<code>\sqrt&#123;x&#125;</code>；n次根号：<code>\sqrt[n]&#123;x&#125;</code></td>
+<td>根号：$\sqrt{x}$；n次根号：$\sqrt[n]{x}$</td>
+</tr>
+<tr>
+<td>极限</td>
+<td><code>\lim_&#123;a \to b&#125; </code> (Typora不能正确显示)</td>
+<td>$\lim_{a \to b}$ 正确格式：<img src="https://www.z4a.net/images/2023/09/21/image20ff43e519c23027.png" class="lazyload" data-srcset="https://www.z4a.net/images/2023/09/21/image20ff43e519c23027.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image20ff43e519c23027.png" align="center" style="width:40px; border:0px solid lightgray; visible: disable" /></td>
+<td>求和</td>
+<td><code>\sum_&#123;a&#125;^&#123;b&#125;</code>(Typora不能正确显示)</td>
+<td>$\sum_{a}^{b}$ 正确格式：<img src="https://www.z4a.net/images/2023/09/21/imagead6574879b7bb615.png" class="lazyload" data-srcset="https://www.z4a.net/images/2023/09/21/imagead6574879b7bb615.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="imagead6574879b7bb615.png" align="center" style="width:40px; border:0px solid lightgray" /></td>
+</tr>
+<tr>
+<td>积分</td>
+<td><code>\int_&#123;a&#125;^&#123;b&#125;</code>和<code>\int\limits_&#123;a&#125;^&#123;b&#125; </code></td>
+<td>$\int_{a}^{b}$和$\int\limits_{a}^{b} $</td>
+<td>曲线积分</td>
+<td><code>\oint_&#123;a&#125;^&#123;b&#125; </code></td>
+<td>$\oint_{a}^{b} $</td>
+</tr>
+<tr>
+<td>向上取整</td>
+<td><code>\lceil x \ceil</code></td>
+<td>$\lceil x \rceil$</td>
+<td>向下取整</td>
+<td><code>\lfloor x \rfloor</code></td>
+<td>$\lfloor x \rfloor$</td>
+</tr>
+<tr>
+<td><code>α</code></td>
+<td><code>\alpha </code></td>
+<td></td>
+<td><code>β</code></td>
+<td><code>\beta</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>Υ</code></td>
+<td><code>\gamma</code></td>
+<td></td>
+<td><code>θ</code></td>
+<td><code>\theta</code></td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id="（二）希腊字母"><a href="#（二）希腊字母" class="headerlink" title="（二）希腊字母"></a>（二）希腊字母</h3><img src="https://www.z4a.net/images/2023/09/21/imagecd91a209560c1e56.png" class="lazyload" data-srcset="https://www.z4a.net/images/2023/09/21/imagecd91a209560c1e56.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="imagecd91a209560c1e56.png" align="center" style="width:100%; border:0px solid lightgray" />
 
+<table>
+<thead>
+<tr>
+<th>符号名称</th>
+<th>读法</th>
+<th>LATEX代码</th>
+<th>显示效果</th>
+<th>符号名称</th>
+<th>读法</th>
+<th>LATEX代码</th>
+<th>显示效果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>阿尔法</td>
+<td>&#x2F;‘ælfə&#x2F;</td>
+<td><code>\alpha</code></td>
+<td>$\alpha$</td>
+<td>贝塔</td>
+<td>&#x2F;‘bi:tə&#x2F;或 &#x2F;‘beɪtə&#x2F;</td>
+<td><code>\beta</code></td>
+<td>$\beta$</td>
+</tr>
+<tr>
+<td>伽马</td>
+<td>&#x2F;‘gæmə&#x2F;</td>
+<td><code>\gamma</code></td>
+<td>$\gamma$</td>
+<td>德尔塔</td>
+<td>&#x2F;‘deltə&#x2F;</td>
+<td><code>\delta</code></td>
+<td>$\delta$</td>
+</tr>
+<tr>
+<td>欸普赛隆</td>
+<td></td>
+<td><code>\epsilon</code></td>
+<td>$\epsilon$</td>
+<td></td>
+<td></td>
+<td><code>\varepsilon</code></td>
+<td>$\varepsilon$</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><code>\zeta</code></td>
+<td>$\zeta$</td>
+<td></td>
+<td></td>
+<td><code>\eta</code></td>
+<td>$\eta$</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><code>\theta</code></td>
+<td>$\theta$</td>
+<td></td>
+<td></td>
+<td><code>\vartheta</code></td>
+<td>$\vartheta$</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><code>\iota</code></td>
+<td>$\iota$</td>
+<td></td>
+<td></td>
+<td><code>\kappa</code></td>
+<td>$\kappa$</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><code>\lambda</code></td>
+<td>$\lambda$</td>
+<td></td>
+<td></td>
+<td><code>\mu</code></td>
+<td>$\mu$</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><code>\nu</code></td>
+<td>$\nu$</td>
+<td></td>
+<td></td>
+<td><code>\xi</code></td>
+<td>$\xi$</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><code>o</code></td>
+<td>$o$</td>
+<td></td>
+<td></td>
+<td><code>\pi</code></td>
+<td>$\pi$</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><code>\varpi</code></td>
+<td>$\varpi$</td>
+<td></td>
+<td></td>
+<td><code>\rho</code></td>
+<td>$\rho$</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><code>\varrho</code></td>
+<td>$\varrho$</td>
+<td></td>
+<td></td>
+<td><code>\sigma</code></td>
+<td>$\sigma$</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><code>\varsigma</code></td>
+<td>$\varsigma$</td>
+<td></td>
+<td></td>
+<td><code>\tau</code></td>
+<td>$\tau$</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><code>\upsilon</code></td>
+<td>$\upsilon$</td>
+<td></td>
+<td></td>
+<td><code>\phi</code></td>
+<td>$\phi$</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><code>\varphi</code></td>
+<td>$\varphi$</td>
+<td></td>
+<td></td>
+<td><code>\chi</code></td>
+<td>$\chi$</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><code>\psi</code></td>
+<td>$\psi$</td>
+<td></td>
+<td></td>
+<td><code>\omega</code></td>
+<td>$\omega$</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><code>\Delta</code></td>
+<td>$\Delta$</td>
+<td></td>
+<td></td>
+<td><code>\Omega</code></td>
+<td>$\Omega$</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><code>\Sigma</code></td>
+<td>$\Sigma$</td>
+<td></td>
+<td></td>
+<td><code>\Lambda</code></td>
+<td>$\Lambda$</td>
+</tr>
+</tbody></table>
+<h2 id="三、多行公式与简单对齐"><a href="#三、多行公式与简单对齐" class="headerlink" title="三、多行公式与简单对齐"></a>三、多行公式与简单对齐</h2><ul>
+<li><p>多行公式：</p>
+<p>首先是<code>\left</code>和<code>\right</code>，后面分别必须跟内容否则报错，要显示大括号就跟<code>\&#123;</code>，不显示内容就跟英文点号<code>.</code>，中间可以不加空格。</p>
+<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\left</span> <span class="keyword">\&#123;</span>	</span><br><span class="line"><span class="keyword">\right</span>.</span><br></pre></td></tr></table></figure>
+<p>然后是<code>\begin&#123;matrix&#125;</code>和<code>\end&#123;matrix&#125;</code>，内部才是公式内容，如：</p>
+<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\left</span> <span class="keyword">\&#123;</span></span><br><span class="line"><span class="keyword">\begin</span>&#123;matrix&#125;</span><br><span class="line"><span class="comment">%这里写公式内容</span></span><br><span class="line">x<span class="built_in">_</span>1+x<span class="built_in">_</span>2+x<span class="built_in">_</span>3=0 <span class="keyword">\\</span> </span><br><span class="line">2x<span class="built_in">_</span>1+2x<span class="built_in">_</span>2+2x<span class="built_in">_</span>3=0</span><br><span class="line"><span class="keyword">\end</span>&#123;matrix&#125;</span><br><span class="line"><span class="keyword">\right</span>.</span><br></pre></td></tr></table></figure>
 
-<hr>
-<p>上标：<code>^</code>，下标：<code>_</code>。</p>
-<hr>
-<h2 id="二、数学符号"><a href="#二、数学符号" class="headerlink" title="二、数学符号"></a>二、数学符号</h2><h2 id="三、多行公式与简单对齐"><a href="#三、多行公式与简单对齐" class="headerlink" title="三、多行公式与简单对齐"></a>三、多行公式与简单对齐</h2>
+<p>显示效果：</p>
+</li>
+</ul>
+<p>$$<br>\left {<br>  \begin{matrix}<br>  %这里写公式内容<br>  x_1+x_2+x_3&#x3D;0 \<br>  2x_1+2x_2+2x_3&#x3D;0<br>  \end{matrix}<br>  \right.<br>$$</p>
+<ul>
+<li><p>如果想要使公式对齐，可在对其位置处添加<code>&amp;</code>符号：</p>
+<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\left</span> <span class="keyword">\&#123;</span></span><br><span class="line"><span class="keyword">\begin</span>&#123;matrix&#125;</span><br><span class="line"><span class="comment">%这里写公式内容</span></span><br><span class="line">x<span class="built_in">_</span>1+x<span class="built_in">_</span>2+x<span class="built_in">_</span>3<span class="built_in">&amp;</span>=0 <span class="keyword">\\</span> </span><br><span class="line">2x<span class="built_in">_</span>1+2x<span class="built_in">_</span>2+2x<span class="built_in">_</span>3<span class="built_in">&amp;</span>=0</span><br><span class="line"><span class="keyword">\end</span>&#123;matrix&#125;</span><br><span class="line"><span class="keyword">\right</span>.</span><br></pre></td></tr></table></figure>
+
+<p>$$<br>\left {<br>\begin{matrix}<br>%这里写公式内容<br>x_1+x_2+x_3&amp;&#x3D;0 \<br>2x_1+2x_2+2x_3&amp;&#x3D;0<br>\end{matrix}<br>\right.<br>$$</p>
+</li>
+</ul>
+
   </div>
   
   
@@ -2748,10 +3102,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-09-02T17:54:49+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-09-21T23:20:47+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2023年9月2日</p>
+    <p>更新于：2023年9月21日</p>
   </a>
 </div>
 
@@ -2902,7 +3256,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E5%85%A5%E9%97%A8%E5%B8%B8%E7%94%A8"><span class="toc-text">一、入门常用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7"><span class="toc-text">二、数学符号</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E5%A4%9A%E8%A1%8C%E5%85%AC%E5%BC%8F%E4%B8%8E%E7%AE%80%E5%8D%95%E5%AF%B9%E9%BD%90"><span class="toc-text">三、多行公式与简单对齐</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E5%85%A5%E9%97%A8%E5%B8%B8%E7%94%A8"><span class="toc-text">一、入门常用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E5%B8%B8%E7%94%A8%E7%AC%A6%E5%8F%B7"><span class="toc-text">二、常用符号</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%881%EF%BC%89%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7"><span class="toc-text">（1）数学符号</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%88%E4%BA%8C%EF%BC%89%E5%B8%8C%E8%85%8A%E5%AD%97%E6%AF%8D"><span class="toc-text">（二）希腊字母</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E5%A4%9A%E8%A1%8C%E5%85%AC%E5%BC%8F%E4%B8%8E%E7%AE%80%E5%8D%95%E5%AF%B9%E9%BD%90"><span class="toc-text">三、多行公式与简单对齐</span></a></li></ol>
     </div>
   </section>
 
@@ -3704,7 +4058,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"寇强的个人空间","url":"http://kouqiang.space/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"寇强","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://kouqiang.space/","sameAs":["https://github.com/volantis-x"],"description":"自建博客页面"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://kouqiang.space/","name":"寇强的个人空间"}},{"@type":"ListItem","position":2,"item":{"@id":"http://kouqiang.space/categories/其他工具/","name":"其他工具"}},{"@type":"ListItem","position":3,"item":{"@id":"http://kouqiang.space/2023/09/02/LATEX常用语法总结/","name":"LATEX常用语法总结"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"寇强的个人空间","url":"http://kouqiang.space/","keywords":null,"description":"自建博客页面","author":{"@type":"Person","name":"寇强","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://kouqiang.space/","description":"自建博客页面"},"publisher":{"@type":"Organization","name":"寇强的个人空间","url":"http://kouqiang.space/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://kouqiang.space?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"LATEX常用语法总结","description":"自建博客页面","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://kouqiang.space/2023/09/02/LATEX%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95%E6%80%BB%E7%BB%93/"},"author":{"@type":"Person","name":"寇强","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://kouqiang.space/"},"publisher":{"@type":"Organization","name":"寇强的个人空间","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://kouqiang.space/2023/09/02/LATEX%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95%E6%80%BB%E7%BB%93/","wordCount":0,"datePublished":"2023-09-02T09:45:00.000Z","dateModified":"2023-09-02T09:54:49.243Z","articleSection":"其他工具","keywords":"学习总结,LATEX,工具,Typora,快捷键","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"寇强的个人空间","url":"http://kouqiang.space/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"寇强","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://kouqiang.space/","sameAs":["https://github.com/volantis-x"],"description":"自建博客页面"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://kouqiang.space/","name":"寇强的个人空间"}},{"@type":"ListItem","position":2,"item":{"@id":"http://kouqiang.space/categories/其他工具/","name":"其他工具"}},{"@type":"ListItem","position":3,"item":{"@id":"http://kouqiang.space/2023/09/02/LATEX常用语法总结/","name":"LATEX常用语法总结"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"寇强的个人空间","url":"http://kouqiang.space/","keywords":null,"description":"自建博客页面","author":{"@type":"Person","name":"寇强","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://kouqiang.space/","description":"自建博客页面"},"publisher":{"@type":"Organization","name":"寇强的个人空间","url":"http://kouqiang.space/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://kouqiang.space?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"LATEX常用语法总结","description":"自建博客页面","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://kouqiang.space/2023/09/02/LATEX%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95%E6%80%BB%E7%BB%93/"},"author":{"@type":"Person","name":"寇强","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://kouqiang.space/"},"publisher":{"@type":"Organization","name":"寇强的个人空间","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://kouqiang.space/2023/09/02/LATEX%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95%E6%80%BB%E7%BB%93/","wordCount":0,"datePublished":"2023-09-02T09:45:00.000Z","dateModified":"2023-09-21T15:20:47.082Z","articleSection":"其他工具","keywords":"学习总结,LATEX,工具,Typora,快捷键","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 

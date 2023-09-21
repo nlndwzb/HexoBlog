@@ -1788,7 +1788,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1695203944596),
+    lastupdate: new Date(1695309771302),
     sidebar: {
       for_page: ["blogger","category","tagcloud","webinfo"],
       for_post: ["toc"],
@@ -3010,16 +3010,36 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class='md article-desc' itemprop="articleBody">
     
       
-        LATEX常用语法一、入门常用行内公式：用两个美元符号即可：$公式内容$。
-多行公式：用两个+两个美元符号，公式内容与该符号不能在同一行：
-123$$......$$
+        LATEX常用语法一、入门常用
+行内公式：用两个美元符号即可：$公式内容$。
 
-
+多行公式：用两个+两个美元符号，不能与公式内容在同一行：
+123$$%......$$
 
 
 上标：^，下标：_。
 
-二、数学符号三、多行公式与简单对齐
+单行注释：用%。
+
+强制换行：
+
+两个反斜杠：\\；
+\par；
+\newline。
+
+
+
+二、常用符号（1）数学符号
+
+
+符号名称
+LATEX代码
+显示效果
+符号名称
+LATEX代码
+显示效果
+
+...
       
     
   </div>
@@ -3622,7 +3642,7 @@ SVG 图像在放大或改变尺寸的情况下其图形质量不会有所损失.
       
         <div class="webinfo-item">
           <div>最后活动时间：</div>
-          <div id="last-update-show">2023-09-20 日</div>
+          <div id="last-update-show">2023-09-21 日</div>
         </div>
       
     </div>
