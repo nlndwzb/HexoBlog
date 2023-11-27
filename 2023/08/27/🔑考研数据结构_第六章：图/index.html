@@ -44,7 +44,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2023-08-27T00:00:00.000Z">
-<meta property="article:modified_time" content="2023-09-12T09:10:30.581Z">
+<meta property="article:modified_time" content="2023-11-27T03:46:12.735Z">
 <meta property="article:author" content="寇强">
 <meta property="article:tag" content="考研笔记">
 <meta property="article:tag" content="数据结构">
@@ -1792,7 +1792,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1700790156909),
+    lastupdate: new Date(1701059906394),
     sidebar: {
       for_page: ["blogger","category","tagcloud","webinfo"],
       for_post: ["toc"],
@@ -3123,7 +3123,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <p>注：</p>
 <ul>
-<li>FirstNeighbor(G,x)：求图G中顶点x的第一个邻接点，若有则返回顶点号，若x无邻接顶点或图中不存在x，则返回-1。<br>NextNeighbor(G, x, y)：x为y的邻接点，找出x的除y之外的下一个邻接点，若有则返回顶点号，若无（y是x的最后一个邻接点）则返回-1。</li>
+<li><code>FirstNeighbor(G,x)</code>：求图G中顶点x的第一个邻接点，若有则返回顶点号，若<code>x</code>无邻接顶点或图中不存在<code>x</code>，则返回<code>-1</code>。<br><code>NextNeighbor(G, x, y)</code>：<code>x</code>为<code>y</code>的邻接点，找出<code>x</code>的除<code>y</code>之外的下一个邻接点，若有则返回顶点号，若无（<code>y</code>是<code>x</code>的最后一个邻接点）则返回<code>-1</code>。</li>
 <li>若图采用邻接矩阵法存储，那么遍历序列是唯一的，如果采用邻接表法存储，那么遍历结果不唯一！</li>
 </ul>
 <h5 id="（3）性能分析-1"><a href="#（3）性能分析-1" class="headerlink" title="（3）性能分析"></a>（3）性能分析</h5><ul>
@@ -3131,8 +3131,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <img src="https://www.z4a.net/images/2023/09/05/image759c07a4613a9191.png" class="lazyload" data-srcset="https://www.z4a.net/images/2023/09/05/image759c07a4613a9191.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image759c07a4613a9191.png" align="center" style="width:80%; border:1px solid lightgray" />
 
 <ul>
-<li>邻接矩阵：O(|V<sup>2</sup>|)。</li>
-<li>邻接链表：O(|V|+|E|)。</li>
+<li>邻接矩阵：$O(|V|^2)$。</li>
+<li>邻接链表：$O(|V|+|E|)$。</li>
 </ul>
 </li>
 <li><p>空间复杂度</p>
@@ -3162,11 +3162,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <ul>
 <li><p>空间复杂度：</p>
-<p>来自函数调用栈，最坏情况为O(|V|)。</p>
+<p>来自函数调用栈，最坏情况为$O(|V|)$。</p>
 </li>
 <li><p>时间复杂度：</p>
-<p>邻接矩阵存储的图：O(|V|<sup>2</sup>)；</p>
-<p>邻接链表存储的图：O(|V|+|E|)。</p>
+<p>邻接矩阵存储的图：$O(|V|^2)$；</p>
+<p>邻接链表存储的图：$O(|V|+|E|)$。</p>
 </li>
 </ul>
 <h5 id="（4）深度优先生成树-x2F-森林"><a href="#（4）深度优先生成树-x2F-森林" class="headerlink" title="（4）深度优先生成树&#x2F;森林"></a>（4）深度优先生成树&#x2F;森林</h5><p>与广度优先生成树&#x2F;森林原理一样。</p>
@@ -3191,7 +3191,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <h3 id="（五）图的应用"><a href="#（五）图的应用" class="headerlink" title="（五）图的应用"></a>（五）图的应用</h3><h4 id="1、最小生成树"><a href="#1、最小生成树" class="headerlink" title="1、最小生成树"></a>1、最小生成树</h4><h5 id="（1）概念"><a href="#（1）概念" class="headerlink" title="（1）概念"></a>（1）概念</h5><ul>
 <li><p>生成树：连通图的生成树是指包含图中所有顶点的一个连通子图。</p>
-<p>顶点有n个，则生成树的边有n-1条。</p>
+<p>顶点有$n$个，则生成树的边有$n-1$条。</p>
 <img src="https://www.z4a.net/images/2023/09/08/imaged5861e003b3293af.png" class="lazyload" data-srcset="https://www.z4a.net/images/2023/09/08/imaged5861e003b3293af.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="imaged5861e003b3293af.png" align="center" style="width:60%; border:1px solid lightgray" />
 </li>
 <li><p>最小生成树：</p>
@@ -3202,16 +3202,16 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <img src="https://www.z4a.net/images/2023/09/08/imagee7e224dfb639e515.png" class="lazyload" data-srcset="https://www.z4a.net/images/2023/09/08/imagee7e224dfb639e515.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="imagee7e224dfb639e515.png" align="center" style="width:70%; border:1px solid lightgray" />
 
 <ul>
-<li><p>时间复杂度为O(|V|<sup>2</sup>)。</p>
+<li><p>时间复杂度为$O(|V|^2)$。</p>
 </li>
-<li><p>时间复杂度不依赖于|E|，因此适合用于稠密图。</p>
+<li><p>时间复杂度不依赖于$|E|$，因此适合用于稠密图。</p>
 </li>
 </ul>
 <h5 id="（3）KrusKal算法"><a href="#（3）KrusKal算法" class="headerlink" title="（3）KrusKal算法"></a>（3）KrusKal算法</h5><p>每次选择一条权值最小的边，使这条边的两头连通(原本已经连通的就不选)，直到所有结点都连通。</p>
 <img src="https://www.z4a.net/images/2023/09/08/imagecfa4b483a6fad37d.png" class="lazyload" data-srcset="https://www.z4a.net/images/2023/09/08/imagecfa4b483a6fad37d.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="imagecfa4b483a6fad37d.png" align="center" style="width:70%; border:1px solid lightgray" />
 
 <ul>
-<li>时间复杂度为O(|E|log<sub>2</sub>|E|)。</li>
+<li>时间复杂度为$O(|E|\log_2|E|)$。</li>
 <li>适合于稀疏图。</li>
 </ul>
 <h4 id="2、最短路径"><a href="#2、最短路径" class="headerlink" title="2、最短路径"></a>2、最短路径</h4><img src="https://www.z4a.net/images/2023/09/08/imagef7d6038caa085725.png" class="lazyload" data-srcset="https://www.z4a.net/images/2023/09/08/imagef7d6038caa085725.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="imagef7d6038caa085725.png" align="center" style="width:80%; border:1px solid lightgray" />
@@ -3267,7 +3267,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <img src="https://www.z4a.net/images/2023/09/08/image32ae9033a2f43319.png" class="lazyload" data-srcset="https://www.z4a.net/images/2023/09/08/image32ae9033a2f43319.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image32ae9033a2f43319.png" align="center" style="width:80%; border:1px solid lightgray" /></blockquote>
 </li>
 </ul>
-<p>时间复杂度：O(|V<sup>2</sup>|)。</p>
+<p>时间复杂度：$O(|V^2|$)。</p>
 <p>注：该算法不适用于有负权值的图！</p>
 <img src="https://www.z4a.net/images/2023/09/08/image7bc9d2694c68e522.png" class="lazyload" data-srcset="https://www.z4a.net/images/2023/09/08/image7bc9d2694c68e522.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image7bc9d2694c68e522.png" align="center" style="width:70%; border:1px solid lightgray" />
 
@@ -3292,7 +3292,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <p>评价：</p>
 <ul>
-<li>时间复杂度为O(|V<sup>3</sup>|)。</li>
+<li>时间复杂度为$O(|V^3|)$。</li>
 <li>可用于带有负权值的图。</li>
 <li>但不能用于带有负权值回路的图！</li>
 </ul>
@@ -3331,9 +3331,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </tr>
 <tr>
 <td align="center">时间复杂度</td>
-<td align="center">邻接矩阵O(|V|<sup>2</sup>)、邻接链表O(|V|)+O(|E|)</td>
-<td align="center">①O(|V|<sup>2</sup>)、②O(|V|<sup>3</sup>)</td>
-<td align="center">O(|V|<sup>3</sup>)</td>
+<td align="center">邻接矩阵$O(</td>
+<td align="center">V</td>
+<td align="center">^2)$、邻接链表$O(</td>
 </tr>
 <tr>
 <td align="center">通常用于</td>
@@ -3487,10 +3487,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-09-12T17:10:30+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-11-27T11:46:12+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2023年9月12日</p>
+    <p>更新于：2023年11月27日</p>
   </a>
 </div>
 
@@ -4444,7 +4444,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"寇强的个人空间","url":"http://kouqiang.space/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"寇强","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://kouqiang.space/","sameAs":["https://github.com/volantis-x"],"description":"自建博客页面"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://kouqiang.space/","name":"寇强的个人空间"}},{"@type":"ListItem","position":2,"item":{"@id":"http://kouqiang.space/categories/考研408笔记/","name":"考研408笔记"}},{"@type":"ListItem","position":3,"item":{"@id":"http://kouqiang.space/2023/08/27/🔑考研数据结构_第六章：图/","name":"🔑考研数据结构_第六章：图"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"寇强的个人空间","url":"http://kouqiang.space/","keywords":null,"description":"自建博客页面","author":{"@type":"Person","name":"寇强","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://kouqiang.space/","description":"自建博客页面"},"publisher":{"@type":"Organization","name":"寇强的个人空间","url":"http://kouqiang.space/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://kouqiang.space?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"🔑考研数据结构_第六章：图","description":"自建博客页面","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://kouqiang.space/2023/08/27/%F0%9F%94%91%E8%80%83%E7%A0%94%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84_%E7%AC%AC%E5%85%AD%E7%AB%A0%EF%BC%9A%E5%9B%BE/"},"author":{"@type":"Person","name":"寇强","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://kouqiang.space/"},"publisher":{"@type":"Organization","name":"寇强的个人空间","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://kouqiang.space/2023/08/27/%F0%9F%94%91%E8%80%83%E7%A0%94%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84_%E7%AC%AC%E5%85%AD%E7%AB%A0%EF%BC%9A%E5%9B%BE/","wordCount":0,"datePublished":"2023-08-27T00:00:00.000Z","dateModified":"2023-09-12T09:10:30.581Z","articleSection":"考研408笔记","keywords":"考研笔记,数据结构","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"寇强的个人空间","url":"http://kouqiang.space/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"寇强","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://kouqiang.space/","sameAs":["https://github.com/volantis-x"],"description":"自建博客页面"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://kouqiang.space/","name":"寇强的个人空间"}},{"@type":"ListItem","position":2,"item":{"@id":"http://kouqiang.space/categories/考研408笔记/","name":"考研408笔记"}},{"@type":"ListItem","position":3,"item":{"@id":"http://kouqiang.space/2023/08/27/🔑考研数据结构_第六章：图/","name":"🔑考研数据结构_第六章：图"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"寇强的个人空间","url":"http://kouqiang.space/","keywords":null,"description":"自建博客页面","author":{"@type":"Person","name":"寇强","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://kouqiang.space/","description":"自建博客页面"},"publisher":{"@type":"Organization","name":"寇强的个人空间","url":"http://kouqiang.space/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://kouqiang.space?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"🔑考研数据结构_第六章：图","description":"自建博客页面","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://kouqiang.space/2023/08/27/%F0%9F%94%91%E8%80%83%E7%A0%94%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84_%E7%AC%AC%E5%85%AD%E7%AB%A0%EF%BC%9A%E5%9B%BE/"},"author":{"@type":"Person","name":"寇强","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://kouqiang.space/"},"publisher":{"@type":"Organization","name":"寇强的个人空间","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://kouqiang.space/2023/08/27/%F0%9F%94%91%E8%80%83%E7%A0%94%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84_%E7%AC%AC%E5%85%AD%E7%AB%A0%EF%BC%9A%E5%9B%BE/","wordCount":0,"datePublished":"2023-08-27T00:00:00.000Z","dateModified":"2023-11-27T03:46:12.735Z","articleSection":"考研408笔记","keywords":"考研笔记,数据结构","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
