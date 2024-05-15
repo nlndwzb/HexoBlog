@@ -1788,7 +1788,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1701059906394),
+    lastupdate: new Date(1715778220705),
     sidebar: {
       for_page: ["blogger","category","tagcloud","webinfo"],
       for_post: ["toc"],
@@ -2637,7 +2637,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           <div class='post-wrapper'>
             <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://kouqiang.space/2023/01/14/JavaScript——基础篇02/">
+  <link itemprop="mainEntityOfPage" href="http://kouqiang.space/2023/03/11/🔑数据结构_第五章：树与二叉树/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="寇强的个人空间">
   </span>
@@ -2655,18 +2655,317 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
     <h2 class="article-title"  itemprop="name headline">
-      <a href="/2023/01/14/JavaScript%E2%80%94%E2%80%94%E5%9F%BA%E7%A1%80%E7%AF%8702/"  itemprop="url">
-        JavaScript——基础篇02
+      <a href="/2023/03/11/%F0%9F%94%91%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84_%E7%AC%AC%E4%BA%94%E7%AB%A0%EF%BC%9A%E6%A0%91%E4%B8%8E%E4%BA%8C%E5%8F%89%E6%A0%91/"  itemprop="url">
+        🔑数据结构_第五章：树与二叉树
       </a>
     </h2>
   
   <div class='md article-desc' itemprop="articleBody">
     
       
-        JavaScript——基础篇02各种功能实现的思路及代码
+        🔑数据结构_第五章：树与二叉树第五章、树与二叉树（一）树的基本概念1、基本概念树是n(n&gt;0)个结点的有限集。
+当n&#x3D;0时，称为空树。在任意一棵空树中应满足：
+
+有且仅有一个特定的称为根的结点。
+当n&gt;1时，其余结点可分为m(m&gt;0)个互不相交的有限集T1，T2，…，Tm，其中每个集合本身又是一棵树，并且称为根的子树。
+
+显然，根的定义是递归的，即在树的定义中又...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time itemprop="dateCreated datePublished" datetime="2023-03-11T20:00:00+08:00">2023-03-11</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/%E7%BC%96%E7%A8%8B/">编程</a>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a href="/categories/%E7%BC%96%E7%A8%8B/" itemprop="url"><span itemprop="name">编程</span></a>
+            </span>
+          
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2023/03/11/%F0%9F%94%91%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84_%E7%AC%AC%E4%BA%94%E7%AB%A0%EF%BC%9A%E6%A0%91%E4%B8%8E%E4%BA%8C%E5%8F%89%E6%A0%91/' itemprop="url">
+            阅读全文
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="http://kouqiang.space/2023/03/11/🔑数据结构_第四章：串/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="寇强的个人空间">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="寇强的个人空间">
+    <meta itemprop="description" content="自建博客页面">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/2023/03/11/%F0%9F%94%91%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84_%E7%AC%AC%E5%9B%9B%E7%AB%A0%EF%BC%9A%E4%B8%B2/"  itemprop="url">
+        🔑数据结构_第四章：串
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      
+        🔑数据结构_第四章：串第四章、串（一）串的定义和实现1、定义串，即字符串String，是由零个或多个字符组成的有限序列。一般记为：$$S&#x3D;\ ‘a_1a_2…a_n’\ \ (n \ge 0)$$
+
+其中，S是串名，单引号或双引号括起来的是串的值。
+
+ai可以是字母、数字或其它字符。
+
+串中字符的个数n称为串的长度。
+
+n=0的串称为“空串”，用Φ表示。
+
+相关定义：
+
+子串：
+...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time itemprop="dateCreated datePublished" datetime="2023-03-11T20:00:00+08:00">2023-03-11</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/%E7%BC%96%E7%A8%8B/">编程</a>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a href="/categories/%E7%BC%96%E7%A8%8B/" itemprop="url"><span itemprop="name">编程</span></a>
+            </span>
+          
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2023/03/11/%F0%9F%94%91%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84_%E7%AC%AC%E5%9B%9B%E7%AB%A0%EF%BC%9A%E4%B8%B2/' itemprop="url">
+            阅读全文
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="http://kouqiang.space/2023/02/28/🎈C语言基础入门/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="寇强的个人空间">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="寇强的个人空间">
+    <meta itemprop="description" content="自建博客页面">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/2023/02/28/%F0%9F%8E%88C%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/"  itemprop="url">
+        🎈C语言基础入门
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      
+        🎈C语言基础入门一、数据的数据类型、数据的输入输出（一）C语言中的数据类型
+C语言中的数据类型
+
+基本类型
+
+整型(int)：大小为4字节
+浮点型(实型)：
+
+双精度double
+单精度float：占用4个字节
+
+字符型：单引号，占用一个字节
+字符串型：双引号，占用字节数为字符数量 + 1，因为每个字符串最后都有个\0表示结束！
+
+构造类型
+指针类型
+空类型
+
+
+基本数据类型，如果只声明不...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time itemprop="dateCreated datePublished" datetime="2023-02-28T21:10:00+08:00">2023-02-28</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/%E8%80%83%E7%A0%94408%E7%AC%94%E8%AE%B0/">考研408笔记</a>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a href="/categories/%E8%80%83%E7%A0%94408%E7%AC%94%E8%AE%B0/" itemprop="url"><span itemprop="name">考研408笔记</span></a>
+            </span>
+          
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2023/02/28/%F0%9F%8E%88C%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/' itemprop="url">
+            阅读全文
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="http://kouqiang.space/2023/01/20/SU动态组件学习/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="寇强的个人空间">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="寇强的个人空间">
+    <meta itemprop="description" content="自建博客页面">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/2023/01/20/SU%E5%8A%A8%E6%80%81%E7%BB%84%E4%BB%B6%E5%AD%A6%E4%B9%A0/"  itemprop="url">
+        SU动态组件学习
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      
+        SU动态组件一、各种函数认识（一）数学函数
+ABS(number)
+求整数的绝对值
+1alert(abs(-127))
+
+
+
+CEILING(number,significance)
+将参数number向上(沿绝对值增大方向)取值，取到最接近significance的倍数。比如：
+1234CEILING(-2.5,-2);//输出为-4！CEILING(3.14159,100);//输出为1...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time itemprop="dateCreated datePublished" datetime="2023-01-20T12:09:00+08:00">2023-01-20</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/%E5%BB%BA%E7%AD%91%E5%AD%A6/">建筑学</a>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a href="/categories/%E5%BB%BA%E7%AD%91%E5%AD%A6/" itemprop="url"><span itemprop="name">建筑学</span></a>
+            </span>
+          
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2023/01/20/SU%E5%8A%A8%E6%80%81%E7%BB%84%E4%BB%B6%E5%AD%A6%E4%B9%A0/' itemprop="url">
+            阅读全文
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="http://kouqiang.space/2023/01/14/JavaScript——常用功能的实现/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="寇强的个人空间">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="寇强的个人空间">
+    <meta itemprop="description" content="自建博客页面">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/2023/01/14/JavaScript%E2%80%94%E2%80%94%E5%B8%B8%E7%94%A8%E5%8A%9F%E8%83%BD%E7%9A%84%E5%AE%9E%E7%8E%B0/"  itemprop="url">
+        JavaScript——常用功能的实现
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      
+        JavaScript——常用功能的实现各种功能实现的思路及代码
 一、昼夜主题切换功能在没有后台服务器，前端只有静态页面时，用js就可以实现昼夜主题切换。不过缺点是默认主题不能随时间变化，且每刷新一次页面都会恢复为默认样式。
 如果有后端，则应该根据客户端请求网页的不同时间来动态创建不同主题的前端页面！
-思路一：更改css文件提前写好两个配色主题（css文件），利用点击按钮绑定js函数去更改头部&l...
+思路一：更改css文件提前写好两个配色主题（css文件），利用点击按钮绑定js函数去更改头部...
       
     
   </div>
@@ -2687,7 +2986,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       </div>
       
         <div>
-          <a class='readmore' href='/2023/01/14/JavaScript%E2%80%94%E2%80%94%E5%9F%BA%E7%A1%80%E7%AF%8702/' itemprop="url">
+          <a class='readmore' href='/2023/01/14/JavaScript%E2%80%94%E2%80%94%E5%B8%B8%E7%94%A8%E5%8A%9F%E8%83%BD%E7%9A%84%E5%AE%9E%E7%8E%B0/' itemprop="url">
             阅读全文
           </a>
         </div>
@@ -2900,7 +3199,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           <div class='post-wrapper'>
             <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://kouqiang.space/2022/10/17/JavaScript——基础篇01/">
+  <link itemprop="mainEntityOfPage" href="http://kouqiang.space/2022/10/17/JavaScript——基础篇/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="寇强的个人空间">
   </span>
@@ -2918,18 +3217,18 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
     <h2 class="article-title"  itemprop="name headline">
-      <a href="/2022/10/17/JavaScript%E2%80%94%E2%80%94%E5%9F%BA%E7%A1%80%E7%AF%8701/"  itemprop="url">
-        JavaScript——基础篇01
+      <a href="/2022/10/17/JavaScript%E2%80%94%E2%80%94%E5%9F%BA%E7%A1%80%E7%AF%87/"  itemprop="url">
+        JavaScript——基础篇
       </a>
     </h2>
   
   <div class='md article-desc' itemprop="articleBody">
     
       
-        JavaScript——基础篇01一、入门介绍等（一）JavaScript的组成部分：
+        JavaScript——基础篇一、入门介绍等（一）JavaScript的组成部分：
 ECMAScript
 整个JavaScript的核心，包含基本语法、变量、关键字、保留字、数据类型、语句、函数等，各平台都使用ECMA标准，因此不存在不同系统不兼容问题。
-123ECMAScript核心——JavaScript面向对象编程Java 是面向对象，写Java程序，写类和对象。而JavaScri...
+123ECMAScript核心——JavaScript面向对象编程Java 是面向对象，写Java程序，写类和对象。而JavaScript...
       
     
   </div>
@@ -2950,7 +3249,7 @@ ECMAScript
       </div>
       
         <div>
-          <a class='readmore' href='/2022/10/17/JavaScript%E2%80%94%E2%80%94%E5%9F%BA%E7%A1%80%E7%AF%8701/' itemprop="url">
+          <a class='readmore' href='/2022/10/17/JavaScript%E2%80%94%E2%80%94%E5%9F%BA%E7%A1%80%E7%AF%87/' itemprop="url">
             阅读全文
           </a>
         </div>
@@ -3014,278 +3313,6 @@ ECMAScript
       
         <div>
           <a class='readmore' href='/2022/07/19/Html%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://kouqiang.space/2022/06/16/DDBot食用指南/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="寇强的个人空间">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="寇强的个人空间">
-    <meta itemprop="description" content="自建博客页面">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2022/06/16/DDBot%E9%A3%9F%E7%94%A8%E6%8C%87%E5%8D%97/"  itemprop="url">
-        DDBot食用指南
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        DDBot食用指南B站专栏介绍：https://www.bilibili.com/read/cv10602230
-项目及源代码地址：https://github.com/Sora233/DDBOT
-详细配置参考技术文档：https://gitee.com/sora233/DDBOT/blob/master/EXAMPLE.md#watch
-官方唯一指定交流群：755612788
-获取bot：...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2022-06-16T14:38:00+08:00">2022-06-16</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E5%85%B6%E4%BB%96%E5%B7%A5%E5%85%B7/">其他工具</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E5%85%B6%E4%BB%96%E5%B7%A5%E5%85%B7/" itemprop="url"><span itemprop="name">其他工具</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2022/06/16/DDBot%E9%A3%9F%E7%94%A8%E6%8C%87%E5%8D%97/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://kouqiang.space/2022/06/07/Kali工具集/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="寇强的个人空间">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="寇强的个人空间">
-    <meta itemprop="description" content="自建博客页面">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2022/06/07/Kali%E5%B7%A5%E5%85%B7%E9%9B%86/"  itemprop="url">
-        Kali工具集
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        Kali工具集一、存活主机识别（一）arping1.介绍ARP协议是“Address Resolution Protocol”（地址解析协议）的缩写。
-在同一以太网中，通过地址解析协议，源主机可以通过目的主机的IP地址获得目的主机的MAC地址。arping程序就是完成上述过程的程序。
-arping，用来向局域网内的其它主机发送ARP请求的指令，它可以用来测试局域网内的某个IP是否已被使用。
-...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2022-06-07T03:08:00+08:00">2022-06-07</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E5%85%B6%E4%BB%96%E5%B7%A5%E5%85%B7/">其他工具</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E5%85%B6%E4%BB%96%E5%B7%A5%E5%85%B7/" itemprop="url"><span itemprop="name">其他工具</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2022/06/07/Kali%E5%B7%A5%E5%85%B7%E9%9B%86/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://kouqiang.space/2022/06/01/Linux基础终端指令/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="寇强的个人空间">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="寇强的个人空间">
-    <meta itemprop="description" content="自建博客页面">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2022/06/01/Linux%E5%9F%BA%E7%A1%80%E7%BB%88%E7%AB%AF%E6%8C%87%E4%BB%A4/"  itemprop="url">
-        Linux基础终端指令
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        Linux基础终端指令一、文本文件操作基础命令1.查看当前路径1pwd
-
-2.切换路径1cd /var/MyProject01
-
-3.创建文件夹1mkdir MyProject01
-
-4.复制文件12cp /root/123.txt /var/MyProject01//将root目录下的123.txt文件复制到/var/MyProject01目录下
-
-5.移动文件1mv /root/123....
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2022-06-01T09:59:00+08:00">2022-06-01</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/Linux/">Linux</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/Linux/" itemprop="url"><span itemprop="name">Linux</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2022/06/01/Linux%E5%9F%BA%E7%A1%80%E7%BB%88%E7%AB%AF%E6%8C%87%E4%BB%A4/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://kouqiang.space/2022/06/01/kali安装及其准备/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="寇强的个人空间">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="寇强的个人空间">
-    <meta itemprop="description" content="自建博客页面">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2022/06/01/kali%E5%AE%89%E8%A3%85%E5%8F%8A%E5%85%B6%E5%87%86%E5%A4%87/"  itemprop="url">
-        kali安装和前期准备
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        kali安装和前期准备一、安装虚拟机（VMware）教程CSDN上一搜一大堆！
-二、安装Kali（2021）教程CSDN上一搜一大堆！
-默认用户名和密码：
-旧版本是root和toor，新版本默认用户名和密码都是kali
-三、配置kali1.改用户密码和用户名参考链接：新kali版本，root默认密码_繁华king的博客-CSDN博客_kali root密码
-Kali Linux 2021.2...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2022-06-01T09:55:00+08:00">2022-06-01</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/kali/">kali</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/kali/" itemprop="url"><span itemprop="name">kali</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2022/06/01/kali%E5%AE%89%E8%A3%85%E5%8F%8A%E5%85%B6%E5%87%86%E5%A4%87/' itemprop="url">
             阅读全文
           </a>
         </div>
@@ -3440,7 +3467,7 @@ Kali Linux 2021.2...
           <li><a class="flat-box"
             title="/categories/%E5%89%8D%E7%AB%AF/" href="/categories/%E5%89%8D%E7%AB%AF/"
             active-action="action-categoriesE5898DE7ABAF"
-            ><div class='name'>前端</div><div class='badge'>(6)</div></a></li>
+            ><div class='name'>前端</div><div class='badge'>(9)</div></a></li>
         
           <li><a class="flat-box"
             title="/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" href="/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"
@@ -3460,12 +3487,12 @@ Kali Linux 2021.2...
           <li><a class="flat-box"
             title="/categories/%E7%BC%96%E7%A8%8B/" href="/categories/%E7%BC%96%E7%A8%8B/"
             active-action="action-categoriesE7BC96E7A88B"
-            ><div class='name'>编程</div><div class='badge'>(4)</div></a></li>
+            ><div class='name'>编程</div><div class='badge'>(14)</div></a></li>
         
           <li><a class="flat-box"
             title="/categories/%E8%80%83%E7%A0%94408%E7%AC%94%E8%AE%B0/" href="/categories/%E8%80%83%E7%A0%94408%E7%AC%94%E8%AE%B0/"
             active-action="action-categoriesE88083E7A094408E7AC94E8AEB0"
-            ><div class='name'>考研408笔记</div><div class='badge'>(10)</div></a></li>
+            ><div class='name'>考研408笔记</div><div class='badge'>(1)</div></a></li>
         
       </ul>
     </div>
@@ -3490,7 +3517,7 @@ Kali Linux 2021.2...
 
 
     <div class='content'>
-      <a href="/tags/C/" style="font-size: 14px; color: #999">C++</a> <a href="/tags/CSS/" style="font-size: 15.43px; color: #8f8f8f">CSS</a> <a href="/tags/C%E8%AF%AD%E8%A8%80/" style="font-size: 15.43px; color: #8f8f8f">C语言</a> <a href="/tags/DDBot/" style="font-size: 14px; color: #999">DDBot</a> <a href="/tags/Html/" style="font-size: 14px; color: #999">Html</a> <a href="/tags/JavaScript/" style="font-size: 15.43px; color: #8f8f8f">JavaScript</a> <a href="/tags/LATEX/" style="font-size: 14px; color: #999">LATEX</a> <a href="/tags/Linux/" style="font-size: 14px; color: #999">Linux</a> <a href="/tags/SU/" style="font-size: 14px; color: #999">SU</a> <a href="/tags/SVG/" style="font-size: 14px; color: #999">SVG</a> <a href="/tags/Typora/" style="font-size: 15.43px; color: #8f8f8f">Typora</a> <a href="/tags/Vim%E7%BC%96%E8%BE%91%E5%99%A8/" style="font-size: 14px; color: #999">Vim编辑器</a> <a href="/tags/bilibili/" style="font-size: 14px; color: #999">bilibili</a> <a href="/tags/git/" style="font-size: 14px; color: #999">git</a> <a href="/tags/kali/" style="font-size: 14px; color: #999">kali</a> <a href="/tags/markdown/" style="font-size: 15.43px; color: #8f8f8f">markdown</a> <a href="/tags/python/" style="font-size: 14px; color: #999">python</a> <a href="/tags/%E5%89%8D%E7%AB%AF/" style="font-size: 19.71px; color: #727272">前端</a> <a href="/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" style="font-size: 14px; color: #999">博客搭建</a> <a href="/tags/%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/" style="font-size: 21.14px; color: #686868">学习总结</a> <a href="/tags/%E5%B7%A5%E5%85%B7/" style="font-size: 16.86px; color: #868686">工具</a> <a href="/tags/%E5%BB%BA%E7%AD%91%E5%AD%A6/" style="font-size: 15.43px; color: #8f8f8f">建筑学</a> <a href="/tags/%E5%BF%AB%E6%8D%B7%E9%94%AE/" style="font-size: 15.43px; color: #8f8f8f">快捷键</a> <a href="/tags/%E6%91%84%E5%BD%B1/" style="font-size: 14px; color: #999">摄影</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" style="font-size: 22.57px; color: #5f5f5f">数据结构</a> <a href="/tags/%E7%AC%94%E8%AE%B0/" style="font-size: 15.43px; color: #8f8f8f">笔记</a> <a href="/tags/%E7%AE%97%E6%B3%95/" style="font-size: 18.29px; color: #7c7c7c">算法</a> <a href="/tags/%E7%BC%96%E7%A8%8B/" style="font-size: 16.86px; color: #868686">编程</a> <a href="/tags/%E8%80%83%E7%A0%94%E7%AC%94%E8%AE%B0/" style="font-size: 24px; color: #555">考研笔记</a> <a href="/tags/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/" style="font-size: 14px; color: #999">软件安装</a>
+      <a href="/tags/C/" style="font-size: 14px; color: #999">C++</a> <a href="/tags/C-C/" style="font-size: 14px; color: #999">C/C++</a> <a href="/tags/CSS/" style="font-size: 16px; color: #8b8b8b">CSS</a> <a href="/tags/C%E8%AF%AD%E8%A8%80/" style="font-size: 18px; color: #7e7e7e">C语言</a> <a href="/tags/DDBot/" style="font-size: 14px; color: #999">DDBot</a> <a href="/tags/Html/" style="font-size: 18px; color: #7e7e7e">Html</a> <a href="/tags/JavaScript/" style="font-size: 14px; color: #999">JavaScript</a> <a href="/tags/LATEX/" style="font-size: 14px; color: #999">LATEX</a> <a href="/tags/Linux/" style="font-size: 14px; color: #999">Linux</a> <a href="/tags/Lua/" style="font-size: 14px; color: #999">Lua</a> <a href="/tags/SU/" style="font-size: 14px; color: #999">SU</a> <a href="/tags/SVG/" style="font-size: 14px; color: #999">SVG</a> <a href="/tags/Typora/" style="font-size: 16px; color: #8b8b8b">Typora</a> <a href="/tags/UI/" style="font-size: 14px; color: #999">UI</a> <a href="/tags/Vim%E7%BC%96%E8%BE%91%E5%99%A8/" style="font-size: 14px; color: #999">Vim编辑器</a> <a href="/tags/bilibili/" style="font-size: 14px; color: #999">bilibili</a> <a href="/tags/git/" style="font-size: 14px; color: #999">git</a> <a href="/tags/js/" style="font-size: 16px; color: #8b8b8b">js</a> <a href="/tags/kali/" style="font-size: 14px; color: #999">kali</a> <a href="/tags/markdown/" style="font-size: 16px; color: #8b8b8b">markdown</a> <a href="/tags/python/" style="font-size: 14px; color: #999">python</a> <a href="/tags/%E5%89%8D%E7%AB%AF/" style="font-size: 24px; color: #555">前端</a> <a href="/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" style="font-size: 14px; color: #999">博客搭建</a> <a href="/tags/%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/" style="font-size: 20px; color: #707070">学习总结</a> <a href="/tags/%E5%B7%A5%E5%85%B7/" style="font-size: 18px; color: #7e7e7e">工具</a> <a href="/tags/%E5%BB%BA%E7%AD%91%E5%AD%A6/" style="font-size: 16px; color: #8b8b8b">建筑学</a> <a href="/tags/%E5%BF%AB%E6%8D%B7%E9%94%AE/" style="font-size: 16px; color: #8b8b8b">快捷键</a> <a href="/tags/%E6%91%84%E5%BD%B1/" style="font-size: 14px; color: #999">摄影</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" style="font-size: 22px; color: #636363">数据结构</a> <a href="/tags/%E6%B8%B8%E6%88%8F/" style="font-size: 14px; color: #999">游戏</a> <a href="/tags/%E7%AC%94%E8%AE%B0/" style="font-size: 16px; color: #8b8b8b">笔记</a> <a href="/tags/%E7%AE%97%E6%B3%95/" style="font-size: 22px; color: #636363">算法</a> <a href="/tags/%E7%BC%96%E7%A8%8B/" style="font-size: 24px; color: #555">编程</a> <a href="/tags/%E8%80%83%E7%A0%94%E7%AC%94%E8%AE%B0/" style="font-size: 14px; color: #999">考研笔记</a> <a href="/tags/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/" style="font-size: 14px; color: #999">软件安装</a>
     </div>
   </section>
 
@@ -3516,7 +3543,7 @@ Kali Linux 2021.2...
       
         <div class="webinfo-item">
           <div>文章数目：</div>
-          <div>33 篇</div>
+          <div>37 篇</div>
         </div>
       
 
@@ -3537,7 +3564,7 @@ Kali Linux 2021.2...
       
         <div class="webinfo-item">
           <div>最后活动时间：</div>
-          <div id="last-update-show">2023-11-27 日</div>
+          <div id="last-update-show">2024-05-15 日</div>
         </div>
       
     </div>
