@@ -44,7 +44,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2024-05-14T10:50:00.000Z">
-<meta property="article:modified_time" content="2024-05-16T10:38:58.915Z">
+<meta property="article:modified_time" content="2024-05-22T10:12:55.040Z">
 <meta property="article:author" content="寇强">
 <meta property="article:tag" content="编程">
 <meta property="article:tag" content="前端">
@@ -1793,7 +1793,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1716042481401),
+    lastupdate: new Date(1716481331373),
     sidebar: {
       for_page: ["blogger","category","tagcloud","webinfo"],
       for_post: ["toc"],
@@ -2887,7 +2887,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </tr>
 <tr>
 <td><code>navigator</code></td>
-<td>飙车浏览器对象，用于获得与浏览器相关的信息</td>
+<td>表示浏览器对象，用于获得与浏览器相关的信息</td>
 </tr>
 </tbody></table>
 <h4 id="2、常用方法"><a href="#2、常用方法" class="headerlink" title="2、常用方法"></a>2、常用方法</h4><table>
@@ -2924,6 +2924,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <tr>
 <td><code>blur()</code></td>
 <td>将被引用的对话框放在所有打开窗口的后面</td>
+</tr>
+<tr>
+<td>:star:<code>getComputedStyle()</code></td>
+<td>用于获取页面上最终渲染出来的某元素的样式</td>
 </tr>
 <tr>
 <td><code>scrollTo(x, y)</code></td>
@@ -3059,6 +3063,26 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">clearTimeOut</span>(timeId);</span><br></pre></td></tr></table></figure>
 </li>
 <li><p><code>setInterval(interval)</code></p>
+</li>
+<li><p><code>getComputedStyle()</code></p>
+<p>用于获取此时浏览器窗口中渲染出来的对象的最终属性值，需要两个参数:</p>
+<ul>
+<li>第一个：要获取样式的元素。</li>
+<li>第二个：可以传递一个伪元素，一般都传<code>null</code>。</li>
+</ul>
+<p>该方法会返回一个对象，对象中封装了当前元素对应的样式。</p>
+<p>使用语法：</p>
+<ol>
+<li><p>可以通过 <strong>getComputedStyle(对象，null).样式名</strong> 的形式来读取样式：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> img_left = <span class="title function_">getComputedStyle</span>(bg_img[<span class="number">0</span>], <span class="literal">null</span>).<span class="property">left</span>;</span><br></pre></td></tr></table></figure>
+
+<p>如果获取的样式没有设置，则会获取到真实的值，而不是默认值</p>
+<p>比如：没有设置width，它不会获取到auto，而是一个长度</p>
+</li>
+<li><p>为了更方便的使用 可以加入正则表达式获取样式名</p>
+<p>利用 <strong>getComputedStyle(样式元素，null)[样式名]</strong> 的形式来获取样式</p>
+</li>
+</ol>
 </li>
 </ul>
 <h4 id="3、Window对象的使用"><a href="#3、Window对象的使用" class="headerlink" title="3、Window对象的使用"></a>3、Window对象的使用</h4><p>Window对象不用创建，可以直接调用其方法或属性：</p>
@@ -3282,7 +3306,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <li><strong>读取</strong>：返回元素和它的子元素的文本内容。</li>
 <li><strong>设置</strong>：当你给 <code>innerText</code> 赋值时，它会替换掉元素内部的所有内容，并将赋值的字符串作为<strong>纯文本</strong>插入。</li>
 </ul>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">复制// 读取</span><br><span class="line">var text = document.getElementById(&#x27;myElement&#x27;).innerText;</span><br><span class="line"></span><br><span class="line">// 设置</span><br><span class="line">document.getElementById(&#x27;myElement&#x27;).innerText = &#x27;New text content&#x27;;</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">复制<span class="comment">// 读取</span></span><br><span class="line"><span class="keyword">var</span> text = <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;myElement&#x27;</span>).<span class="property">innerText</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 设置</span></span><br><span class="line"><span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;myElement&#x27;</span>).<span class="property">innerText</span> = <span class="string">&#x27;New text content&#x27;</span>;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p><strong>outerHTML</strong>:</p>
 <ul>
@@ -3290,7 +3314,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <li><strong>读取</strong>：返回整个元素的 HTML 表示，包括起始标签、结束标签以及它们之间的所有内容。</li>
 <li><strong>设置</strong>：在大多数浏览器中，<code>outerHTML</code> 不能被设置，因为它没有标准的定义，并且可能会引起安全问题。</li>
 </ul>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">// 读取</span><br><span class="line">var html = document.getElementById(&#x27;myElement&#x27;).outerHTML;</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 读取</span></span><br><span class="line"><span class="keyword">var</span> html = <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;myElement&#x27;</span>).<span class="property">outerHTML</span>;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p><strong>outerText</strong>:</p>
 <ul>
@@ -3575,10 +3599,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-05-16T18:38:58+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-05-22T18:12:55+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2024年5月16日</p>
+    <p>更新于：2024年5月22日</p>
   </a>
 </div>
 
@@ -3657,6 +3681,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   
     <div class="prev-next">
+      
+        <a class='prev' href='/2024/05/23/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8%E7%BB%8F%E9%AA%8C/'>
+          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>前端开发入门经验</p>
+          <p class='content'>前端开发入门经验1、&lt;img /&gt;图片底部出现空白原因：是图片的默认垂直方式所导致的，图片底部默认和文字基线baseline对齐。
+解决方法：
+
+结合开发需要，设置图片标签的vert...</p>
+        </a>
       
       
         <a class='next' href='/2024/04/24/%F0%9F%8E%AE%E9%A5%A5%E8%8D%92MOD%E8%B7%AF%E5%BE%84/'>
@@ -4469,7 +4501,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"寇强的个人空间","url":"http://kouqiang.space/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"寇强","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://kouqiang.space/","sameAs":["https://github.com/volantis-x"],"description":"自建博客页面"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://kouqiang.space/","name":"寇强的个人空间"}},{"@type":"ListItem","position":2,"item":{"@id":"http://kouqiang.space/categories/前端/","name":"前端"}},{"@type":"ListItem","position":3,"item":{"@id":"http://kouqiang.space/2024/05/14/JavaScript——技术篇/","name":"JavaScript——技术篇"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"寇强的个人空间","url":"http://kouqiang.space/","keywords":null,"description":"自建博客页面","author":{"@type":"Person","name":"寇强","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://kouqiang.space/","description":"自建博客页面"},"publisher":{"@type":"Organization","name":"寇强的个人空间","url":"http://kouqiang.space/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://kouqiang.space?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"JavaScript——技术篇","description":"自建博客页面","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://kouqiang.space/2024/05/14/JavaScript%E2%80%94%E2%80%94%E6%8A%80%E6%9C%AF%E7%AF%87/"},"author":{"@type":"Person","name":"寇强","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://kouqiang.space/"},"publisher":{"@type":"Organization","name":"寇强的个人空间","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://kouqiang.space/2024/05/14/JavaScript%E2%80%94%E2%80%94%E6%8A%80%E6%9C%AF%E7%AF%87/","wordCount":0,"datePublished":"2024-05-14T10:50:00.000Z","dateModified":"2024-05-16T10:38:58.915Z","articleSection":"前端","keywords":"编程,前端,js","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"寇强的个人空间","url":"http://kouqiang.space/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"寇强","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://kouqiang.space/","sameAs":["https://github.com/volantis-x"],"description":"自建博客页面"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://kouqiang.space/","name":"寇强的个人空间"}},{"@type":"ListItem","position":2,"item":{"@id":"http://kouqiang.space/categories/前端/","name":"前端"}},{"@type":"ListItem","position":3,"item":{"@id":"http://kouqiang.space/2024/05/14/JavaScript——技术篇/","name":"JavaScript——技术篇"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"寇强的个人空间","url":"http://kouqiang.space/","keywords":null,"description":"自建博客页面","author":{"@type":"Person","name":"寇强","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://kouqiang.space/","description":"自建博客页面"},"publisher":{"@type":"Organization","name":"寇强的个人空间","url":"http://kouqiang.space/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://kouqiang.space?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"JavaScript——技术篇","description":"自建博客页面","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://kouqiang.space/2024/05/14/JavaScript%E2%80%94%E2%80%94%E6%8A%80%E6%9C%AF%E7%AF%87/"},"author":{"@type":"Person","name":"寇强","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://kouqiang.space/"},"publisher":{"@type":"Organization","name":"寇强的个人空间","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://kouqiang.space/2024/05/14/JavaScript%E2%80%94%E2%80%94%E6%8A%80%E6%9C%AF%E7%AF%87/","wordCount":0,"datePublished":"2024-05-14T10:50:00.000Z","dateModified":"2024-05-22T10:12:55.040Z","articleSection":"前端","keywords":"编程,前端,js","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
