@@ -44,7 +44,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2022-12-22T06:56:00.000Z">
-<meta property="article:modified_time" content="2024-05-22T03:41:51.901Z">
+<meta property="article:modified_time" content="2024-05-24T10:37:24.621Z">
 <meta property="article:author" content="寇强">
 <meta property="article:tag" content="CSS">
 <meta property="article:tag" content="学习总结">
@@ -1793,7 +1793,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1716481331373),
+    lastupdate: new Date(1716547136134),
     sidebar: {
       for_page: ["blogger","category","tagcloud","webinfo"],
       for_post: ["toc"],
@@ -2867,7 +2867,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
 
-<h2 id="五、伪类选择器"><a href="#五、伪类选择器" class="headerlink" title="五、伪类选择器"></a>五、伪类选择器</h2><p>伪类和伪元素也是一种选择器。</p>
+<h2 id="五、伪类和伪元素"><a href="#五、伪类和伪元素" class="headerlink" title="五、伪类和伪元素"></a>五、伪类和伪元素</h2><p>伪类和伪元素也是一种选择器。</p>
 <p>伪类和伪元素是预定义的、独立于文档元素的，它们获取元素的途径不是基于id、class或属性这些基础的元素特征，而是根据元素是否处于某种特殊状态（伪类），或者是元素中特别的内容（伪元素）。</p>
 <h3 id="1-伪类"><a href="#1-伪类" class="headerlink" title="1.伪类"></a>1.伪类</h3><p>伪类是一种选择器，CSS伪类用于向某些选择器添加特殊效果，伪类选择元素基于当前元素处于的状态，或者说元素当前所具有的特性。</p>
 <h4 id="（1）超链接伪类"><a href="#（1）超链接伪类" class="headerlink" title="（1）超链接伪类"></a>（1）超链接伪类</h4><p>语法：</p>
@@ -2883,8 +2883,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </tr>
 </thead>
 <tbody><tr>
-<td><code>:root</code></td>
-<td>选择文档的根元素，在HTML中根元素永远是HTML</td>
+<td><code>E:root</code></td>
+<td>选择元素<code>E</code>所在文档的根元素，在HTML中根元素永远是HTML</td>
 </tr>
 <tr>
 <td><code>:not(selector)</code></td>
@@ -2899,10 +2899,213 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <td>在链接中URL用锚点<code>#idname</code>可以指向相对应的<code>id</code>值的元素，该伪类用于选取锚点元素的目标元素</td>
 </tr>
 </tbody></table>
-<h3 id="2-常见结构伪类选择器"><a href="#2-常见结构伪类选择器" class="headerlink" title="2.常见结构伪类选择器"></a>2.常见结构伪类选择器</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-pseudo">:first</span>-child			//第一个节点</span><br><span class="line"><span class="selector-pseudo">:last-child</span>				//最后一个节点</span><br><span class="line"><span class="selector-pseudo">:nth-child</span>(n)			//顺数第n个节点（<span class="number">2</span>n表示顺数的所有偶数位节点）</span><br><span class="line"><span class="selector-pseudo">:nth-last-child</span>(n)		//倒数第n个节点（<span class="number">2</span>n表示倒序所有偶数位节点）</span><br></pre></td></tr></table></figure>
+<h4 id="（3）子元素伪类"><a href="#（3）子元素伪类" class="headerlink" title="（3）子元素伪类"></a>（3）子元素伪类</h4><table>
+<thead>
+<tr>
+<th>伪类</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>E:first-child</code>和<code>E:last-child</code></td>
+<td>当<code>E</code>作为某元素的第一个&#x2F;最后一个元素时被选中</td>
+</tr>
+<tr>
+<td><code>E:only-child</code></td>
+<td>当<code>E</code>作为某元素的唯一一个元素时被选中</td>
+</tr>
+<tr>
+<td><code>E:nth-child(n)</code></td>
+<td>当<code>E</code>作为某元素的第<code>n</code>个元素时被选中</td>
+</tr>
+<tr>
+<td><code>E:nth-last-child(n)</code></td>
+<td>当<code>E</code>作为某元素的倒数第<code>n</code>个元素时被选中</td>
+</tr>
+<tr>
+<td><code>E:first-of-type</code></td>
+<td>与<code>E</code>同级的第一个元素也是<code>E</code>的话，选中这里的第一个<code>E</code></td>
+</tr>
+<tr>
+<td><code>E:last-of-type</code></td>
+<td>与<code>E</code>同级的最后一个元素也是<code>E</code>的话，选中这里的最后一个<code>E</code></td>
+</tr>
+<tr>
+<td><code>E:only-of-type</code></td>
+<td>选择所有仅有一个子元素为<code>E</code>的元素</td>
+</tr>
+<tr>
+<td><code>E:nth-of-type</code></td>
+<td>与<code>E</code>同级的第<code>n</code>个元素也是<code>E</code>的话，选中这里的第<code>n</code>个<code>E</code></td>
+</tr>
+<tr>
+<td><code>E:nth-last-of-type(n)</code></td>
+<td>与<code>E</code>同级的倒数第<code>n</code>个元素也是<code>E</code>的话，选中这里的倒数第<code>n</code>个<code>E</code></td>
+</tr>
+</tbody></table>
+<p>如：</p>
+<p><code>E:first-child</code>：如果元素<code>E</code>是任意元素的第一个子元素，那么选中它。</p>
+<p><code>F&gt;E:first-child</code>：选择所有<code>F</code>元素的儿子中的第一个<code>E</code>元素。</p>
+<p>注：可与其他选择器混合使用：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.jiaKuan</span><span class="selector-pseudo">:only-of-type</span>&#123;</span><br><span class="line">	<span class="attribute">color</span>: darkorange;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>更多请查阅参考：<a target="_blank" rel="noopener" href="https://blog.csdn.net/fantasy_Go/article/details/80995224?spm=1001.2101.3001.6650.1&utm_medium=distribute.pc_relevant.none-task-blog-2~default~CTRLIST~Rate-1-80995224-blog-107923223.pc_relevant_antiscanv3&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2~default~CTRLIST~Rate-1-80995224-blog-107923223.pc_relevant_antiscanv3&utm_relevant_index=2">伪类选择器简单总结</a></p>
-<h3 id="3-目标伪类选择器"><a href="#3-目标伪类选择器" class="headerlink" title="3.目标伪类选择器"></a>3.目标伪类选择器</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-pseudo">:target</span></span><br></pre></td></tr></table></figure>
+<h4 id="（4）UI伪类"><a href="#（4）UI伪类" class="headerlink" title="（4）UI伪类"></a>（4）UI伪类</h4><table>
+<thead>
+<tr>
+<th>伪类</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>:hover</td>
+<td>鼠标悬浮在其上时</td>
+</tr>
+<tr>
+<td>:active</td>
+<td>鼠标按下未抬起时</td>
+</tr>
+<tr>
+<td>:focus</td>
+<td>元素获得焦点时</td>
+</tr>
+<tr>
+<td>:enabled</td>
+<td>选择所有启用的表单元素</td>
+</tr>
+<tr>
+<td>:disabled</td>
+<td>选择所有禁用的表单元素</td>
+</tr>
+<tr>
+<td>:read-only</td>
+<td>元素处于只读状态时</td>
+</tr>
+<tr>
+<td>:read-write</td>
+<td>可读可写状态时</td>
+</tr>
+<tr>
+<td>:checked</td>
+<td>选择所有选中的表单元素</td>
+</tr>
+<tr>
+<td>:default</td>
+<td>当页面打开时默认处于选取状态的单选按钮或复选框</td>
+</tr>
+<tr>
+<td>:indeterminate</td>
+<td>当页面打开时，如果一组单选按钮都没有设定为选取状态，则选择这组按钮。如果用户选取了其中一个按钮，则该选择器中的样式会失效。</td>
+</tr>
+<tr>
+<td>::selection</td>
+<td>当元素处于选中时的状态</td>
+</tr>
+<tr>
+<td>:invalid</td>
+<td>选择所有未通过表单校验的元素</td>
+</tr>
+<tr>
+<td>:valid</td>
+<td>选择所有通过了表单校验的元素</td>
+</tr>
+<tr>
+<td>:required</td>
+<td>选择所有正确设定了<code>required</code>属性的<code>input</code>、<code>select</code>和<code>textarea</code>元素</td>
+</tr>
+<tr>
+<td>:optional</td>
+<td>选择所有未指定<code>required</code>属性的<code>input</code>、<code>select</code>和<code>textarea</code>元素</td>
+</tr>
+<tr>
+<td>:in-range</td>
+<td>元素输入值在规定范围内时选择该元素</td>
+</tr>
+<tr>
+<td>:out-of-range</td>
+<td>元素输入值不在规定范围内时选择该元素</td>
+</tr>
+</tbody></table>
+<p>注：不同浏览器对UI伪类支持情况有差异！</p>
+<h3 id="2-伪元素"><a href="#2-伪元素" class="headerlink" title="2.伪元素"></a>2.伪元素</h3><p>伪元素用于对某些元素中的特定内容进行操作。</p>
+<table>
+<thead>
+<tr>
+<th>伪元素</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>::first-letter</code></td>
+<td>将特殊样式添加到文本的首字符</td>
+</tr>
+<tr>
+<td><code>::first-line</code></td>
+<td>将特殊样式添加到文本的首行</td>
+</tr>
+<tr>
+<td><code>::before</code></td>
+<td>在元素之前插入某些内容，和<code>content</code>属性一起使用</td>
+</tr>
+<tr>
+<td><code>::after</code></td>
+<td>在元素之后插入某些内容，和<code>content</code>属性一起使用</td>
+</tr>
+</tbody></table>
+<h4 id="（1）-first-letter"><a href="#（1）-first-letter" class="headerlink" title="（1）::first-letter"></a>（1）<code>::first-letter</code></h4><p>用于将特殊样式添加到文本的首个字符，只能应用于块级元素。</p>
+<p>该伪元素支持应用以下属性：<code>font</code>、<code>color</code>、<code>background</code>、<code>word-spacing</code>、<code>letter-spacing</code>、<code>text-decoration</code>、<code>vertical-align</code>、<code>text-transform</code>、<code>line-height</code>和<code>clear</code>。</p>
+<h4 id="（2）-first-line"><a href="#（2）-first-line" class="headerlink" title="（2）::first-line"></a>（2）<code>::first-line</code></h4><p>用于将特殊样式添加到一段文本的首行，不论文本在屏幕上如何调整如何缩放或换行，该样式始终作用于文本的第一行。</p>
+<p>该伪元素支持应用以下属性：<code>font</code>、<code>color</code>、<code>background</code>、<code>text-decoration</code>、<code>vertical-align</code>（当<code>float</code>为<code>none</code>时）、<code>text-transform</code>、<code>line-height</code>、<code>clear</code>、<code>margin</code>、<code>padding</code>、<code>border</code>和<code>float</code>。</p>
+<h3 id="3-内容属性"><a href="#3-内容属性" class="headerlink" title="3.内容属性"></a>3.内容属性</h3><p>CSS内容属性与<code>::before</code>、<code>::after</code>伪元素一起使用，用于插入内容，默认是内联内容。</p>
+<h4 id="（1）content属性"><a href="#（1）content属性" class="headerlink" title="（1）content属性"></a>（1）<code>content</code>属性</h4><table>
+<thead>
+<tr>
+<th>值</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>none</code></td>
+<td>不生成任何值</td>
+</tr>
+<tr>
+<td><code>normal</code></td>
+<td>默认值，与<code>none</code>相同</td>
+</tr>
+<tr>
+<td><code>&lt;attr&gt;</code></td>
+<td>插入标签属性值</td>
+</tr>
+<tr>
+<td><code>&lt;url&gt;</code></td>
+<td>插入一个外部资源，如图像视频或浏览器支持的其他任何资源</td>
+</tr>
+<tr>
+<td><code>&lt;string&gt;</code></td>
+<td>插入字符串</td>
+</tr>
+<tr>
+<td><code>counter(name)</code></td>
+<td>使用已命名的计数器</td>
+</tr>
+<tr>
+<td><code>counter(name, list-style-type)</code></td>
+<td>使用已命名的计数器并使用<code>list-style-type</code>指定标号的种类</td>
+</tr>
+<tr>
+<td><code>close-quote</code></td>
+<td>插入<code>quotes</code>属性的后标记</td>
+</tr>
+<tr>
+<td><code>open-quote</code></td>
+<td>插入<code>quotes</code>属性的前标记</td>
+</tr>
+</tbody></table>
+<h4 id="（2）counter-increment属性"><a href="#（2）counter-increment属性" class="headerlink" title="（2）counter-increment属性"></a>（2）<code>counter-increment</code>属性</h4><p>用于设定计数器和增加的值，计数器的name参数可任意命名，用在counter(name)属性值或counter(name, list-style-type)方法上。</p>
+<p>增加的值默认为1，可以设为负值，如：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">li</span>&#123;</span><br><span class="line">    <span class="attribute">counter-increment</span>: cil <span class="number">2</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="（3）quotes属性"><a href="#（3）quotes属性" class="headerlink" title="（3）quotes属性"></a>（3）<code>quotes</code>属性</h4><p>quotes属性为content属性的open-quote和close-quote值定义标记，两个为一组，如：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">li</span>&#123;</span><br><span class="line">    <span class="attribute">quotes</span>: <span class="string">&quot;(&quot;</span> <span class="string">&quot;)&quot;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
 
@@ -3838,10 +4041,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-05-22T11:41:51+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-05-24T18:37:24+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2024年5月22日</p>
+    <p>更新于：2024年5月24日</p>
   </a>
 </div>
 
@@ -3990,7 +4193,7 @@ ECMAScript
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81CSS%E5%BC%95%E5%85%A5%E6%96%B9%E5%BC%8F"><span class="toc-text">一、CSS引入方式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%A4%96%E9%83%A8%E5%BC%95%E5%85%A5"><span class="toc-text">1.外部引入</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E5%86%85%E9%83%A8%E5%86%99%E5%85%A5"><span class="toc-text">2.内部写入</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E8%A1%8C%E5%86%85%E5%B5%8C%E5%85%A5"><span class="toc-text">3.行内嵌入</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E8%AF%AD%E6%B3%95%E8%A7%84%E8%8C%83"><span class="toc-text">二、语法规范</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81CSS%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-text">三、CSS选择器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E6%A0%87%E7%AD%BE-x2F-%E5%85%83%E7%B4%A0%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-text">1.标签&#x2F;元素选择器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E7%B1%BB%E9%80%89%E6%8B%A9%E5%99%A8%E5%92%8Cid%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-text">2.类选择器和id选择器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E9%80%9A%E9%85%8D%E7%AC%A6%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-text">3.通配符选择器*</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E5%B1%9E%E6%80%A7%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-text">4.属性选择器</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%881%EF%BC%89%E9%80%89%E6%8B%A9%E5%85%B7%E6%9C%89%E6%8C%87%E5%AE%9A%E5%B1%9E%E6%80%A7%E7%9A%84%E5%85%83%E7%B4%A0"><span class="toc-text">（1）选择具有指定属性的元素</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%882%EF%BC%89%E5%B1%9E%E6%80%A7%E5%92%8C%E5%A4%9A%E4%B8%AA%E5%80%BC%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-text">（2）属性和多个值选择器</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E2%91%A0-attr-val"><span class="toc-text">①[attr~&#x3D;val]</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E2%91%A1-attr-val"><span class="toc-text">②[attr|&#x3D;val] </span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E2%91%A2-attr-x3D-val"><span class="toc-text">③[attr^&#x3D;val]</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E2%91%A3-attr-x3D-val"><span class="toc-text">④[attr$&#x3D;val]</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E2%91%A4-attr-x3D-val"><span class="toc-text">⑤[attr*&#x3D;val]</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E3%80%81CSS%E9%AB%98%E7%BA%A7-x2F-%E5%A4%8D%E5%90%88%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-text">四、CSS高级&#x2F;复合选择器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%90%8E%E4%BB%A3%E9%80%89%E6%8B%A9%E5%99%A8%EF%BC%9A"><span class="toc-text">1.后代选择器： </span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E5%AD%90-x2F-%E5%B1%82%E7%BA%A7%E9%80%89%E6%8B%A9%E5%99%A8%EF%BC%9A-gt"><span class="toc-text">2.子&#x2F;层级选择器：&gt;</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E5%B9%B6%E9%9B%86%E9%80%89%E6%8B%A9%E5%99%A8%EF%BC%9A"><span class="toc-text">3.并集选择器：,</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E4%BA%A4%E9%9B%86%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-text">4.交集选择器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E5%85%84%E5%BC%9F%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-text">5.兄弟选择器</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%94%E3%80%81%E4%BC%AA%E7%B1%BB%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-text">五、伪类选择器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E4%BC%AA%E7%B1%BB"><span class="toc-text">1.伪类</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%881%EF%BC%89%E8%B6%85%E9%93%BE%E6%8E%A5%E4%BC%AA%E7%B1%BB"><span class="toc-text">（1）超链接伪类</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%882%EF%BC%89%E7%BB%93%E6%9E%84%E6%80%A7%E4%BC%AA%E7%B1%BB"><span class="toc-text">（2）结构性伪类</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E5%B8%B8%E8%A7%81%E7%BB%93%E6%9E%84%E4%BC%AA%E7%B1%BB%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-text">2.常见结构伪类选择器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E7%9B%AE%E6%A0%87%E4%BC%AA%E7%B1%BB%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-text">3.目标伪类选择器</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AD%E3%80%81CSS%E6%A0%B7%E5%BC%8F"><span class="toc-text">六、CSS样式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#0-CSS%E5%B8%B8%E7%94%A8%E5%8D%95%E4%BD%8D"><span class="toc-text">0.CSS常用单位</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%B8%B8%E7%94%A8%E6%96%87%E5%AD%97%E6%A0%B7%E5%BC%8F"><span class="toc-text">1.常用文字样式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E6%96%87%E6%9C%AC%E6%A0%BC%E5%BC%8F%E8%AE%BE%E7%BD%AE"><span class="toc-text">2.文本格式设置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E5%85%83%E7%B4%A0%E8%BE%B9%E6%A1%86%E6%A0%B7%E5%BC%8F"><span class="toc-text">3.元素边框样式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E5%85%83%E7%B4%A0%E8%83%8C%E6%99%AF%E5%9B%BE%E7%89%87"><span class="toc-text">4.元素背景图片</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E5%9B%BE%E7%89%87%E6%A0%B7%E5%BC%8F"><span class="toc-text">5.图片样式</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%881%EF%BC%89%E5%9B%BE%E7%89%87%E5%B0%BA%E5%AF%B8%E5%92%8C%E5%9B%BE%E7%89%87%E8%BE%B9%E6%A1%86"><span class="toc-text">（1）图片尺寸和图片边框</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%882%EF%BC%89%E5%9B%BE%E7%89%87%E8%AE%BE%E7%BD%AE%E6%B0%B4%E5%B9%B3%E5%92%8C%E5%9E%82%E7%9B%B4%E5%AF%B9%E9%BD%90"><span class="toc-text">（2）图片设置水平和垂直对齐</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%9E%82%E7%9B%B4%E5%AF%B9%E9%BD%90%EF%BC%9Avertical-align%E5%B1%9E%E6%80%A7"><span class="toc-text">垂直对齐：vertical-align属性</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-%E5%88%97%E8%A1%A8%E9%A1%B9%E5%89%8D%E7%AC%A6%E5%8F%B7%E6%A0%B7%E5%BC%8F"><span class="toc-text">6.列表项前符号样式</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%80%E8%88%AC%E5%AF%B9%E6%9C%89%E5%BA%8F%E5%88%97%E8%A1%A8%E5%BA%94%E7%94%A8%E8%BF%99%E4%BA%9B%E6%A0%B7%E5%BC%8F%EF%BC%9A"><span class="toc-text">一般对有序列表应用这些样式：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%80%E8%88%AC%E5%AF%B9%E6%97%A0%E5%BA%8F%E5%88%97%E8%A1%A8%E5%BA%94%E7%94%A8%E8%BF%99%E4%BA%9B%E6%A0%B7%E5%BC%8F%EF%BC%9A"><span class="toc-text">一般对无序列表应用这些样式：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%98%E5%8F%AF%E4%BB%A5%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9B%BE%E7%89%87%E4%B8%BA%E6%A0%B7%E5%BC%8F%EF%BC%9A"><span class="toc-text">还可以自定义图片为样式：</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-%E8%A1%A8%E6%A0%BC%E6%A0%B7%E5%BC%8F"><span class="toc-text">7.表格样式</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%881%EF%BC%89%E8%A1%A8%E6%A0%BC%E8%BE%B9%E6%A1%86"><span class="toc-text">（1）表格边框</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%882%EF%BC%89%E5%AE%BD%E5%BA%A6%E3%80%81%E9%AB%98%E5%BA%A6%E3%80%81%E8%BE%B9%E6%A1%86%E9%97%B4%E8%B7%9D"><span class="toc-text">（2）宽度、高度、边框间距</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%883%EF%BC%89%E8%A1%A8%E6%A0%BC%E6%A0%87%E9%A2%98%E4%BD%8D%E7%BD%AE"><span class="toc-text">（3）表格标题位置</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-CSS%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B"><span class="toc-text">8.CSS盒子模型</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%881%EF%BC%89%E7%9B%92%E5%AD%90%E8%BE%B9%E6%A1%86border"><span class="toc-text">（1）盒子边框border</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%882%EF%BC%89%E7%9B%92%E5%AD%90%E5%86%85%E5%A4%96%E8%BE%B9%E8%B7%9Dpadding%E5%92%8Cmargin"><span class="toc-text">（2）盒子内外边距padding和margin</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%883%EF%BC%89%E6%B8%85%E9%99%A4%E5%86%85%E5%A4%96%E8%BE%B9%E8%B7%9D"><span class="toc-text">（3）清除内外边距</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%884%EF%BC%89%E7%9B%92%E5%AD%90%E5%A4%A7%E5%B0%8F%E9%99%90%E5%88%B6"><span class="toc-text">（4）盒子大小限制</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%885%EF%BC%89box-sizing%E5%B1%9E%E6%80%A7"><span class="toc-text">（5）box-sizing属性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%886%EF%BC%89outline%E5%B1%9E%E6%80%A7"><span class="toc-text">（6）outline属性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%887%EF%BC%89box-shadow%E5%B1%9E%E6%80%A7"><span class="toc-text">（7）box-shadow属性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%888%EF%BC%89opacity%E5%B1%9E%E6%80%A7"><span class="toc-text">（8）opacity属性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%889%EF%BC%89%E7%9B%92%E6%A8%A1%E5%9E%8B%E6%98%BE%E7%A4%BA%E6%A8%A1%E5%BC%8F"><span class="toc-text">（9）盒模型显示模式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%8810%EF%BC%89%E5%8F%AF%E8%A7%81%E4%B8%8E%E6%BA%A2%E5%87%BA"><span class="toc-text">（10）可见与溢出</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E2%91%A0visibility%E5%B1%9E%E6%80%A7"><span class="toc-text">①visibility属性</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E2%91%A1overflow%E5%B1%9E%E6%80%A7"><span class="toc-text">②overflow属性</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%8811%EF%BC%89cursor%E9%BC%A0%E6%A0%87%E6%A0%B7%E5%BC%8F"><span class="toc-text">（11）cursor鼠标样式</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-%E6%B5%AE%E5%8A%A8%E5%B8%83%E5%B1%80"><span class="toc-text">9.浮动布局</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%881%EF%BC%89%E4%BC%A0%E7%BB%9F%E7%BD%91%E9%A1%B5%E5%B8%83%E5%B1%80%E7%9A%84%E4%B8%89%E7%A7%8D%E6%96%B9%E5%BC%8F"><span class="toc-text">（1）传统网页布局的三种方式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%882%EF%BC%89%E6%B5%AE%E5%8A%A8%E5%B8%83%E5%B1%80"><span class="toc-text">（2）浮动布局</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#10-%E5%AE%9A%E4%BD%8D%E5%B8%83%E5%B1%80"><span class="toc-text">10.定位布局</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%881%EF%BC%89%E5%AE%9A%E4%BD%8D%E7%BB%84%E6%88%90"><span class="toc-text">（1）定位组成</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E2%91%A0%E5%AE%9A%E4%BD%8D%E6%A8%A1%E5%BC%8Fposition"><span class="toc-text">①定位模式position</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E2%91%A1%E8%BE%B9%E5%81%8F%E7%A7%BB"><span class="toc-text">②边偏移</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%882%EF%BC%89%E9%9D%99%E6%80%81%E5%AE%9A%E4%BD%8D%EF%BC%88%E9%BB%98%E8%AE%A4%EF%BC%89"><span class="toc-text">（2）静态定位（默认）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%883%EF%BC%89%E7%9B%B8%E5%AF%B9%E5%AE%9A%E4%BD%8Drelative"><span class="toc-text">（3）相对定位relative</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%884%EF%BC%89%E7%BB%9D%E5%AF%B9%E5%AE%9A%E4%BD%8Dabdolute"><span class="toc-text">（4）绝对定位abdolute</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%885%EF%BC%89%E5%9B%BA%E5%AE%9A%E5%AE%9A%E4%BD%8Dfixed"><span class="toc-text">（5）固定定位fixed</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%886%EF%BC%89%E7%B2%98%E8%B4%B4%E5%AE%9A%E4%BD%8Dsticky"><span class="toc-text">（6）粘贴定位sticky</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%887%EF%BC%89%E6%80%BB%E7%BB%93"><span class="toc-text">（7）总结</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#11-display-flex%E5%BC%B9%E6%80%A7%E5%B8%83%E5%B1%80%EF%BC%88%E4%BC%B8%E7%BC%A9%E7%9B%92%EF%BC%89"><span class="toc-text">11.display: flex弹性布局（伸缩盒）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%881%EF%BC%89%E4%BC%B8%E7%BC%A9%E7%9B%92%E5%B1%9E%E6%80%A7"><span class="toc-text">（1）伸缩盒属性</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E2%91%A0flex-direction"><span class="toc-text">①flex-direction</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E2%91%A1flex-wrap"><span class="toc-text">②flex-wrap</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E2%91%A2flex-flow"><span class="toc-text">③flex-flow</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E2%91%A3justify-content"><span class="toc-text">④justify-content</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E2%91%A4align-items"><span class="toc-text">⑤align-items</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E2%91%A5align-content"><span class="toc-text">⑥align-content</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%882%EF%BC%89%E9%A1%B9%E7%9B%AE%E5%B1%9E%E6%80%A7"><span class="toc-text">（2）项目属性</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E2%91%A0order"><span class="toc-text">①order</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E2%91%A1flex-grow"><span class="toc-text">②flex-grow</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E2%91%A2flex-shrink"><span class="toc-text">③flex-shrink</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E2%91%A3flex-basis"><span class="toc-text">④flex-basis</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E2%91%A4flex"><span class="toc-text">⑤flex</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E2%91%A5align-self"><span class="toc-text">⑥align-self</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#12-%E7%BD%91%E6%A0%BC%E5%B8%83%E5%B1%80"><span class="toc-text">12.网格布局</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#12-%E8%BF%87%E6%B8%A1%E5%8A%A8%E7%94%BB"><span class="toc-text">12.过渡动画</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#13-%E5%B1%82%E5%8F%A0%E6%A0%B7%E5%BC%8F%E8%A1%A8%E7%9A%84%E4%BC%98%E5%85%88%E7%BA%A7"><span class="toc-text">13.层叠样式表的优先级</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81CSS%E5%BC%95%E5%85%A5%E6%96%B9%E5%BC%8F"><span class="toc-text">一、CSS引入方式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%A4%96%E9%83%A8%E5%BC%95%E5%85%A5"><span class="toc-text">1.外部引入</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E5%86%85%E9%83%A8%E5%86%99%E5%85%A5"><span class="toc-text">2.内部写入</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E8%A1%8C%E5%86%85%E5%B5%8C%E5%85%A5"><span class="toc-text">3.行内嵌入</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E8%AF%AD%E6%B3%95%E8%A7%84%E8%8C%83"><span class="toc-text">二、语法规范</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81CSS%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-text">三、CSS选择器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E6%A0%87%E7%AD%BE-x2F-%E5%85%83%E7%B4%A0%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-text">1.标签&#x2F;元素选择器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E7%B1%BB%E9%80%89%E6%8B%A9%E5%99%A8%E5%92%8Cid%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-text">2.类选择器和id选择器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E9%80%9A%E9%85%8D%E7%AC%A6%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-text">3.通配符选择器*</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E5%B1%9E%E6%80%A7%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-text">4.属性选择器</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%881%EF%BC%89%E9%80%89%E6%8B%A9%E5%85%B7%E6%9C%89%E6%8C%87%E5%AE%9A%E5%B1%9E%E6%80%A7%E7%9A%84%E5%85%83%E7%B4%A0"><span class="toc-text">（1）选择具有指定属性的元素</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%882%EF%BC%89%E5%B1%9E%E6%80%A7%E5%92%8C%E5%A4%9A%E4%B8%AA%E5%80%BC%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-text">（2）属性和多个值选择器</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E2%91%A0-attr-val"><span class="toc-text">①[attr~&#x3D;val]</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E2%91%A1-attr-val"><span class="toc-text">②[attr|&#x3D;val] </span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E2%91%A2-attr-x3D-val"><span class="toc-text">③[attr^&#x3D;val]</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E2%91%A3-attr-x3D-val"><span class="toc-text">④[attr$&#x3D;val]</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E2%91%A4-attr-x3D-val"><span class="toc-text">⑤[attr*&#x3D;val]</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E3%80%81CSS%E9%AB%98%E7%BA%A7-x2F-%E5%A4%8D%E5%90%88%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-text">四、CSS高级&#x2F;复合选择器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%90%8E%E4%BB%A3%E9%80%89%E6%8B%A9%E5%99%A8%EF%BC%9A"><span class="toc-text">1.后代选择器： </span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E5%AD%90-x2F-%E5%B1%82%E7%BA%A7%E9%80%89%E6%8B%A9%E5%99%A8%EF%BC%9A-gt"><span class="toc-text">2.子&#x2F;层级选择器：&gt;</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E5%B9%B6%E9%9B%86%E9%80%89%E6%8B%A9%E5%99%A8%EF%BC%9A"><span class="toc-text">3.并集选择器：,</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E4%BA%A4%E9%9B%86%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-text">4.交集选择器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E5%85%84%E5%BC%9F%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-text">5.兄弟选择器</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%94%E3%80%81%E4%BC%AA%E7%B1%BB%E5%92%8C%E4%BC%AA%E5%85%83%E7%B4%A0"><span class="toc-text">五、伪类和伪元素</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E4%BC%AA%E7%B1%BB"><span class="toc-text">1.伪类</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%881%EF%BC%89%E8%B6%85%E9%93%BE%E6%8E%A5%E4%BC%AA%E7%B1%BB"><span class="toc-text">（1）超链接伪类</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%882%EF%BC%89%E7%BB%93%E6%9E%84%E6%80%A7%E4%BC%AA%E7%B1%BB"><span class="toc-text">（2）结构性伪类</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%883%EF%BC%89%E5%AD%90%E5%85%83%E7%B4%A0%E4%BC%AA%E7%B1%BB"><span class="toc-text">（3）子元素伪类</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%884%EF%BC%89UI%E4%BC%AA%E7%B1%BB"><span class="toc-text">（4）UI伪类</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E4%BC%AA%E5%85%83%E7%B4%A0"><span class="toc-text">2.伪元素</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%881%EF%BC%89-first-letter"><span class="toc-text">（1）::first-letter</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%882%EF%BC%89-first-line"><span class="toc-text">（2）::first-line</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E5%86%85%E5%AE%B9%E5%B1%9E%E6%80%A7"><span class="toc-text">3.内容属性</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%881%EF%BC%89content%E5%B1%9E%E6%80%A7"><span class="toc-text">（1）content属性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%882%EF%BC%89counter-increment%E5%B1%9E%E6%80%A7"><span class="toc-text">（2）counter-increment属性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%883%EF%BC%89quotes%E5%B1%9E%E6%80%A7"><span class="toc-text">（3）quotes属性</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AD%E3%80%81CSS%E6%A0%B7%E5%BC%8F"><span class="toc-text">六、CSS样式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#0-CSS%E5%B8%B8%E7%94%A8%E5%8D%95%E4%BD%8D"><span class="toc-text">0.CSS常用单位</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%B8%B8%E7%94%A8%E6%96%87%E5%AD%97%E6%A0%B7%E5%BC%8F"><span class="toc-text">1.常用文字样式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E6%96%87%E6%9C%AC%E6%A0%BC%E5%BC%8F%E8%AE%BE%E7%BD%AE"><span class="toc-text">2.文本格式设置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E5%85%83%E7%B4%A0%E8%BE%B9%E6%A1%86%E6%A0%B7%E5%BC%8F"><span class="toc-text">3.元素边框样式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E5%85%83%E7%B4%A0%E8%83%8C%E6%99%AF%E5%9B%BE%E7%89%87"><span class="toc-text">4.元素背景图片</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E5%9B%BE%E7%89%87%E6%A0%B7%E5%BC%8F"><span class="toc-text">5.图片样式</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%881%EF%BC%89%E5%9B%BE%E7%89%87%E5%B0%BA%E5%AF%B8%E5%92%8C%E5%9B%BE%E7%89%87%E8%BE%B9%E6%A1%86"><span class="toc-text">（1）图片尺寸和图片边框</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%882%EF%BC%89%E5%9B%BE%E7%89%87%E8%AE%BE%E7%BD%AE%E6%B0%B4%E5%B9%B3%E5%92%8C%E5%9E%82%E7%9B%B4%E5%AF%B9%E9%BD%90"><span class="toc-text">（2）图片设置水平和垂直对齐</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%9E%82%E7%9B%B4%E5%AF%B9%E9%BD%90%EF%BC%9Avertical-align%E5%B1%9E%E6%80%A7"><span class="toc-text">垂直对齐：vertical-align属性</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-%E5%88%97%E8%A1%A8%E9%A1%B9%E5%89%8D%E7%AC%A6%E5%8F%B7%E6%A0%B7%E5%BC%8F"><span class="toc-text">6.列表项前符号样式</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%80%E8%88%AC%E5%AF%B9%E6%9C%89%E5%BA%8F%E5%88%97%E8%A1%A8%E5%BA%94%E7%94%A8%E8%BF%99%E4%BA%9B%E6%A0%B7%E5%BC%8F%EF%BC%9A"><span class="toc-text">一般对有序列表应用这些样式：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%80%E8%88%AC%E5%AF%B9%E6%97%A0%E5%BA%8F%E5%88%97%E8%A1%A8%E5%BA%94%E7%94%A8%E8%BF%99%E4%BA%9B%E6%A0%B7%E5%BC%8F%EF%BC%9A"><span class="toc-text">一般对无序列表应用这些样式：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%98%E5%8F%AF%E4%BB%A5%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9B%BE%E7%89%87%E4%B8%BA%E6%A0%B7%E5%BC%8F%EF%BC%9A"><span class="toc-text">还可以自定义图片为样式：</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-%E8%A1%A8%E6%A0%BC%E6%A0%B7%E5%BC%8F"><span class="toc-text">7.表格样式</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%881%EF%BC%89%E8%A1%A8%E6%A0%BC%E8%BE%B9%E6%A1%86"><span class="toc-text">（1）表格边框</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%882%EF%BC%89%E5%AE%BD%E5%BA%A6%E3%80%81%E9%AB%98%E5%BA%A6%E3%80%81%E8%BE%B9%E6%A1%86%E9%97%B4%E8%B7%9D"><span class="toc-text">（2）宽度、高度、边框间距</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%883%EF%BC%89%E8%A1%A8%E6%A0%BC%E6%A0%87%E9%A2%98%E4%BD%8D%E7%BD%AE"><span class="toc-text">（3）表格标题位置</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-CSS%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B"><span class="toc-text">8.CSS盒子模型</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%881%EF%BC%89%E7%9B%92%E5%AD%90%E8%BE%B9%E6%A1%86border"><span class="toc-text">（1）盒子边框border</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%882%EF%BC%89%E7%9B%92%E5%AD%90%E5%86%85%E5%A4%96%E8%BE%B9%E8%B7%9Dpadding%E5%92%8Cmargin"><span class="toc-text">（2）盒子内外边距padding和margin</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%883%EF%BC%89%E6%B8%85%E9%99%A4%E5%86%85%E5%A4%96%E8%BE%B9%E8%B7%9D"><span class="toc-text">（3）清除内外边距</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%884%EF%BC%89%E7%9B%92%E5%AD%90%E5%A4%A7%E5%B0%8F%E9%99%90%E5%88%B6"><span class="toc-text">（4）盒子大小限制</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%885%EF%BC%89box-sizing%E5%B1%9E%E6%80%A7"><span class="toc-text">（5）box-sizing属性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%886%EF%BC%89outline%E5%B1%9E%E6%80%A7"><span class="toc-text">（6）outline属性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%887%EF%BC%89box-shadow%E5%B1%9E%E6%80%A7"><span class="toc-text">（7）box-shadow属性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%888%EF%BC%89opacity%E5%B1%9E%E6%80%A7"><span class="toc-text">（8）opacity属性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%889%EF%BC%89%E7%9B%92%E6%A8%A1%E5%9E%8B%E6%98%BE%E7%A4%BA%E6%A8%A1%E5%BC%8F"><span class="toc-text">（9）盒模型显示模式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%8810%EF%BC%89%E5%8F%AF%E8%A7%81%E4%B8%8E%E6%BA%A2%E5%87%BA"><span class="toc-text">（10）可见与溢出</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E2%91%A0visibility%E5%B1%9E%E6%80%A7"><span class="toc-text">①visibility属性</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E2%91%A1overflow%E5%B1%9E%E6%80%A7"><span class="toc-text">②overflow属性</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%8811%EF%BC%89cursor%E9%BC%A0%E6%A0%87%E6%A0%B7%E5%BC%8F"><span class="toc-text">（11）cursor鼠标样式</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-%E6%B5%AE%E5%8A%A8%E5%B8%83%E5%B1%80"><span class="toc-text">9.浮动布局</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%881%EF%BC%89%E4%BC%A0%E7%BB%9F%E7%BD%91%E9%A1%B5%E5%B8%83%E5%B1%80%E7%9A%84%E4%B8%89%E7%A7%8D%E6%96%B9%E5%BC%8F"><span class="toc-text">（1）传统网页布局的三种方式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%882%EF%BC%89%E6%B5%AE%E5%8A%A8%E5%B8%83%E5%B1%80"><span class="toc-text">（2）浮动布局</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#10-%E5%AE%9A%E4%BD%8D%E5%B8%83%E5%B1%80"><span class="toc-text">10.定位布局</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%881%EF%BC%89%E5%AE%9A%E4%BD%8D%E7%BB%84%E6%88%90"><span class="toc-text">（1）定位组成</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E2%91%A0%E5%AE%9A%E4%BD%8D%E6%A8%A1%E5%BC%8Fposition"><span class="toc-text">①定位模式position</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E2%91%A1%E8%BE%B9%E5%81%8F%E7%A7%BB"><span class="toc-text">②边偏移</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%882%EF%BC%89%E9%9D%99%E6%80%81%E5%AE%9A%E4%BD%8D%EF%BC%88%E9%BB%98%E8%AE%A4%EF%BC%89"><span class="toc-text">（2）静态定位（默认）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%883%EF%BC%89%E7%9B%B8%E5%AF%B9%E5%AE%9A%E4%BD%8Drelative"><span class="toc-text">（3）相对定位relative</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%884%EF%BC%89%E7%BB%9D%E5%AF%B9%E5%AE%9A%E4%BD%8Dabdolute"><span class="toc-text">（4）绝对定位abdolute</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%885%EF%BC%89%E5%9B%BA%E5%AE%9A%E5%AE%9A%E4%BD%8Dfixed"><span class="toc-text">（5）固定定位fixed</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%886%EF%BC%89%E7%B2%98%E8%B4%B4%E5%AE%9A%E4%BD%8Dsticky"><span class="toc-text">（6）粘贴定位sticky</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%887%EF%BC%89%E6%80%BB%E7%BB%93"><span class="toc-text">（7）总结</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#11-display-flex%E5%BC%B9%E6%80%A7%E5%B8%83%E5%B1%80%EF%BC%88%E4%BC%B8%E7%BC%A9%E7%9B%92%EF%BC%89"><span class="toc-text">11.display: flex弹性布局（伸缩盒）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%881%EF%BC%89%E4%BC%B8%E7%BC%A9%E7%9B%92%E5%B1%9E%E6%80%A7"><span class="toc-text">（1）伸缩盒属性</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E2%91%A0flex-direction"><span class="toc-text">①flex-direction</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E2%91%A1flex-wrap"><span class="toc-text">②flex-wrap</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E2%91%A2flex-flow"><span class="toc-text">③flex-flow</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E2%91%A3justify-content"><span class="toc-text">④justify-content</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E2%91%A4align-items"><span class="toc-text">⑤align-items</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E2%91%A5align-content"><span class="toc-text">⑥align-content</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%882%EF%BC%89%E9%A1%B9%E7%9B%AE%E5%B1%9E%E6%80%A7"><span class="toc-text">（2）项目属性</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E2%91%A0order"><span class="toc-text">①order</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E2%91%A1flex-grow"><span class="toc-text">②flex-grow</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E2%91%A2flex-shrink"><span class="toc-text">③flex-shrink</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E2%91%A3flex-basis"><span class="toc-text">④flex-basis</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E2%91%A4flex"><span class="toc-text">⑤flex</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E2%91%A5align-self"><span class="toc-text">⑥align-self</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#12-%E7%BD%91%E6%A0%BC%E5%B8%83%E5%B1%80"><span class="toc-text">12.网格布局</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#12-%E8%BF%87%E6%B8%A1%E5%8A%A8%E7%94%BB"><span class="toc-text">12.过渡动画</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#13-%E5%B1%82%E5%8F%A0%E6%A0%B7%E5%BC%8F%E8%A1%A8%E7%9A%84%E4%BC%98%E5%85%88%E7%BA%A7"><span class="toc-text">13.层叠样式表的优先级</span></a></li></ol></li></ol>
     </div>
   </section>
 
@@ -4738,7 +4941,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"寇强的个人空间","url":"http://kouqiang.space/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"寇强","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://kouqiang.space/","sameAs":["https://github.com/volantis-x"],"description":"自建博客页面"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://kouqiang.space/","name":"寇强的个人空间"}},{"@type":"ListItem","position":2,"item":{"@id":"http://kouqiang.space/categories/前端/","name":"前端"}},{"@type":"ListItem","position":3,"item":{"@id":"http://kouqiang.space/2022/12/22/CSS学习总结/","name":"CSS学习总结"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"寇强的个人空间","url":"http://kouqiang.space/","keywords":null,"description":"自建博客页面","author":{"@type":"Person","name":"寇强","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://kouqiang.space/","description":"自建博客页面"},"publisher":{"@type":"Organization","name":"寇强的个人空间","url":"http://kouqiang.space/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://kouqiang.space?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"CSS学习总结","description":"自建博客页面","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://kouqiang.space/2022/12/22/CSS%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/"},"author":{"@type":"Person","name":"寇强","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://kouqiang.space/"},"publisher":{"@type":"Organization","name":"寇强的个人空间","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://kouqiang.space/2022/12/22/CSS%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/","wordCount":0,"datePublished":"2022-12-22T06:56:00.000Z","dateModified":"2024-05-22T03:41:51.901Z","articleSection":"前端","keywords":"CSS,学习总结,前端","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"寇强的个人空间","url":"http://kouqiang.space/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"寇强","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://kouqiang.space/","sameAs":["https://github.com/volantis-x"],"description":"自建博客页面"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://kouqiang.space/","name":"寇强的个人空间"}},{"@type":"ListItem","position":2,"item":{"@id":"http://kouqiang.space/categories/前端/","name":"前端"}},{"@type":"ListItem","position":3,"item":{"@id":"http://kouqiang.space/2022/12/22/CSS学习总结/","name":"CSS学习总结"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"寇强的个人空间","url":"http://kouqiang.space/","keywords":null,"description":"自建博客页面","author":{"@type":"Person","name":"寇强","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://kouqiang.space/","description":"自建博客页面"},"publisher":{"@type":"Organization","name":"寇强的个人空间","url":"http://kouqiang.space/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://kouqiang.space?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"CSS学习总结","description":"自建博客页面","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://kouqiang.space/2022/12/22/CSS%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/"},"author":{"@type":"Person","name":"寇强","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://kouqiang.space/"},"publisher":{"@type":"Organization","name":"寇强的个人空间","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://kouqiang.space/2022/12/22/CSS%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/","wordCount":0,"datePublished":"2022-12-22T06:56:00.000Z","dateModified":"2024-05-24T10:37:24.621Z","articleSection":"前端","keywords":"CSS,学习总结,前端","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 

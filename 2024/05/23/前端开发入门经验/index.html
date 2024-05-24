@@ -44,7 +44,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2024-05-23T14:45:00.000Z">
-<meta property="article:modified_time" content="2024-05-23T16:06:16.358Z">
+<meta property="article:modified_time" content="2024-05-24T05:56:06.697Z">
 <meta property="article:author" content="寇强">
 <meta property="article:tag" content="前端">
 <meta property="article:tag" content="js">
@@ -1794,7 +1794,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1716481331373),
+    lastupdate: new Date(1716547136134),
     sidebar: {
       for_page: ["blogger","category","tagcloud","webinfo"],
       for_post: ["toc"],
@@ -2747,13 +2747,29 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p><code>Obj.attributes</code>：返回的是一个对象集合，每个对象都有<code>name</code>和<code>value</code>两个属性。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> imgAttrs = fa_div[<span class="number">0</span>].<span class="property">attributes</span>;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(imgAttrs.<span class="property">length</span>);		<span class="comment">//检查对象有多少个属性</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(imgAttrs[<span class="number">0</span>].<span class="property">name</span>);		<span class="comment">//第一个属性名</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(imgAttrs[<span class="number">0</span>].<span class="property">value</span>);		<span class="comment">//第一个属性值</span></span><br></pre></td></tr></table></figure>
 
-
-
 <h4 id="3、设置图片和链接不可被鼠标拖动"><a href="#3、设置图片和链接不可被鼠标拖动" class="headerlink" title="3、设置图片和链接不可被鼠标拖动"></a>3、设置图片和链接不可被鼠标拖动</h4><p>在页面中图片和链接一般都可以被鼠标拖动，就像这样：</p>
 <p>图片上传失败，回头重新弄下！</p>
 <p>解决方法：设置对象的<code>draggable</code>属性为<code>false</code>：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">imgs[<span class="number">0</span>].<span class="property">draggable</span> = <span class="literal">false</span>;</span><br></pre></td></tr></table></figure>
 
+
+
+<h4 id="4、变量提升与暂时性死区"><a href="#4、变量提升与暂时性死区" class="headerlink" title="4、变量提升与暂时性死区"></a>4、变量提升与暂时性死区</h4><ul>
+<li><p>变量提升：</p>
+<p>javascript要经历编译和执行两个阶段，编译阶段会自动搜集所有的声明，<code>var</code>声明的变量会首先被赋值为<code>undefined</code>，剩下的语句在执行阶段逐句生效。如：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(a);</span><br><span class="line"><span class="keyword">var</span> a = <span class="number">666</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//等价于：</span></span><br><span class="line"><span class="keyword">var</span> a;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(a);</span><br><span class="line">a = <span class="number">666</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//输出undefined</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>原理：</p>
+<p>预编译阶段统计所有<code>var</code>声明的变量，这些变量执行的是<u>变量环境</u>，即为给<code>var</code>声明的变量赋值<code>undefined</code>。</p>
+<p>而块级作用域声明的变量执行<u>词法环境</u>，词法环境下声明的变量没有默认值，且在赋值前调用会报错。</p>
+<p>词法环境会根据不同的块级作用域生成对应栈，块级作用域就是通过词法环境的栈来实现的，变量提升是变量环境实现的，所以通过词法环境的栈和环境变量混合使用就同时支持了<code>var</code>声明和块级作用域。</p>
+</li>
+<li><p>作用域与<strong>暂时性死区</strong>详解</p>
+<p>使用<code>let</code>或<code>const</code>声明变量，<strong>从声明到到被赋值之前</strong>，这段时间叫<strong>暂时性死区</strong>。</p>
+<p>在变量属于暂时性死区时调用变量，就会报错，并且这时候<code>typeof</code>的结果是不准确的。</p>
+<p>参考文章：<a target="_blank" rel="noopener" href="https://www.cnblogs.com/youhong/p/12369548.html">let&#x2F;const的暂时性死区 - 小丸子的城堡 - 博客园 (cnblogs.com)</a></p>
+</li>
+</ul>
 
   </div>
   
@@ -2778,7 +2794,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-05-24T00:06:16+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-05-24T13:56:06+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
     <p>更新于：2024年5月24日</p>
@@ -2928,7 +2944,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#1%E3%80%81-lt-img-gt-%E5%9B%BE%E7%89%87%E5%BA%95%E9%83%A8%E5%87%BA%E7%8E%B0%E7%A9%BA%E7%99%BD"><span class="toc-text">1、&lt;img &#x2F;&gt;图片底部出现空白</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2%E3%80%81JavaScript%E6%97%A0%E6%B3%95%E8%8E%B7%E5%8F%96%E5%85%83%E7%B4%A0%E6%9F%90%E4%BA%9B%E5%B1%9E%E6%80%A7%E5%80%BC"><span class="toc-text">2、JavaScript无法获取元素某些属性值</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3%E3%80%81%E8%AE%BE%E7%BD%AE%E5%9B%BE%E7%89%87%E5%92%8C%E9%93%BE%E6%8E%A5%E4%B8%8D%E5%8F%AF%E8%A2%AB%E9%BC%A0%E6%A0%87%E6%8B%96%E5%8A%A8"><span class="toc-text">3、设置图片和链接不可被鼠标拖动</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#1%E3%80%81-lt-img-gt-%E5%9B%BE%E7%89%87%E5%BA%95%E9%83%A8%E5%87%BA%E7%8E%B0%E7%A9%BA%E7%99%BD"><span class="toc-text">1、&lt;img &#x2F;&gt;图片底部出现空白</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2%E3%80%81JavaScript%E6%97%A0%E6%B3%95%E8%8E%B7%E5%8F%96%E5%85%83%E7%B4%A0%E6%9F%90%E4%BA%9B%E5%B1%9E%E6%80%A7%E5%80%BC"><span class="toc-text">2、JavaScript无法获取元素某些属性值</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3%E3%80%81%E8%AE%BE%E7%BD%AE%E5%9B%BE%E7%89%87%E5%92%8C%E9%93%BE%E6%8E%A5%E4%B8%8D%E5%8F%AF%E8%A2%AB%E9%BC%A0%E6%A0%87%E6%8B%96%E5%8A%A8"><span class="toc-text">3、设置图片和链接不可被鼠标拖动</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4%E3%80%81%E5%8F%98%E9%87%8F%E6%8F%90%E5%8D%87%E4%B8%8E%E6%9A%82%E6%97%B6%E6%80%A7%E6%AD%BB%E5%8C%BA"><span class="toc-text">4、变量提升与暂时性死区</span></a></li></ol>
     </div>
   </section>
 
@@ -3676,7 +3692,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"寇强的个人空间","url":"http://kouqiang.space/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"寇强","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://kouqiang.space/","sameAs":["https://github.com/volantis-x"],"description":"自建博客页面"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://kouqiang.space/","name":"寇强的个人空间"}},{"@type":"ListItem","position":2,"item":{"@id":"http://kouqiang.space/categories/前端/","name":"前端"}},{"@type":"ListItem","position":3,"item":{"@id":"http://kouqiang.space/2024/05/23/前端开发入门经验/","name":"前端开发入门经验"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"寇强的个人空间","url":"http://kouqiang.space/","keywords":null,"description":"自建博客页面","author":{"@type":"Person","name":"寇强","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://kouqiang.space/","description":"自建博客页面"},"publisher":{"@type":"Organization","name":"寇强的个人空间","url":"http://kouqiang.space/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://kouqiang.space?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"前端开发入门经验","description":"自建博客页面","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://kouqiang.space/2024/05/23/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8%E7%BB%8F%E9%AA%8C/"},"author":{"@type":"Person","name":"寇强","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://kouqiang.space/"},"publisher":{"@type":"Organization","name":"寇强的个人空间","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://kouqiang.space/2024/05/23/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8%E7%BB%8F%E9%AA%8C/","wordCount":0,"datePublished":"2024-05-23T14:45:00.000Z","dateModified":"2024-05-23T16:06:16.358Z","articleSection":"前端","keywords":"前端,js,html,css","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"寇强的个人空间","url":"http://kouqiang.space/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"寇强","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://kouqiang.space/","sameAs":["https://github.com/volantis-x"],"description":"自建博客页面"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://kouqiang.space/","name":"寇强的个人空间"}},{"@type":"ListItem","position":2,"item":{"@id":"http://kouqiang.space/categories/前端/","name":"前端"}},{"@type":"ListItem","position":3,"item":{"@id":"http://kouqiang.space/2024/05/23/前端开发入门经验/","name":"前端开发入门经验"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"寇强的个人空间","url":"http://kouqiang.space/","keywords":null,"description":"自建博客页面","author":{"@type":"Person","name":"寇强","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://kouqiang.space/","description":"自建博客页面"},"publisher":{"@type":"Organization","name":"寇强的个人空间","url":"http://kouqiang.space/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://kouqiang.space?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"前端开发入门经验","description":"自建博客页面","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://kouqiang.space/2024/05/23/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8%E7%BB%8F%E9%AA%8C/"},"author":{"@type":"Person","name":"寇强","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://kouqiang.space/"},"publisher":{"@type":"Organization","name":"寇强的个人空间","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://kouqiang.space/2024/05/23/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8%E7%BB%8F%E9%AA%8C/","wordCount":0,"datePublished":"2024-05-23T14:45:00.000Z","dateModified":"2024-05-24T05:56:06.697Z","articleSection":"前端","keywords":"前端,js,html,css","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
